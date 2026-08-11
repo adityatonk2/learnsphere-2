@@ -1,0 +1,162 @@
+"use client";
+
+import React from 'react';
+import { Globe, Mail, Phone, MapPin, ShieldCheck } from 'lucide-react';
+import { useScrollReveal } from '../hooks/useScrollReveal';
+
+interface FooterProps {
+  onOpenContact: () => void;
+  setActiveSection: (section: string) => void;
+}
+
+export const Footer: React.FC<FooterProps> = ({ onOpenContact, setActiveSection }) => {
+  const containerRef = useScrollReveal({ y: 40, duration: 0.9 });
+  const scrollTo = (id: string) => {
+    setActiveSection(id);
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  return (
+    <footer ref={containerRef} className="bg-slate-900 text-slate-300 border-t border-slate-800">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 gsap-reveal">
+          
+          {/* Brand Info */}
+          <div className="lg:col-span-2 space-y-4">
+            <div className="flex items-center gap-3">
+              <div className="w-9 h-9 rounded-full bg-gradient-to-tr from-[#003B73] via-[#0B5198] to-[#0088FF] p-0.5">
+                <div className="w-full h-full bg-slate-900 rounded-full flex items-center justify-center p-1">
+                  <svg viewBox="0 0 100 100" className="w-full h-full text-sky-400" fill="currentColor">
+                    <circle cx="50" cy="50" r="38" fill="none" stroke="currentColor" strokeWidth="8" />
+                    <ellipse cx="50" cy="50" rx="45" ry="16" fill="none" stroke="#00A3FF" strokeWidth="6" transform="rotate(-25 50 50)" />
+                    <circle cx="50" cy="50" r="14" fill="#00A3FF" />
+                  </svg>
+                </div>
+              </div>
+              <div className="flex flex-col">
+                <span className="text-lg font-bold tracking-tight text-white">
+                  LearnSphere
+                </span>
+                <span className="text-[9px] font-semibold tracking-widest text-slate-400 uppercase -mt-1">
+                  Technologies
+                </span>
+              </div>
+            </div>
+
+            <p className="text-slate-400 text-xs sm:text-sm leading-relaxed max-w-sm font-light">
+              Global provider of enterprise corporate learning, authorized IT vendor certifications, and custom workforce upskilling solutions.
+            </p>
+
+            <div className="pt-2 flex items-center gap-2 text-xs text-sky-400 font-semibold">
+              <ShieldCheck className="w-4 h-4 text-emerald-400" />
+              <span>ISO 9001:2015 & ISO 27001 Certified Training Partner</span>
+            </div>
+          </div>
+
+          {/* Quick Navigation */}
+          <div>
+            <h4 className="text-xs font-bold text-white uppercase tracking-wider mb-4">
+              Navigation
+            </h4>
+            <ul className="space-y-2.5 text-xs text-slate-400">
+              <li>
+                <button onClick={() => scrollTo('home')} className="hover:text-white transition-colors">
+                  Home
+                </button>
+              </li>
+              <li>
+                <button onClick={() => scrollTo('solutions')} className="hover:text-white transition-colors">
+                  Our Solutions
+                </button>
+              </li>
+              <li>
+                <button onClick={() => scrollTo('training-modes')} className="hover:text-white transition-colors">
+                  Learning Formats
+                </button>
+              </li>
+              <li>
+                <button onClick={() => scrollTo('courses')} className="hover:text-white transition-colors">
+                  Course Directory
+                </button>
+              </li>
+              <li>
+                <button onClick={() => scrollTo('about')} className="hover:text-white transition-colors">
+                  About Us
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          {/* Delivery Formats */}
+          <div>
+            <h4 className="text-xs font-bold text-white uppercase tracking-wider mb-4">
+              Delivery Options
+            </h4>
+            <ul className="space-y-2.5 text-xs text-slate-400">
+              <li>
+                <button onClick={() => scrollTo('training-modes')} className="hover:text-white transition-colors">
+                  Fly-Me-A-Trainer (FMAT)
+                </button>
+              </li>
+              <li>
+                <button onClick={() => scrollTo('training-modes')} className="hover:text-white transition-colors">
+                  Flexi (Self-Paced)
+                </button>
+              </li>
+              <li>
+                <button onClick={() => scrollTo('training-modes')} className="hover:text-white transition-colors">
+                  1-on-1 Training
+                </button>
+              </li>
+              <li>
+                <button onClick={() => scrollTo('training-modes')} className="hover:text-white transition-colors">
+                  Customised Programmes
+                </button>
+              </li>
+              <li>
+                <button onClick={() => scrollTo('training-modes')} className="hover:text-white transition-colors">
+                  Virtual Live Online
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          {/* Contact Details */}
+          <div>
+            <h4 className="text-xs font-bold text-white uppercase tracking-wider mb-4">
+              Corporate Headquarters
+            </h4>
+            <ul className="space-y-3 text-xs text-slate-400">
+              <li className="flex items-start gap-2">
+                <MapPin className="w-4 h-4 text-sky-400 shrink-0 mt-0.5" />
+                <span>100 Technology Square, Suite 800, Boston, MA 02139</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <Phone className="w-4 h-4 text-sky-400 shrink-0" />
+                <span>+1 (800) 555-8920</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <Mail className="w-4 h-4 text-sky-400 shrink-0" />
+                <span>contact@learnspheretech.com</span>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+        {/* Bottom Bar */}
+        <div className="mt-12 pt-8 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+          <p>© {new Date().getFullYear()} LearnSphere Technologies Inc. All rights reserved.</p>
+          <div className="flex gap-6">
+            <span className="hover:text-slate-400 cursor-pointer">Privacy Policy</span>
+            <span className="hover:text-slate-400 cursor-pointer">Terms of Service</span>
+            <span className="hover:text-slate-400 cursor-pointer">Accreditations</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+};
