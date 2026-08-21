@@ -4,6 +4,7 @@ import React from 'react';
 import { ArrowRight, CheckCircle2, ShieldCheck, Users, Award } from 'lucide-react';
 import Image from 'next/image';
 import { useScrollReveal } from '../hooks/useScrollReveal';
+import { StatCounter } from './StatCounter';
 
 interface HeroSectionProps {
   onOpenContact: () => void;
@@ -70,18 +71,9 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenContact, onExplo
 
           {/* Key Metrics / Trust Signals */}
           <div className="pt-8 grid grid-cols-3 gap-4 border-t border-white/15 max-w-lg gsap-reveal">
-            <div className="flex flex-col gsap-reveal">
-              <span className="text-2xl font-black text-white">500+</span>
-              <span className="text-xs text-sky-200">Certified Courses</span>
-            </div>
-            <div className="flex flex-col gsap-reveal">
-              <span className="text-2xl font-black text-white">100k+</span>
-              <span className="text-xs text-sky-200">Trained Employees</span>
-            </div>
-            <div className="flex flex-col gsap-reveal">
-              <span className="text-2xl font-black text-white">99.4%</span>
-              <span className="text-xs text-sky-200">Exam Pass Rate</span>
-            </div>
+            <StatCounter target={500} suffix="+" label="Certified Courses" />
+            <StatCounter target={100} suffix="k+" label="Trained Employees" />
+            <StatCounter target={99.4} decimals={1} suffix="%" label="Exam Pass Rate" />
           </div>
         </div>
       </div>

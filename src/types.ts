@@ -42,3 +42,13 @@ export interface ContactFormData {
   participants: string;
   message: string;
 }
+
+export interface PartnerFormData {
+  companyName: string;
+  contactPerson: string;
+  email: string;
+  phone: string;
+  website: string;
+  partnershipType: string;
+  message: string;
+}

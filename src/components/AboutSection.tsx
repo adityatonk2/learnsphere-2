@@ -16,17 +16,17 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenContact }) => 
       <div ref={containerRef} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch">
           
-          {/* Left Column: About LearnSphere Technologies text matching Image 1 */}
+          {/* Left Column: About NexMentor Solutions text matching Image 1 */}
           <div className="lg:col-span-7 flex flex-col justify-between space-y-6 gsap-reveal">
             <div className="space-y-4">
               <span className="text-[#0B5198] font-bold text-sm uppercase tracking-wider block">
                 Company Overview
               </span>
               <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0A2540] tracking-tight">
-                About LearnSphere Technologies
+                About NexMentor Solutions
               </h2>
               <p className="text-slate-600 text-base leading-relaxed font-normal">
-                LearnSphere Technologies is a global leader in enterprise learning, authorized vendor certifications, and technical workforce upskilling.
+                NexMentor Solutions is a global leader in enterprise learning, authorized vendor certifications, and technical workforce upskilling.
               </p>
             </div>
 

@@ -42,7 +42,7 @@ export const CourseDirectorySection: React.FC<CourseDirectorySectionProps> = ({ 
               Certification Directory
             </span>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0A2540]">
-              Authorized Technology Courses
+              Top Technology Courses
             </h2>
             <p className="text-slate-500 text-base mt-1">
               Select a global vendor below to explore official certification training programs.

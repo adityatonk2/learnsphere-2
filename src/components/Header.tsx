@@ -5,7 +5,7 @@ import { ChevronDown, Menu, X, Globe, Phone, Mail, Sparkles, BookOpen } from 'lu
 import { LEARNING_OPTIONS } from '../data/coursesData';
 
 interface HeaderProps {
-  onOpenContact: () => void;
+  onOpenContact: (subject?: string) => void;
   activeSection: string;
   setActiveSection: (section: string) => void;
 }
@@ -48,14 +48,14 @@ export const Header: React.FC<HeaderProps> = ({ onOpenContact, activeSection, se
           </span>
         </div>
         <div className="flex items-center gap-4">
-          <a href="mailto:contact@learnspheretech.com" className="hover:text-white transition-colors flex items-center gap-1">
-            <Mail className="w-3.5 h-3.5 text-sky-400" /> contact@learnspheretech.com
+          <a href="mailto:contact@nexmentorsolutions.com" className="hover:text-white transition-colors flex items-center gap-1">
+            <Mail className="w-3.5 h-3.5 text-sky-400" /> contact@nexmentorsolutions.com
           </a>
         </div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-        {/* Brand Logo matching Image 1 */}
+        {/* Brand Logo */}
         <div 
           onClick={() => scrollToSection('home')} 
           className="flex items-center gap-3 cursor-pointer group select-none"
@@ -71,10 +71,10 @@ export const Header: React.FC<HeaderProps> = ({ onOpenContact, activeSection, se
           </div>
           <div className="flex flex-col">
             <span className="text-xl font-bold tracking-tight text-[#0A2540] flex items-center gap-1">
-              LearnSphere
+              NexMentor
             </span>
             <span className="text-[10px] font-semibold tracking-widest text-slate-500 uppercase -mt-1">
-              Technologies
+              Solutions
             </span>
           </div>
         </div>
@@ -164,17 +164,23 @@ export const Header: React.FC<HeaderProps> = ({ onOpenContact, activeSection, se
           </button>
 
           <button
-            onClick={onOpenContact}
+            onClick={() => onOpenContact()}
             className="text-sm font-medium text-slate-700 hover:text-[#0B5198] transition-colors py-2"
           >
             Contact
           </button>
         </nav>
 
-        {/* Action Button matching Image 1 */}
-        <div className="hidden lg:flex items-center gap-4">
+        {/* Action Buttons */}
+        <div className="hidden lg:flex items-center gap-3">
           <button
-            onClick={onOpenContact}
+            onClick={() => onOpenContact('Connect with Course Advisor')}
+            className="text-sm font-semibold text-[#0B5198] border border-[#0B5198]/30 hover:border-[#0B5198] hover:bg-sky-50 px-5 py-2.5 rounded-lg transition-all active:scale-95"
+          >
+            Connect with Advisor
+          </button>
+          <button
+            onClick={() => onOpenContact()}
             className="bg-[#0052CC] hover:bg-[#003B99] text-white px-6 py-2.5 rounded-lg text-sm font-semibold shadow-md hover:shadow-lg transition-all active:scale-95"
           >
             Get Started
@@ -237,9 +243,18 @@ export const Header: React.FC<HeaderProps> = ({ onOpenContact, activeSection, se
           <button
             onClick={() => {
               setMobileMenuOpen(false);
+              onOpenContact('Connect with Course Advisor');
+            }}
+            className="w-full mt-2 border border-[#0B5198] text-[#0B5198] py-3 rounded-lg font-semibold text-center"
+          >
+            Connect with Advisor
+          </button>
+          <button
+            onClick={() => {
+              setMobileMenuOpen(false);
               onOpenContact();
             }}
-            className="w-full mt-2 bg-[#0052CC] text-white py-3 rounded-lg font-semibold text-center shadow-md"
+            className="w-full bg-[#0052CC] text-white py-3 rounded-lg font-semibold text-center shadow-md"
           >
             Get Started
           </button>

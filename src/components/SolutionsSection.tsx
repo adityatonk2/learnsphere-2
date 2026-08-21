@@ -48,25 +48,45 @@ export const SolutionsSection: React.FC<SolutionsSectionProps> = ({ onOpenContac
           </p>
         </div>
 
-        {/* 4 Feature Items Grid matching Image 1 layout */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        {/* 4 Feature Items Grid — flip cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-16" style={{ perspective: '1500px' }}>
           {SOLUTIONS_LIST.map((solution) => (
             <div
               key={solution.id}
-              className="bg-white p-6 rounded-2xl border border-slate-100 shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col items-center text-center group cursor-pointer gsap-reveal"
+              className="group gsap-reveal h-56 cursor-pointer"
+              style={{ perspective: '1500px' }}
               onClick={onOpenContact}
             >
-              <div className="w-16 h-16 rounded-2xl bg-sky-50 group-hover:bg-[#0B5198] flex items-center justify-center mb-5 transition-colors duration-300 group-hover:text-white">
-                <div className="group-hover:scale-110 group-hover:text-white transition-all">
-                  {getIcon(solution.iconName)}
+              <div
+                className="relative w-full h-full transition-transform duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]"
+              >
+                {/* Front face */}
+                <div
+                  className="absolute inset-0 [backface-visibility:hidden] bg-white p-6 rounded-2xl border border-slate-100 shadow-xs flex flex-col items-center justify-center text-center"
+                >
+                  <div className="w-16 h-16 rounded-2xl bg-sky-50 flex items-center justify-center mb-5">
+                    {getIcon(solution.iconName)}
+                  </div>
+                  <h3 className="text-lg font-bold text-[#0A2540] mb-2">
+                    {solution.title}
+                  </h3>
+                  <p className="text-slate-500 text-sm font-medium leading-relaxed">
+                    {solution.subtitle}
+                  </p>
+                </div>
+
+                {/* Back face */}
+                <div
+                  className="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)] bg-[#0B5198] p-6 rounded-2xl shadow-lg flex flex-col items-center justify-center text-center"
+                >
+                  <p className="text-white text-sm leading-relaxed">
+                    {solution.description}
+                  </p>
+                  <span className="mt-4 text-xs font-bold text-sky-200 uppercase tracking-wider">
+                    Click to Learn More →
+                  </span>
                 </div>
               </div>
-              <h3 className="text-lg font-bold text-[#0A2540] mb-2 group-hover:text-[#0B5198] transition-colors">
-                {solution.title}
-              </h3>
-              <p className="text-slate-500 text-sm font-medium leading-relaxed">
-                {solution.subtitle}
-              </p>
             </div>
           ))}
         </div>
@@ -81,7 +101,7 @@ export const SolutionsSection: React.FC<SolutionsSectionProps> = ({ onOpenContac
               Empower your enterprise with scalable, turn-key skill transformation programs.
             </h3>
             <p className="text-slate-600 text-base leading-relaxed">
-              LearnSphere Technologies bridges skill gaps across IT, Cybersecurity, Cloud Infrastructure, DevOps, and Project Management with hands-on lab environments and certified master instructors.
+              NexMentor Solutions bridges skill gaps across IT, Cybersecurity, Cloud Infrastructure, DevOps, and Project Management with hands-on lab environments and certified master instructors.
             </p>
 
             <ul className="space-y-3 text-sm text-slate-700 font-medium">

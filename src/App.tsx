@@ -4,16 +4,25 @@ import React, { useState } from 'react';
 import { Header } from './components/Header';
 import { HeroSection } from './components/HeroSection';
 import { SolutionsSection } from './components/SolutionsSection';
+import { WhyUsSection } from './components/WhyUsSection';
 import { TrainingModesSection } from './components/TrainingModesSection';
 import { CourseDirectorySection } from './components/CourseDirectorySection';
+import { LeadershipSection } from './components/LeadershipSection';
+import { MissionVisionValuesSection } from './components/MissionVisionValuesSection';
+import { TestimonialsSection } from './components/TestimonialsSection';
+import { StatsSection } from './components/StatsSection';
+import { PartnerCTASection } from './components/PartnerCTASection';
+import { PromoBanner } from './components/PromoBanner';
 import { AboutSection } from './components/AboutSection';
 import { ContactModal } from './components/ContactModal';
+import { PartnerModal } from './components/PartnerModal';
 import { Footer } from './components/Footer';
 
 export default function App() {
   const [activeSection, setActiveSection] = useState('home');
   const [isContactOpen, setIsContactOpen] = useState(false);
   const [contactDefaultSubject, setContactDefaultSubject] = useState<string>('');
+  const [isPartnerOpen, setIsPartnerOpen] = useState(false);
 
   const handleOpenContact = (subject?: string) => {
     if (subject) {
@@ -34,9 +43,12 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-white text-slate-900 font-sans selection:bg-sky-500 selection:text-white">
+      {/* Monsoon Sale Promo Banner */}
+      <PromoBanner onOpenContact={handleOpenContact} />
+
       {/* Header with Sticky Navbar & Learning Options Dropdown */}
       <Header
-        onOpenContact={() => handleOpenContact()}
+        onOpenContact={(subject) => handleOpenContact(subject)}
         activeSection={activeSection}
         setActiveSection={setActiveSection}
       />
@@ -54,6 +66,9 @@ export default function App() {
           onOpenContact={() => handleOpenContact('Learning Solutions Demo')}
         />
 
+        {/* Why NexMentor Solutions? */}
+        <WhyUsSection />
+
         {/* Flexible Learning Options Section (Image 2) */}
         <TrainingModesSection
           onOpenContact={(modeTitle) => handleOpenContact(modeTitle)}
@@ -64,7 +79,22 @@ export default function App() {
           onOpenContact={(courseName) => handleOpenContact(courseName)}
         />
 
-        {/* About LearnSphere Technologies & Callout Card (Image 1 bottom) */}
+        {/* Business Stats */}
+        <StatsSection />
+
+        {/* Leadership Profiles */}
+        <LeadershipSection />
+
+        {/* Mission, Vision & Values */}
+        <MissionVisionValuesSection />
+
+        {/* Client & Learner Testimonials */}
+        <TestimonialsSection />
+
+        {/* Become a Partner CTA */}
+        <PartnerCTASection onOpenPartnerForm={() => setIsPartnerOpen(true)} />
+
+        {/* About NexMentor Solutions & Callout Card (Image 1 bottom) */}
         <AboutSection
           onOpenContact={() => handleOpenContact('Corporate Partnership')}
         />
@@ -81,6 +111,12 @@ export default function App() {
         isOpen={isContactOpen}
         onClose={() => setIsContactOpen(false)}
         defaultSubject={contactDefaultSubject}
+      />
+
+      {/* Become a Partner Modal */}
+      <PartnerModal
+        isOpen={isPartnerOpen}
+        onClose={() => setIsPartnerOpen(false)}
       />
     </div>
   );
