@@ -2,8 +2,10 @@
 
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Globe, Phone, Mail, Search } from 'lucide-react';
+import { useLocale } from 'next-intl';
 import { SearchModal } from './SearchModal';
 import { ThemeToggle } from './ThemeToggle';
+import { LanguageSwitcher } from './LanguageSwitcher';
 
 interface HeaderProps {
   onOpenContact: (subject?: string) => void;
@@ -41,6 +43,7 @@ const NavLink: React.FC<NavLinkProps> = ({ label, active, onClick }) => (
 );
 
 export const Header: React.FC<HeaderProps> = ({ onOpenContact, activeSection, setActiveSection }) => {
+  const locale = useLocale();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
 
@@ -67,7 +70,8 @@ export const Header: React.FC<HeaderProps> = ({ onOpenContact, activeSection, se
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     } else if (typeof window !== 'undefined') {
-      window.location.href = id === 'home' ? '/' : `/#${id}`;
+      // Not on the home page (e.g. a /[locale]/courses/[slug] route) — go home to the anchor, locale-aware.
+      window.location.href = id === 'home' ? `/${locale}` : `/${locale}#${id}`;
     }
   };
 
@@ -125,6 +129,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenContact, activeSection, se
         </nav>
 
         <div className="hidden lg:flex items-center gap-1.5">
+          <LanguageSwitcher />
           <ThemeToggle />
           <button
             onClick={() => setSearchOpen(true)}
@@ -153,6 +158,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenContact, activeSection, se
         </div>
 
         <div className="lg:hidden flex items-center gap-1">
+          <LanguageSwitcher />
           <ThemeToggle />
           <button
             onClick={() => setSearchOpen(true)}
