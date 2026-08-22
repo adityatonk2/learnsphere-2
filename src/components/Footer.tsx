@@ -21,9 +21,11 @@ export const Footer: React.FC<FooterProps> = ({ onOpenContact, setActiveSection 
   const containerRef = useScrollReveal({ y: 40, duration: 0.9 });
   const scrollTo = (id: string) => {
     setActiveSection(id);
-    const element = document.getElementById(id);
+    const element = typeof document !== 'undefined' ? document.getElementById(id) : null;
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
+    } else if (typeof window !== 'undefined') {
+      window.location.href = id === 'home' ? '/' : `/#${id}`;
     }
   };
 

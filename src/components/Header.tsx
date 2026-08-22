@@ -1,8 +1,9 @@
 "use client";
 
 import React, { useState, useRef, useEffect } from 'react';
-import { ChevronDown, Menu, X, Globe, Phone, Mail, Sparkles, BookOpen } from 'lucide-react';
+import { ChevronDown, Menu, X, Globe, Phone, Mail, Sparkles, BookOpen, Search } from 'lucide-react';
 import { LEARNING_OPTIONS } from '../data/coursesData';
+import { SearchModal } from './SearchModal';
 
 interface HeaderProps {
   onOpenContact: (subject?: string) => void;
@@ -13,6 +14,7 @@ interface HeaderProps {
 export const Header: React.FC<HeaderProps> = ({ onOpenContact, activeSection, setActiveSection }) => {
   const [learningDropdownOpen, setLearningDropdownOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [searchOpen, setSearchOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -25,13 +27,33 @@ export const Header: React.FC<HeaderProps> = ({ onOpenContact, activeSection, se
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
+  // Global shortcut: Cmd/Ctrl+K, or "/" when not typing in a field, opens search.
+  useEffect(() => {
+    const handleShortcut = (e: KeyboardEvent) => {
+      const target = e.target as HTMLElement | null;
+      const typing = target && (target.tagName === 'INPUT' || target.tagName === 'TEXTAREA' || target.isContentEditable);
+      if ((e.key === 'k' || e.key === 'K') && (e.metaKey || e.ctrlKey)) {
+        e.preventDefault();
+        setSearchOpen((v) => !v);
+      } else if (e.key === '/' && !typing && !searchOpen) {
+        e.preventDefault();
+        setSearchOpen(true);
+      }
+    };
+    document.addEventListener('keydown', handleShortcut);
+    return () => document.removeEventListener('keydown', handleShortcut);
+  }, [searchOpen]);
+
   const scrollToSection = (id: string) => {
     setActiveSection(id);
     setMobileMenuOpen(false);
     setLearningDropdownOpen(false);
-    const element = document.getElementById(id);
+    const element = typeof document !== 'undefined' ? document.getElementById(id) : null;
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
+    } else if (typeof window !== 'undefined') {
+      // Not on the home page (e.g. a /courses/[slug] route) — go home to the anchor.
+      window.location.href = id === 'home' ? '/' : `/#${id}`;
     }
   };
 
@@ -174,6 +196,15 @@ export const Header: React.FC<HeaderProps> = ({ onOpenContact, activeSection, se
         {/* Action Buttons */}
         <div className="hidden lg:flex items-center gap-3">
           <button
+            onClick={() => setSearchOpen(true)}
+            className="flex items-center gap-2 text-sm text-slate-400 bg-slate-100/70 hover:bg-slate-100 border border-slate-200 hover:border-slate-300 pl-3 pr-2 py-2 rounded-lg transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0B5198]"
+            aria-label="Search the site"
+          >
+            <Search className="w-4 h-4" />
+            <span>Search</span>
+            <kbd className="text-[10px] font-sans font-semibold text-slate-400 bg-white border border-slate-200 rounded px-1.5 py-0.5">⌘K</kbd>
+          </button>
+          <button
             onClick={() => onOpenContact('Connect with Course Advisor')}
             className="text-sm font-semibold text-[#0B5198] border border-[#0B5198]/30 hover:border-[#0B5198] hover:bg-sky-50 px-5 py-2.5 rounded-lg transition-all active:scale-95"
           >
@@ -187,14 +218,23 @@ export const Header: React.FC<HeaderProps> = ({ onOpenContact, activeSection, se
           </button>
         </div>
 
-        {/* Mobile Menu Button */}
-        <button
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="lg:hidden p-2 rounded-lg text-slate-700 hover:bg-slate-100 transition-colors"
-          aria-label="Toggle menu"
-        >
-          {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-        </button>
+        {/* Mobile Controls */}
+        <div className="lg:hidden flex items-center gap-1">
+          <button
+            onClick={() => setSearchOpen(true)}
+            className="p-2 rounded-lg text-slate-700 hover:bg-slate-100 transition-colors"
+            aria-label="Search the site"
+          >
+            <Search className="w-6 h-6" />
+          </button>
+          <button
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="p-2 rounded-lg text-slate-700 hover:bg-slate-100 transition-colors"
+            aria-label="Toggle menu"
+          >
+            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Drawer Menu */}
@@ -260,6 +300,13 @@ export const Header: React.FC<HeaderProps> = ({ onOpenContact, activeSection, se
           </button>
         </div>
       )}
+
+      {/* Global Search (Command Palette) */}
+      <SearchModal
+        isOpen={searchOpen}
+        onClose={() => setSearchOpen(false)}
+        onNavigate={(sectionId) => scrollToSection(sectionId)}
+      />
     </header>
   );
 };

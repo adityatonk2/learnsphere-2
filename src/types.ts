@@ -3,7 +3,9 @@ export interface Course {
   title: string;
   code?: string;
   duration?: string;
-  level?: 'Beginner' | 'Intermediate' | 'Advanced' | 'Expert';
+  level?: string;
+  domain?: string;
+  slug?: string;
   description?: string;
   popular?: boolean;
 }

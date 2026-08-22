@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Header } from './components/Header';
 import { HeroSection } from './components/HeroSection';
 import { SolutionsSection } from './components/SolutionsSection';
@@ -23,6 +23,16 @@ export default function App() {
   const [isContactOpen, setIsContactOpen] = useState(false);
   const [contactDefaultSubject, setContactDefaultSubject] = useState<string>('');
   const [isPartnerOpen, setIsPartnerOpen] = useState(false);
+
+  // When arriving from another route with a hash (e.g. /#courses), scroll there.
+  useEffect(() => {
+    if (typeof window !== 'undefined' && window.location.hash) {
+      const id = window.location.hash.slice(1);
+      setTimeout(() => {
+        document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+      }, 80);
+    }
+  }, []);
 
   const handleOpenContact = (subject?: string) => {
     if (subject) {
