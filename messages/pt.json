@@ -1,9 +1,17 @@
 {
-  "Common": { "getStarted": "Começar", "search": "Pesquisar" },
+  "Common": {
+    "getStarted": "Começar",
+    "search": "Pesquisar"
+  },
   "Header": {
     "globalReach": "Formação global em mais de 40 países",
     "enterpriseSupport": "Suporte empresarial: +1 (800) 555-8920",
-    "nav": { "solutions": "Soluções", "training": "Formação", "courses": "Cursos", "about": "Sobre nós" },
+    "nav": {
+      "solutions": "Soluções",
+      "training": "Formação",
+      "courses": "Cursos",
+      "about": "Sobre nós"
+    },
     "connectAdvisor": "Falar com um consultor",
     "connectAdvisorSubject": "Falar com um consultor de cursos",
     "searchTitle": "Pesquisar (⌘K)"
@@ -30,12 +38,151 @@
     "heading": "Porquê a NexMentor Solutions?",
     "subheading": "Um parceiro de confiança para organizações que precisam de resultados prontos para certificação, não apenas horas de formação.",
     "reasons": [
-      { "title": "Currículo alinhado com fornecedores", "description": "Currículo alinhado com AWS, Microsoft, EC-Council, ISC2, PMI e mais — cada curso corresponde diretamente a exames de certificação reais." },
-      { "title": "Formadores especialistas certificados", "description": "Uma equipa global com mais de 1.200 instrutores certificados e com experiência na indústria — não simples leitores de conteúdo." },
-      { "title": "Presença global de entrega", "description": "Entrega presencial, virtual ou híbrida em mais de 40 países, alinhada com o fuso horário e infraestrutura da sua equipa." },
-      { "title": "Formatos de aprendizagem flexíveis", "description": "De percursos Flexi ao próprio ritmo a coortes presenciais com formador dedicado — escolha o formato certo para a sua equipa." },
-      { "title": "Resultados de exame comprovados", "description": "Uma taxa de aprovação consistentemente alta, apoiada por material oficial, laboratórios práticos e percursos estruturados de preparação." },
-      { "title": "Apoio dedicado de consultor", "description": "Cada aluno e conta empresarial recebe um consultor de cursos para planeamento, agendamento e orientação de carreira." }
+      {
+        "title": "Currículo alinhado com fornecedores",
+        "description": "Currículo alinhado com AWS, Microsoft, EC-Council, ISC2, PMI e mais — cada curso corresponde diretamente a exames de certificação reais."
+      },
+      {
+        "title": "Formadores especialistas certificados",
+        "description": "Uma equipa global com mais de 1.200 instrutores certificados e com experiência na indústria — não simples leitores de conteúdo."
+      },
+      {
+        "title": "Presença global de entrega",
+        "description": "Entrega presencial, virtual ou híbrida em mais de 40 países, alinhada com o fuso horário e infraestrutura da sua equipa."
+      },
+      {
+        "title": "Formatos de aprendizagem flexíveis",
+        "description": "De percursos Flexi ao próprio ritmo a coortes presenciais com formador dedicado — escolha o formato certo para a sua equipa."
+      },
+      {
+        "title": "Resultados de exame comprovados",
+        "description": "Uma taxa de aprovação consistentemente alta, apoiada por material oficial, laboratórios práticos e percursos estruturados de preparação."
+      },
+      {
+        "title": "Apoio dedicado de consultor",
+        "description": "Cada aluno e conta empresarial recebe um consultor de cursos para planeamento, agendamento e orientação de carreira."
+      }
     ]
+  },
+  "CourseDirectory": {
+    "eyebrow": "Diretório de certificações",
+    "heading": "Melhores cursos de tecnologia",
+    "subtitle": "Explore mais de {count} programas de formação oficiais dos principais fornecedores de tecnologia.",
+    "searchPlaceholder": "Pesquisar CEH, CISSP, Azure, Kubernetes...",
+    "clear": "Limpar",
+    "providersLabel": "Fornecedores de certificação",
+    "providerPrefix": "Fornecedor: ",
+    "popular": "Popular",
+    "viewLabel": "Ver",
+    "searchResultsTitle": "Resultados da pesquisa ({count})",
+    "matchingQuery": "Correspondendo a \"{query}\"",
+    "vendorCoursesTitle": "Cursos {vendor}",
+    "programsCount": "{count} programas de formação oficiais",
+    "vendorAlignedBadge": "Currículo alinhado com fornecedores",
+    "noResults": "Nenhum curso encontrado para \"{query}\".",
+    "resetSearch": "Repor pesquisa",
+    "requestCatalog": "Solicitar catálogo completo e preços"
+  },
+  "Levels": {
+    "Foundation": "Fundamentos",
+    "Beginner": "Iniciante",
+    "Intermediate": "Intermédio",
+    "Advanced": "Avançado",
+    "Expert": "Especialista",
+    "Professional": "Profissional",
+    "Associate": "Associado",
+    "Administration": "Administração"
+  },
+  "SearchModal": {
+    "placeholder": "Pesquisar cursos, certificações, páginas…",
+    "closeLabel": "Fechar pesquisa",
+    "ariaLabel": "Pesquisar na NexMentor Solutions",
+    "noMatches": "Sem resultados para \"{query}\"",
+    "tryHint": "Experimente um fornecedor (AWS, CISSP), um tema ou o nome de uma página.",
+    "coursesGroup": "Cursos",
+    "pagesGroup": "Páginas",
+    "learningGroup": "Opções de aprendizagem",
+    "badgeCourse": "Curso",
+    "badgePage": "Página",
+    "badgeLearning": "Aprendizagem",
+    "navigate": "navegar",
+    "open": "abrir",
+    "close": "fechar",
+    "escKey": "esc",
+    "resultsCount": "{count, plural, one {# resultado} other {# resultados}}",
+    "learningOptionSub": "Opção de aprendizagem",
+    "sections": {
+      "home": {
+        "label": "Início",
+        "sub": "Voltar ao topo"
+      },
+      "solutions": {
+        "label": "Soluções",
+        "sub": "Soluções de aprendizagem empresarial"
+      },
+      "why-us": {
+        "label": "Porquê a NexMentor Solutions",
+        "sub": "O que nos distingue"
+      },
+      "training-modes": {
+        "label": "Modalidades de formação",
+        "sub": "Formatos de entrega flexíveis"
+      },
+      "courses": {
+        "label": "Melhores cursos de tecnologia",
+        "sub": "Diretório completo de certificações"
+      },
+      "leadership": {
+        "label": "Liderança",
+        "sub": "Conheça os fundadores"
+      },
+      "mission-vision-values": {
+        "label": "Missão, visão e valores",
+        "sub": "O que defendemos"
+      },
+      "testimonials": {
+        "label": "Testemunhos",
+        "sub": "Opiniões de alunos e clientes"
+      },
+      "about": {
+        "label": "Sobre nós",
+        "sub": "Visão geral da empresa"
+      }
+    }
+  },
+  "LearningOptions": {
+    "items": [
+      "Formação online ao vivo",
+      "Formação presencial",
+      "Formação individual",
+      "Formador no local",
+      "Flexi",
+      "Formação personalizada",
+      "Webinar como serviço",
+      "MentorQuiz",
+      "Próximos webinars"
+    ]
+  },
+  "Courses": {
+    "rh-1": "Red Hat Certified System Administrator (RHCSA)",
+    "rh-2": "Red Hat Certified Engineer (RHCE)",
+    "rh-3": "Administração Red Hat OpenShift II: operação de um cluster de produção",
+    "rh-4": "Automação Red Hat Enterprise Linux com Ansible",
+    "bcs-1": "Diploma internacional BCS em análise de negócio",
+    "bcs-2": "Certificado fundamental BCS em análise de negócio",
+    "bcs-3": "Certificado de praticante BCS em engenharia de requisitos",
+    "bcs-4": "Certificado fundamental BCS em experiência do utilizador",
+    "pmi-1": "Project Management Professional (PMP)",
+    "pmi-2": "Certified Associate in Project Management (CAPM)",
+    "pmi-3": "PMI Agile Certified Practitioner (PMI-ACP)",
+    "pmi-4": "PMI Professional in Business Analysis (PMI-PBA)"
+  },
+  "Stats": {
+    "studentsTrained": "Alunos formados",
+    "employeesTrained": "Colaboradores formados",
+    "coursesOffered": "Cursos oferecidos",
+    "certificationVendors": "Fornecedores de certificação",
+    "successfulLearners": "Alunos bem-sucedidos",
+    "countriesServed": "Países atendidos"
   }
 }

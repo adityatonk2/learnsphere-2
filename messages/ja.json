@@ -1,9 +1,17 @@
 {
-  "Common": { "getStarted": "始める", "search": "検索" },
+  "Common": {
+    "getStarted": "始める",
+    "search": "検索"
+  },
   "Header": {
     "globalReach": "40か国以上でグローバルトレーニングを提供",
     "enterpriseSupport": "エンタープライズサポート: +1 (800) 555-8920",
-    "nav": { "solutions": "ソリューション", "training": "トレーニング", "courses": "コース", "about": "会社概要" },
+    "nav": {
+      "solutions": "ソリューション",
+      "training": "トレーニング",
+      "courses": "コース",
+      "about": "会社概要"
+    },
     "connectAdvisor": "アドバイザーに相談",
     "connectAdvisorSubject": "コースアドバイザーに相談",
     "searchTitle": "検索 (⌘K)"
@@ -30,12 +38,151 @@
     "heading": "NexMentor Solutionsが選ばれる理由",
     "subheading": "研修時間だけでなく、認定取得に直結する成果を求める組織にとって信頼できるパートナーです。",
     "reasons": [
-      { "title": "ベンダー準拠カリキュラム", "description": "AWS、Microsoft、EC-Council、ISC2、PMIなどに準拠したカリキュラム — すべてのコースが実際の認定試験に直結しています。" },
-      { "title": "認定マスタートレーナー", "description": "1,200名以上の実務経験豊富なベンダー認定講師によるグローバルチーム — 単なる内容の読み上げではありません。" },
-      { "title": "グローバルな提供体制", "description": "40か国以上で対面・オンライン・ハイブリッド形式に対応し、チームのタイムゾーンとインフラに合わせて提供します。" },
-      { "title": "柔軟な学習形式", "description": "自己ペースのFlexiトラックから、講師派遣型の対面コホートまで、貴社に合った形式を選択できます。" },
-      { "title": "実証された試験結果", "description": "公式教材、実践ラボ、体系的な試験対策トラックに支えられた、常に高い試験合格率。" },
-      { "title": "専任アドバイザーサポート", "description": "すべての受講者・法人アカウントに、計画・スケジュール・キャリアパスの相談ができる専任アドバイザーが付きます。" }
+      {
+        "title": "ベンダー準拠カリキュラム",
+        "description": "AWS、Microsoft、EC-Council、ISC2、PMIなどに準拠したカリキュラム — すべてのコースが実際の認定試験に直結しています。"
+      },
+      {
+        "title": "認定マスタートレーナー",
+        "description": "1,200名以上の実務経験豊富なベンダー認定講師によるグローバルチーム — 単なる内容の読み上げではありません。"
+      },
+      {
+        "title": "グローバルな提供体制",
+        "description": "40か国以上で対面・オンライン・ハイブリッド形式に対応し、チームのタイムゾーンとインフラに合わせて提供します。"
+      },
+      {
+        "title": "柔軟な学習形式",
+        "description": "自己ペースのFlexiトラックから、講師派遣型の対面コホートまで、貴社に合った形式を選択できます。"
+      },
+      {
+        "title": "実証された試験結果",
+        "description": "公式教材、実践ラボ、体系的な試験対策トラックに支えられた、常に高い試験合格率。"
+      },
+      {
+        "title": "専任アドバイザーサポート",
+        "description": "すべての受講者・法人アカウントに、計画・スケジュール・キャリアパスの相談ができる専任アドバイザーが付きます。"
+      }
     ]
+  },
+  "CourseDirectory": {
+    "eyebrow": "認定コースディレクトリ",
+    "heading": "人気のテクノロジーコース",
+    "subtitle": "主要テクノロジーベンダーの{count}以上の公式トレーニングプログラムをご覧ください。",
+    "searchPlaceholder": "CEH、CISSP、Azure、Kubernetesを検索...",
+    "clear": "クリア",
+    "providersLabel": "認定プロバイダー",
+    "providerPrefix": "プロバイダー: ",
+    "popular": "人気",
+    "viewLabel": "詳細を見る",
+    "searchResultsTitle": "検索結果 ({count})",
+    "matchingQuery": "「{query}」に一致",
+    "vendorCoursesTitle": "{vendor} コース",
+    "programsCount": "{count}の公式トレーニングプログラム",
+    "vendorAlignedBadge": "ベンダー準拠カリキュラム",
+    "noResults": "「{query}」に一致するコースが見つかりません。",
+    "resetSearch": "検索をリセット",
+    "requestCatalog": "完全なカタログと価格を問い合わせる"
+  },
+  "Levels": {
+    "Foundation": "基礎",
+    "Beginner": "初級",
+    "Intermediate": "中級",
+    "Advanced": "上級",
+    "Expert": "エキスパート",
+    "Professional": "プロフェッショナル",
+    "Associate": "アソシエイト",
+    "Administration": "管理者向け"
+  },
+  "SearchModal": {
+    "placeholder": "コース、認定、ページを検索…",
+    "closeLabel": "検索を閉じる",
+    "ariaLabel": "NexMentor Solutionsを検索",
+    "noMatches": "「{query}」に一致する結果はありません",
+    "tryHint": "ベンダー名（AWS、CISSP）、トピック、またはページ名で検索してください。",
+    "coursesGroup": "コース",
+    "pagesGroup": "ページ",
+    "learningGroup": "学習オプション",
+    "badgeCourse": "コース",
+    "badgePage": "ページ",
+    "badgeLearning": "学習",
+    "navigate": "移動",
+    "open": "開く",
+    "close": "閉じる",
+    "escKey": "esc",
+    "resultsCount": "{count}件の結果",
+    "learningOptionSub": "学習オプション",
+    "sections": {
+      "home": {
+        "label": "ホーム",
+        "sub": "トップに戻る"
+      },
+      "solutions": {
+        "label": "ソリューション",
+        "sub": "企業向け学習ソリューション"
+      },
+      "why-us": {
+        "label": "NexMentor Solutionsが選ばれる理由",
+        "sub": "私たちの強み"
+      },
+      "training-modes": {
+        "label": "トレーニング形式",
+        "sub": "柔軟な提供形式"
+      },
+      "courses": {
+        "label": "人気のテクノロジーコース",
+        "sub": "完全な認定コースディレクトリ"
+      },
+      "leadership": {
+        "label": "リーダーシップ",
+        "sub": "創業者紹介"
+      },
+      "mission-vision-values": {
+        "label": "ミッション・ビジョン・バリュー",
+        "sub": "私たちが大切にしていること"
+      },
+      "testimonials": {
+        "label": "お客様の声",
+        "sub": "受講者・クライアントのフィードバック"
+      },
+      "about": {
+        "label": "会社概要",
+        "sub": "会社の概要"
+      }
+    }
+  },
+  "LearningOptions": {
+    "items": [
+      "ライブオンライン研修",
+      "対面研修",
+      "1対1研修",
+      "講師派遣（FMAT）",
+      "フレキシ",
+      "カスタマイズ研修",
+      "ウェビナーサービス",
+      "メンタークイズ",
+      "今後のウェビナー"
+    ]
+  },
+  "Courses": {
+    "rh-1": "Red Hat認定システム管理者（RHCSA）",
+    "rh-2": "Red Hat認定エンジニア（RHCE）",
+    "rh-3": "Red Hat OpenShift管理 II：本番クラスタの運用",
+    "rh-4": "AnsibleによるRed Hat Enterprise Linuxオートメーション",
+    "bcs-1": "BCSビジネス分析国際ディプロマ",
+    "bcs-2": "BCSビジネス分析ファウンデーション認定",
+    "bcs-3": "BCS要件エンジニアリング実務者認定",
+    "bcs-4": "BCSユーザーエクスペリエンスファウンデーション認定",
+    "pmi-1": "プロジェクトマネジメント・プロフェッショナル（PMP）",
+    "pmi-2": "認定アソシエイト・イン・プロジェクトマネジメント（CAPM）",
+    "pmi-3": "PMIアジャイル認定実務者（PMI-ACP）",
+    "pmi-4": "PMIビジネス分析プロフェッショナル（PMI-PBA）"
+  },
+  "Stats": {
+    "studentsTrained": "研修修了学生数",
+    "employeesTrained": "研修修了従業員数",
+    "coursesOffered": "提供コース数",
+    "certificationVendors": "認定ベンダー数",
+    "successfulLearners": "合格者数",
+    "countriesServed": "対応国数"
   }
 }

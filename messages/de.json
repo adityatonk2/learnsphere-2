@@ -1,9 +1,17 @@
 {
-  "Common": { "getStarted": "Jetzt starten", "search": "Suchen" },
+  "Common": {
+    "getStarted": "Jetzt starten",
+    "search": "Suchen"
+  },
   "Header": {
     "globalReach": "Globale Schulungen in über 40 Ländern",
     "enterpriseSupport": "Enterprise-Support: +1 (800) 555-8920",
-    "nav": { "solutions": "Lösungen", "training": "Schulung", "courses": "Kurse", "about": "Über uns" },
+    "nav": {
+      "solutions": "Lösungen",
+      "training": "Schulung",
+      "courses": "Kurse",
+      "about": "Über uns"
+    },
     "connectAdvisor": "Berater kontaktieren",
     "connectAdvisorSubject": "Kursberater kontaktieren",
     "searchTitle": "Suchen (⌘K)"
@@ -30,12 +38,151 @@
     "heading": "Warum NexMentor Solutions?",
     "subheading": "Ein vertrauenswürdiger Partner für Organisationen, die zertifizierungsreife Ergebnisse brauchen — nicht nur Schulungsstunden.",
     "reasons": [
-      { "title": "Herstellerorientierter Lehrplan", "description": "Lehrplan abgestimmt auf AWS, Microsoft, EC-Council, ISC2, PMI und mehr — jeder Kurs entspricht direkt echten Zertifizierungsprüfungen." },
-      { "title": "Zertifizierte Meistertrainer", "description": "Ein globales Team von über 1.200 praxiserfahrenen, herstellerzertifizierten Trainern — keine bloßen Inhaltevorleser." },
-      { "title": "Globale Präsenz", "description": "Vor-Ort-, virtuelle oder hybride Durchführung in über 40 Ländern, abgestimmt auf Zeitzone und Infrastruktur Ihres Teams." },
-      { "title": "Flexible Lernformate", "description": "Von selbstgesteuerten Flexi-Tracks bis zu Vor-Ort-Kohorten mit Trainer vor Ort — wählen Sie das passende Format für Ihre Belegschaft." },
-      { "title": "Bewährte Prüfungsergebnisse", "description": "Eine durchgehend hohe Erfolgsquote, gestützt durch offizielles Kursmaterial, praktische Labore und strukturierte Prüfungsvorbereitung." },
-      { "title": "Persönliche Beratung", "description": "Jeder Lernende und jedes Unternehmenskonto erhält einen Kursberater für Planung, Terminierung und Karriereberatung." }
+      {
+        "title": "Herstellerorientierter Lehrplan",
+        "description": "Lehrplan abgestimmt auf AWS, Microsoft, EC-Council, ISC2, PMI und mehr — jeder Kurs entspricht direkt echten Zertifizierungsprüfungen."
+      },
+      {
+        "title": "Zertifizierte Meistertrainer",
+        "description": "Ein globales Team von über 1.200 praxiserfahrenen, herstellerzertifizierten Trainern — keine bloßen Inhaltevorleser."
+      },
+      {
+        "title": "Globale Präsenz",
+        "description": "Vor-Ort-, virtuelle oder hybride Durchführung in über 40 Ländern, abgestimmt auf Zeitzone und Infrastruktur Ihres Teams."
+      },
+      {
+        "title": "Flexible Lernformate",
+        "description": "Von selbstgesteuerten Flexi-Tracks bis zu Vor-Ort-Kohorten mit Trainer vor Ort — wählen Sie das passende Format für Ihre Belegschaft."
+      },
+      {
+        "title": "Bewährte Prüfungsergebnisse",
+        "description": "Eine durchgehend hohe Erfolgsquote, gestützt durch offizielles Kursmaterial, praktische Labore und strukturierte Prüfungsvorbereitung."
+      },
+      {
+        "title": "Persönliche Beratung",
+        "description": "Jeder Lernende und jedes Unternehmenskonto erhält einen Kursberater für Planung, Terminierung und Karriereberatung."
+      }
     ]
+  },
+  "CourseDirectory": {
+    "eyebrow": "Zertifizierungsverzeichnis",
+    "heading": "Top-Technologiekurse",
+    "subtitle": "Entdecken Sie über {count} offizielle Schulungsprogramme führender Technologieanbieter.",
+    "searchPlaceholder": "CEH, CISSP, Azure, Kubernetes suchen...",
+    "clear": "Löschen",
+    "providersLabel": "Zertifizierungsanbieter",
+    "providerPrefix": "Anbieter: ",
+    "popular": "Beliebt",
+    "viewLabel": "Ansehen",
+    "searchResultsTitle": "Suchergebnisse ({count})",
+    "matchingQuery": "Treffer für \"{query}\"",
+    "vendorCoursesTitle": "{vendor}-Kurse",
+    "programsCount": "{count} offizielle Schulungsprogramme",
+    "vendorAlignedBadge": "Herstellerorientierter Lehrplan",
+    "noResults": "Keine Kurse für \"{query}\" gefunden.",
+    "resetSearch": "Suche zurücksetzen",
+    "requestCatalog": "Vollständigen Katalog & Preise anfordern"
+  },
+  "Levels": {
+    "Foundation": "Grundlagen",
+    "Beginner": "Einsteiger",
+    "Intermediate": "Mittelstufe",
+    "Advanced": "Fortgeschritten",
+    "Expert": "Experte",
+    "Professional": "Professional",
+    "Associate": "Associate",
+    "Administration": "Administration"
+  },
+  "SearchModal": {
+    "placeholder": "Kurse, Zertifizierungen, Seiten suchen…",
+    "closeLabel": "Suche schließen",
+    "ariaLabel": "NexMentor Solutions durchsuchen",
+    "noMatches": "Keine Treffer für \"{query}\"",
+    "tryHint": "Versuchen Sie einen Anbieter (AWS, CISSP), ein Thema oder einen Seitennamen.",
+    "coursesGroup": "Kurse",
+    "pagesGroup": "Seiten",
+    "learningGroup": "Lernoptionen",
+    "badgeCourse": "Kurs",
+    "badgePage": "Seite",
+    "badgeLearning": "Lernen",
+    "navigate": "navigieren",
+    "open": "öffnen",
+    "close": "schließen",
+    "escKey": "esc",
+    "resultsCount": "{count, plural, one {# Ergebnis} other {# Ergebnisse}}",
+    "learningOptionSub": "Lernoption",
+    "sections": {
+      "home": {
+        "label": "Startseite",
+        "sub": "Zurück nach oben"
+      },
+      "solutions": {
+        "label": "Lösungen",
+        "sub": "Lernlösungen für Unternehmen"
+      },
+      "why-us": {
+        "label": "Warum NexMentor Solutions",
+        "sub": "Was uns auszeichnet"
+      },
+      "training-modes": {
+        "label": "Schulungsformate",
+        "sub": "Flexible Durchführungsformate"
+      },
+      "courses": {
+        "label": "Top-Technologiekurse",
+        "sub": "Vollständiges Zertifizierungsverzeichnis"
+      },
+      "leadership": {
+        "label": "Führung",
+        "sub": "Lernen Sie die Gründer kennen"
+      },
+      "mission-vision-values": {
+        "label": "Mission, Vision & Werte",
+        "sub": "Wofür wir stehen"
+      },
+      "testimonials": {
+        "label": "Erfahrungsberichte",
+        "sub": "Feedback von Lernenden und Kunden"
+      },
+      "about": {
+        "label": "Über uns",
+        "sub": "Unternehmensüberblick"
+      }
+    }
+  },
+  "LearningOptions": {
+    "items": [
+      "Live-Online-Schulung",
+      "Präsenzschulung",
+      "Einzeltraining",
+      "Trainer vor Ort",
+      "Flexi",
+      "Individuelle Schulung",
+      "Webinar als Service",
+      "MentorQuiz",
+      "Bevorstehende Webinare"
+    ]
+  },
+  "Courses": {
+    "rh-1": "Red Hat Certified System Administrator (RHCSA)",
+    "rh-2": "Red Hat Certified Engineer (RHCE)",
+    "rh-3": "Red Hat OpenShift Administration II: Betrieb eines Produktionsclusters",
+    "rh-4": "Red Hat Enterprise Linux Automatisierung mit Ansible",
+    "bcs-1": "BCS International Diploma in Business Analysis",
+    "bcs-2": "BCS Foundation Certificate in Business Analysis",
+    "bcs-3": "BCS Practitioner Certificate in Requirements Engineering",
+    "bcs-4": "BCS Foundation Certificate in User Experience",
+    "pmi-1": "Project Management Professional (PMP)",
+    "pmi-2": "Certified Associate in Project Management (CAPM)",
+    "pmi-3": "PMI Agile Certified Practitioner (PMI-ACP)",
+    "pmi-4": "PMI Professional in Business Analysis (PMI-PBA)"
+  },
+  "Stats": {
+    "studentsTrained": "Geschulte Studenten",
+    "employeesTrained": "Geschulte Mitarbeiter",
+    "coursesOffered": "Angebotene Kurse",
+    "certificationVendors": "Zertifizierungsanbieter",
+    "successfulLearners": "Erfolgreiche Lernende",
+    "countriesServed": "Betreute Länder"
   }
 }
