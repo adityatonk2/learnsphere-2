@@ -10,7 +10,7 @@ const PILLARS = [
     label: 'Our Mission',
     heading: 'Make certification-grade expertise accessible to every workforce.',
     description:
-      'To transform how organizations build technical capability — delivering official, vendor-aligned training that turns learning hours into job-ready, certified skills.',
+      'To transform how organizations build technical capability — delivering vendor-aligned training that turns learning hours into job-ready, certified skills.',
   },
   {
     icon: Eye,
@@ -24,7 +24,7 @@ const PILLARS = [
     label: 'Our Values',
     heading: 'Integrity, mastery, and outcomes over shortcuts.',
     description:
-      'We stand behind official courseware and genuine outcomes — real instructors, real labs, real exam readiness, and honest reporting to every client we serve.',
+      'We stand behind vendor-aligned courseware and genuine outcomes — real instructors, real labs, real exam readiness, and honest reporting to every client we serve.',
   },
 ];
 
