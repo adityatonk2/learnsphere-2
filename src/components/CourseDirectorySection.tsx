@@ -2,11 +2,13 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 import { VENDORS_DATA } from '../data/coursesData';
 import { getCourseById } from '../data/courseContent';
 import { Course } from '../types';
 import { ChevronRight, Search, ArrowRight } from 'lucide-react';
 import { useScrollReveal } from '../hooks/useScrollReveal';
+import { translatedTitle, translatedLevel } from '../lib/courseTranslation';
 
 interface CourseDirectorySectionProps {
   onOpenContact: (courseName?: string) => void;
@@ -18,28 +20,34 @@ const slugFor = (c: Course) => getCourseById(c.id)?.slug;
 
 const CourseCard: React.FC<{ course: SearchCourse; showProvider?: boolean }> = ({ course, showProvider }) => {
   const slug = slugFor(course);
+  const tCourses = useTranslations('Courses');
+  const tLevels = useTranslations('Levels');
+  const tDir = useTranslations('CourseDirectory');
+  const title = translatedTitle(tCourses, course);
+  const level = translatedLevel(tLevels, course.level);
+
   const inner = (
     <>
       <div className="space-y-1">
         <h4 className="text-sm font-medium text-slate-800 dark:text-slate-100 group-hover:text-[#0B5198] transition-colors leading-snug">
-          {course.title}
+          {title}
         </h4>
         {showProvider && course.vendorName && (
-          <span className="text-[11px] font-semibold text-slate-400 block">Provider: {course.vendorName}</span>
+          <span className="text-[11px] font-semibold text-slate-400 block">{tDir('providerPrefix')}{course.vendorName}</span>
         )}
       </div>
       <div className="mt-2.5 flex items-center gap-2 flex-wrap">
         {course.code && (
           <span className="text-[11px] font-mono font-medium text-slate-500 dark:text-slate-400 bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded">{course.code}</span>
         )}
-        {course.level && (
-          <span className="text-[10px] font-semibold text-slate-500 dark:text-slate-400 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 px-1.5 py-0.5 rounded">{course.level}</span>
+        {level && (
+          <span className="text-[10px] font-semibold text-slate-500 dark:text-slate-400 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 px-1.5 py-0.5 rounded">{level}</span>
         )}
         {course.popular && (
-          <span className="text-[10px] font-bold text-amber-700 bg-amber-50 dark:bg-amber-950/40 px-1.5 py-0.5 rounded border border-amber-200">Popular</span>
+          <span className="text-[10px] font-bold text-amber-700 bg-amber-50 dark:bg-amber-950/40 px-1.5 py-0.5 rounded border border-amber-200">{tDir('popular')}</span>
         )}
         <span className="ml-auto text-[11px] font-semibold text-[#0B5198] dark:text-sky-400 opacity-0 group-hover:opacity-100 flex items-center gap-0.5 transition-opacity">
-          View <ArrowRight className="w-3 h-3" />
+          {tDir('viewLabel')} <ArrowRight className="w-3 h-3" />
         </span>
       </div>
     </>
@@ -59,6 +67,7 @@ export const CourseDirectorySection: React.FC<CourseDirectorySectionProps> = ({ 
   const [selectedVendorId, setSelectedVendorId] = useState<string>('aws');
   const [searchQuery, setSearchQuery] = useState<string>('');
   const containerRef = useScrollReveal({ y: 50, duration: 0.9 });
+  const t = useTranslations('CourseDirectory');
 
   const selectedVendor = VENDORS_DATA.find((v) => v.id === selectedVendorId) || VENDORS_DATA[0];
 
@@ -71,7 +80,6 @@ export const CourseDirectorySection: React.FC<CourseDirectorySectionProps> = ({ 
       )
     : [];
 
-  // Group the selected vendor's courses by domain (falls back to a single group).
   const domainGroups = React.useMemo(() => {
     const map = new Map<string, Course[]>();
     for (const c of selectedVendor.courses) {
@@ -82,16 +90,17 @@ export const CourseDirectorySection: React.FC<CourseDirectorySectionProps> = ({ 
     return Array.from(map.entries());
   }, [selectedVendor]);
 
+  const totalCourses = VENDORS_DATA.reduce((n, v) => n + v.courses.length, 0);
+
   return (
     <section id="courses" className="py-20 bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 border-t border-slate-100 dark:border-slate-800">
       <div ref={containerRef} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header & Instant Course Search */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6 gsap-reveal">
           <div>
-            <span className="text-[#0B5198] dark:text-sky-400 font-bold text-sm uppercase tracking-wider block mb-1">Certification Directory</span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0A2540] dark:text-white">Top Technology Courses</h2>
+            <span className="text-[#0B5198] dark:text-sky-400 font-bold text-sm uppercase tracking-wider block mb-1">{t('eyebrow')}</span>
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0A2540] dark:text-white">{t('heading')}</h2>
             <p className="text-slate-500 dark:text-slate-400 text-base mt-1">
-              Explore {VENDORS_DATA.reduce((n, v) => n + v.courses.length, 0)}+ official training programs across leading technology vendors.
+              {t('subtitle', { count: totalCourses })}
             </p>
           </div>
 
@@ -99,21 +108,20 @@ export const CourseDirectorySection: React.FC<CourseDirectorySectionProps> = ({ 
             <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
             <input
               type="text"
-              placeholder="Search CEH, CISSP, Azure, Kubernetes..."
+              placeholder={t('searchPlaceholder')}
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="w-full pl-10 pr-4 py-2.5 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#0B5198] focus:bg-white dark:focus:bg-slate-900 transition-all"
             />
             {searchQuery && (
-              <button onClick={() => setSearchQuery('')} className="absolute right-3 top-1/2 -translate-y-1/2 text-xs text-slate-400 hover:text-slate-600 dark:hover:text-slate-300">Clear</button>
+              <button onClick={() => setSearchQuery('')} className="absolute right-3 top-1/2 -translate-y-1/2 text-xs text-slate-400 hover:text-slate-600 dark:hover:text-slate-300">{t('clear')}</button>
             )}
           </div>
         </div>
 
         <div className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden grid grid-cols-1 md:grid-cols-12 min-h-[500px] gsap-reveal">
-          {/* Vendor sidebar */}
           <div className="md:col-span-3 lg:col-span-3 border-b md:border-b-0 md:border-r border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900/50 py-2 max-h-[320px] overflow-y-auto md:max-h-[640px]">
-            <div className="px-4 py-2 text-[11px] font-bold text-slate-400 uppercase tracking-wider">Certification Providers</div>
+            <div className="px-4 py-2 text-[11px] font-bold text-slate-400 uppercase tracking-wider">{t('providersLabel')}</div>
             <div className="space-y-0.5">
               {VENDORS_DATA.map((vendor) => {
                 const isSelected = selectedVendorId === vendor.id && !q;
@@ -136,7 +144,6 @@ export const CourseDirectorySection: React.FC<CourseDirectorySectionProps> = ({ 
             </div>
           </div>
 
-          {/* Course panel */}
           <div className="md:col-span-9 lg:col-span-9 p-6 sm:p-10 flex flex-col justify-between">
             <div>
               <div className="flex items-center justify-between pb-6 mb-6 border-b border-slate-100 dark:border-slate-800">
@@ -146,12 +153,14 @@ export const CourseDirectorySection: React.FC<CourseDirectorySectionProps> = ({ 
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-[#0A2540] dark:text-white">
-                      {q ? `Search Results (${searchResults.length})` : `${selectedVendor.name} Courses`}
+                      {q ? t('searchResultsTitle', { count: searchResults.length }) : t('vendorCoursesTitle', { vendor: selectedVendor.name })}
                     </h3>
-                    <p className="text-xs text-slate-500 dark:text-slate-400">{q ? `Matching "${searchQuery}"` : `${selectedVendor.courses.length} official training programs`}</p>
+                    <p className="text-xs text-slate-500 dark:text-slate-400">
+                      {q ? t('matchingQuery', { query: searchQuery }) : t('programsCount', { count: selectedVendor.courses.length })}
+                    </p>
                   </div>
                 </div>
-                <span className="hidden sm:inline-block text-xs font-semibold text-sky-700 bg-sky-50 dark:bg-slate-800 px-3 py-1 rounded-full border border-sky-100 dark:border-sky-900/50">Vendor-Aligned Curriculum</span>
+                <span className="hidden sm:inline-block text-xs font-semibold text-sky-700 bg-sky-50 dark:bg-slate-800 px-3 py-1 rounded-full border border-sky-100 dark:border-sky-900/50">{t('vendorAlignedBadge')}</span>
               </div>
 
               {q ? (
@@ -163,8 +172,8 @@ export const CourseDirectorySection: React.FC<CourseDirectorySectionProps> = ({ 
                   </div>
                 ) : (
                   <div className="py-16 text-center space-y-3">
-                    <p className="text-slate-500 dark:text-slate-400 text-sm">No courses matching "{searchQuery}" found.</p>
-                    <button onClick={() => setSearchQuery('')} className="text-xs font-semibold text-[#0B5198] dark:text-sky-400 hover:underline">Reset Search</button>
+                    <p className="text-slate-500 dark:text-slate-400 text-sm">{t('noResults', { query: searchQuery })}</p>
+                    <button onClick={() => setSearchQuery('')} className="text-xs font-semibold text-[#0B5198] dark:text-sky-400 hover:underline">{t('resetSearch')}</button>
                   </div>
                 )
               ) : (
@@ -194,7 +203,7 @@ export const CourseDirectorySection: React.FC<CourseDirectorySectionProps> = ({ 
                 onClick={() => onOpenContact(`Catalog Inquiry for ${selectedVendor.name}`)}
                 className="bg-[#007AB8] hover:bg-[#006396] text-white px-8 py-3 rounded-full font-bold text-sm shadow-md hover:shadow-lg transition-all active:scale-95 flex items-center gap-2"
               >
-                <span>Request full catalog &amp; pricing</span>
+                <span>{t('requestCatalog')}</span>
                 <ChevronRight className="w-4 h-4" />
               </button>
             </div>
