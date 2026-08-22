@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { setRequestLocale } from 'next-intl/server';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 import {
   getAllCourseSlugs,
   getCourseBySlug,
@@ -54,7 +54,8 @@ export default async function CoursePage({
   setRequestLocale(locale);
   const course = getCourseBySlug(slug);
   if (!course) notFound();
-  const content = getCourseContent(course);
+  const t = await getTranslations('CourseContent');
+  const content = getCourseContent(course, t);
   const related = getRelatedCourses(course);
   return <CoursePageClient course={course} content={content} related={related} />;
 }

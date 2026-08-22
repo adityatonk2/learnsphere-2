@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useRef, useEffect } from 'react';
-import { useLocale } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { Check } from 'lucide-react';
 import { usePathname, useRouter } from '@/i18n/navigation';
 
@@ -18,6 +18,7 @@ const LANGUAGES: { code: string; label: string; flag: string }[] = [
 ];
 
 export const LanguageSwitcher: React.FC = () => {
+  const t = useTranslations('LanguageSwitcher');
   const locale = useLocale();
   const pathname = usePathname();
   const router = useRouter();
@@ -43,8 +44,8 @@ export const LanguageSwitcher: React.FC = () => {
     <div className="relative" ref={ref}>
       <button
         onClick={() => setOpen((v) => !v)}
-        aria-label="Change language"
-        title="Change language"
+        aria-label={t('changeLanguage')}
+        title={t('changeLanguage')}
         className="relative w-9 h-9 rounded-lg flex items-center justify-center text-base hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0B5198]"
       >
         <span aria-hidden="true">{current.flag}</span>

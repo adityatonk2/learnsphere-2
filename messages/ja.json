@@ -14,7 +14,8 @@
     },
     "connectAdvisor": "アドバイザーに相談",
     "connectAdvisorSubject": "コースアドバイザーに相談",
-    "searchTitle": "検索 (⌘K)"
+    "searchTitle": "検索 (⌘K)",
+    "toggleMenu": "メニューを切り替える"
   },
   "Hero": {
     "badge": "信頼されるグローバル企業教育パートナー",
@@ -24,7 +25,8 @@
     "browseCatalog": "カタログを見る",
     "statCourses": "認定コース数",
     "statEmployees": "研修修了者数",
-    "statPassRate": "試験合格率"
+    "statPassRate": "試験合格率",
+    "imageAlt": "企業研修チーム"
   },
   "Promo": {
     "badgeText": "モンスーンセール — 会員限定：",
@@ -184,5 +186,422 @@
     "certificationVendors": "認定ベンダー数",
     "successfulLearners": "合格者数",
     "countriesServed": "対応国数"
+  },
+  "Solutions": {
+    "eyebrow": "私たちのソリューション",
+    "heading": "次世代の学習ソリューション",
+    "subheading": "貴社の人材を高める革新的なツール",
+    "clickToLearnMore": "クリックして詳しく見る →",
+    "bannerBadge": "エンタープライズグレードのLMSとトレーニング",
+    "bannerHeading": "スケーラブルですぐに使えるスキル変革プログラムで貴社を強化します。",
+    "bannerBody": "NexMentor Solutionsは、実践的なラボ環境と認定マスタートレーナーにより、IT、サイバーセキュリティ、クラウドインフラ、DevOps、プロジェクトマネジメントのスキルギャップを埋めます。",
+    "bannerPoint1": "エンタープライズSSO、Okta、SCIMディレクトリ同期とのシームレスな統合",
+    "bannerPoint2": "公式試験バウチャーと体系的な試験対策",
+    "bannerPoint3": "専任のエンタープライズアカウントエグゼクティブと24時間365日の技術サポート",
+    "requestDemo": "エンタープライズデモを依頼",
+    "items": {
+      "elearning": {
+        "title": "eラーニングプラットフォーム",
+        "subtitle": "魅力的なオンライン研修モジュール",
+        "description": "何千もの自己学習コース、クイズ、公式ベンダー学習ガイドを備えた総合デジタルポータル。"
+      },
+      "virtual-classrooms": {
+        "title": "バーチャルクラスルーム",
+        "subtitle": "インタラクティブなライブ研修セッション",
+        "description": "ブレイクアウトルーム、画面共有、インタラクティブなホワイトボードを備えたリアルタイム講師主導のバーチャルセッション。"
+      },
+      "analytics": {
+        "title": "ラーニング分析",
+        "subtitle": "データ駆動型パフォーマンスインサイト",
+        "description": "従業員のスキル習得、コース完了率、ラボスコア、ROIを測定するエグゼクティブダッシュボード。"
+      },
+      "custom-programs": {
+        "title": "カスタム研修プログラム",
+        "subtitle": "オーダーメイドの学習体験",
+        "description": "貴社のインフラツール、AWS/Azure環境、コンプライアンス要件に合わせてカスタム設計されたカリキュラム。"
+      }
+    },
+    "imageAlt": "ノートパソコンで協働するビジネスパーソン"
+  },
+  "TrainingModes": {
+    "eyebrow": "柔軟な学習オプション",
+    "heading": "あらゆる組織に合わせた提供形式",
+    "subheading": "柔軟な学習提供フレームワークで、チームがどこで、いつ、どのように最も効果的に学ぶかを選択できます。",
+    "seeWhatsIncluded": "含まれる内容を見る",
+    "hoverToFlip": "ホバーして反転",
+    "flipBack": "元に戻す",
+    "bestForLabel": "最適な対象:",
+    "inquire": "問い合わせる",
+    "details": "詳細",
+    "keyDeliverables": "主な成果物",
+    "recommendedForLabel": "推奨対象:",
+    "inquireAbout": "{mode}について問い合わせる",
+    "items": {
+      "fmat": {
+        "badge": "最速",
+        "title": "フライ・ミー・ア・トレーナー（FMAT）",
+        "description": "大規模グループ向けの柔軟なオンサイト学習。世界中どこへでも専門家を派遣します。",
+        "features": [
+          "グローバルオフィスでのオンサイト講師派遣",
+          "カスタマイズされたハードウェア・ラボ設定サポート",
+          "5名以上のグループに対してコスト効率が高い",
+          "タイムゾーンに合わせた柔軟なスケジュール"
+        ],
+        "recommendedFor": "従業員の出張費用をかけずに専任の対面専門知識を必要とする企業チーム。"
+      },
+      "flexi": {
+        "badge": "最も柔軟",
+        "title": "フレキシ（自己学習型）",
+        "description": "編集済み講義、教材、実践ラボ、任意の質問解消セッションを備えた自己学習型学習。",
+        "features": [
+          "HD動画録画と公式教材への24時間アクセス",
+          "クラウドホスト型実践ラボ環境",
+          "1対1のスケジュール済みメンター質問解消セッション",
+          "進捗トラッキングと完了分析"
+        ],
+        "recommendedFor": "支障のない学習スケジュールを必要とする多忙な専門家やリモートチーム。"
+      },
+      "1on1": {
+        "badge": "最も集中的",
+        "title": "1対1研修",
+        "description": "最大限の集中のために1名の従業員専属で割り当てられる専任講師。",
+        "features": [
+          "100%パーソナライズされた講師の注目",
+          "受講者の知識レベルに合わせたペース",
+          "実際のプロジェクトのデバッグとメンタリング",
+          "柔軟な1日のセッション時間"
+        ],
+        "recommendedFor": "迅速な習得を必要とする主要な意思決定者、チームリーダー、専門家。"
+      },
+      "bespoke": {
+        "badge": "オーダーメイド",
+        "title": "カスタマイズプログラム",
+        "description": "貴社の技術スタック、business プロセス、学習目標に合わせたオーダーメイドカリキュラム。",
+        "features": [
+          "貴社の技術スタックに合わせた共同設計のシラバス",
+          "貴社の内部リポジトリ・ケーススタディとの統合",
+          "研修前後のスキル評価マトリックス",
+          "専任のエンタープライズ学習成功マネージャー"
+        ],
+        "recommendedFor": "デジタルトランスフォーメーションや技術スタック移行を実行する組織。"
+      }
+    }
+  },
+  "About": {
+    "eyebrow": "会社概要",
+    "heading": "NexMentor Solutionsについて",
+    "description": "NexMentor Solutionsは、企業研修、業界で認められたベンダー認定資格、技術人材のスキルアップにおける世界的なリーダーです。",
+    "bullets": {
+      "whoWeAre": {
+        "title": "私たちについて",
+        "description": "最先端の企業教育のリーダーとして、40か国以上で認定トレーニングを提供しています。"
+      },
+      "ourMission": {
+        "title": "私たちの使命",
+        "description": "テクノロジーを通じて学びを変革し、検証済みで即戦力となる技術的専門知識をチームに提供します。"
+      },
+      "globalInstructors": {
+        "title": "グローバル認定インストラクター",
+        "description": "実務経験豊富な認定実務トレーナー1,200人以上のネットワーク。"
+      }
+    },
+    "badges": {
+      "vendorAligned": "ベンダー準拠",
+      "globalDelivery": "グローバルオンサイト提供",
+      "certifiedCourseware": "認定教材"
+    },
+    "calloutHeading": "人材の変革をお考えですか?",
+    "calloutDescription": "ぜひご参加いただき、貴社の企業研修を今日から向上させましょう。貴社チーム向けのカスタム見積もりをご用意します。",
+    "contactButton": "お問い合わせ"
+  },
+  "Leadership": {
+    "eyebrow": "リーダーシップ",
+    "heading": "NexMentor Solutionsを支える人々",
+    "leaders": {
+      "shivamSharma": {
+        "role": "創業者兼CEO",
+        "quote": "私たちはNexMentor Solutionsを一つの信念のもとに築きました——研修は、認定資格とキャリアの成果につながって初めて意味を持つということです。"
+      },
+      "tarunSharma": {
+        "role": "共同創業者兼ディレクター",
+        "quote": "すべての学習者は、フォーチュン500企業のチームと同じ厳格さ——公式教材、本物のインストラクター、そして習熟への明確な道筋——を受けるに値します。"
+      }
+    }
+  },
+  "MissionVisionValues": {
+    "eyebrow": "私たちを突き動かすもの",
+    "heading": "ミッション、ビジョン、バリュー",
+    "pillars": {
+      "mission": {
+        "label": "私たちの使命",
+        "heading": "認定資格レベルの専門知識をすべての人材にアクセス可能にする。",
+        "description": "組織が技術力を構築する方法を変革する——ベンダー準拠のトレーニングを提供し、学習時間を即戦力の認定スキルへと変えます。"
+      },
+      "vision": {
+        "label": "私たちのビジョン",
+        "heading": "世界で最も信頼される企業研修パートナーになる。",
+        "description": "すべてのテクノロジー専門家が、基礎知識から専門家レベルの認定資格まで、明確で誘導され検証可能な道を持てる未来を思い描いています。"
+      },
+      "values": {
+        "label": "私たちの価値観",
+        "heading": "近道よりも誠実さ、熟達、そして成果を。",
+        "description": "私たちはベンダー準拠の教材と本物の成果を支持します——本物のインストラクター、本物のラボ、本物の試験対策、そしてすべてのクライアントへの誠実な報告。"
+      }
+    }
+  },
+  "Testimonials": {
+    "eyebrow": "お客様の声",
+    "heading": "受講者とパートナーの声",
+    "subheading": "実際の研修経験のみに基づく検証済みのフィードバック",
+    "items": {
+      "ldManager": {
+        "role": "L&Dマネージャー — エンタープライズテクノロジーチーム",
+        "comment": "Architecting on AWSコースの受講後、チーム全員が初回でAWSソリューションアーキテクト試験に合格しました。インストラクターは実践的で、ラボは実際の試験範囲によく一致していました。"
+      },
+      "itDirector": {
+        "role": "ITディレクター — 金融サービス",
+        "comment": "Fly-Me-A-Trainer形式により、納期スケジュールを妨げることなく12名のエンジニアをオンサイトでスキルアップできました。初日からスケジューリングと調整はスムーズでした。"
+      },
+      "individualLearner": {
+        "role": "個人受講者 — クラウドプラクティショナートラック",
+        "comment": "フレキシブルな自己ペース学習は、フルタイムの仕事に合わせやすかったです。1対1の質問解消セッションが私にとって最も役立ちました。"
+      }
+    }
+  },
+  "PartnerCTA": {
+    "heading": "パートナーになることにご興味がありますか?",
+    "description": "リセラー、研修会社、統合パートナーの皆様——共に成長しましょう。",
+    "button": "パートナーになる"
+  },
+  "ContactModal": {
+    "eyebrow": "エンタープライズ研修相談",
+    "heading": "NexMentor Solutionsへのお問い合わせ",
+    "subheading": "カスタマイズされたグループ料金とスケジュールについて、エンタープライズアカウントアドバイザーにご相談ください。",
+    "inquiryRegardingPrefix": "お問い合わせ内容: {subject}",
+    "fields": {
+      "fullName": {
+        "label": "氏名 *",
+        "placeholder": "山田太郎"
+      },
+      "email": {
+        "label": "業務用メールアドレス *",
+        "placeholder": "taro@company.com"
+      },
+      "phone": {
+        "label": "電話番号",
+        "placeholder": "+1 (555) 000-0000"
+      },
+      "company": {
+        "label": "会社名 / 組織名 *",
+        "placeholder": "Acme Corp"
+      },
+      "trainingMode": {
+        "label": "希望する提供形式"
+      },
+      "participants": {
+        "label": "予想受講者数"
+      },
+      "message": {
+        "label": "メッセージ / コースへの関心",
+        "placeholder": "学習目標や必要な特定のコースについてお聞かせください..."
+      }
+    },
+    "trainingModeOptions": {
+      "fmat": "Fly-Me-A-Trainer (FMAT)",
+      "flexi": "フレキシ(自己ペース)",
+      "oneOnOne": "1対1トレーニング",
+      "customised": "カスタマイズプログラム",
+      "virtual": "バーチャルライブオンライン"
+    },
+    "participantsOptions": {
+      "one": "1名",
+      "twoToFive": "2〜5名",
+      "fiveToTen": "5〜10名",
+      "tenToTwentyFive": "10〜25名",
+      "fiftyPlus": "50名以上(エンタープライズグループ)"
+    },
+    "privacy": {
+      "prefix": "私は",
+      "privacyPolicy": "プライバシーポリシー",
+      "and": "および",
+      "termsConditions": "利用規約",
+      "suffix": "に同意し、本お問い合わせに関して連絡を受けることに同意します。*"
+    },
+    "submitButton": "相談リクエストを送信",
+    "successHeading": "お問い合わせを受け付けました!",
+    "successMessagePart1": "ありがとうございます、",
+    "successMessagePart2": "様。エンタープライズラーニングアドバイザーが2営業時間以内に",
+    "successMessagePart3": "宛にご連絡いたします。",
+    "closeButton": "ウィンドウを閉じる"
+  },
+  "PartnerModal": {
+    "eyebrow": "パートナープログラム",
+    "heading": "パートナーになる",
+    "subheading": "貴社について教えてください。パートナーシップの条件と次のステップについてご連絡いたします。",
+    "fields": {
+      "companyName": {
+        "label": "会社名 *",
+        "placeholder": "Acme Training Partners Pvt. Ltd."
+      },
+      "contactPerson": {
+        "label": "ご担当者様 *",
+        "placeholder": "Jane Doe, 事業開発責任者"
+      },
+      "email": {
+        "label": "業務用メールアドレス *",
+        "placeholder": "jane@company.com"
+      },
+      "phone": {
+        "label": "電話番号 *",
+        "placeholder": "+91 98765 43210"
+      },
+      "website": {
+        "label": "会社ウェブサイト",
+        "placeholder": "https://www.company.com"
+      },
+      "partnershipType": {
+        "label": "パートナーシップの種類"
+      },
+      "message": {
+        "label": "パートナーシップについて教えてください",
+        "placeholder": "貴社と検討中のパートナーシップについて簡単にご説明ください..."
+      }
+    },
+    "partnershipTypeOptions": {
+      "reseller": "企業研修リセラー",
+      "contentPartner": "コンテンツ / 教材パートナー",
+      "affiliate": "アフィリエイト / 紹介パートナー",
+      "techIntegration": "技術統合パートナー",
+      "other": "その他"
+    },
+    "privacy": {
+      "prefix": "私は",
+      "privacyPolicy": "プライバシーポリシー",
+      "and": "および",
+      "termsConditions": "利用規約",
+      "suffix": "に同意します。*"
+    },
+    "submitButton": "パートナーシップリクエストを送信",
+    "successHeading": "リクエストを受け付けました!",
+    "successMessagePart1": "ありがとうございます、",
+    "successMessagePart2": "様。パートナーシップチームが2営業日以内に",
+    "successMessagePart3": "宛にご連絡いたします。",
+    "closeButton": "ウィンドウを閉じる"
+  },
+  "Footer": {
+    "description": "企業研修、業界で認められたITベンダー認定資格、カスタム人材育成ソリューションのグローバルプロバイダー。",
+    "certification": "ISO 9001:2015 & ISO 27001認証トレーニングパートナー",
+    "navigation": {
+      "title": "ナビゲーション",
+      "home": "ホーム",
+      "solutions": "ソリューション",
+      "learningFormats": "学習形式",
+      "courseDirectory": "コースディレクトリ",
+      "aboutUs": "会社概要"
+    },
+    "deliveryOptions": {
+      "title": "提供オプション",
+      "fmat": "Fly-Me-A-Trainer (FMAT)",
+      "flexi": "フレキシ(自己ペース)",
+      "oneOnOne": "1対1トレーニング",
+      "customised": "カスタマイズプログラム",
+      "virtual": "バーチャルライブオンライン"
+    },
+    "contact": {
+      "title": "本社所在地",
+      "address": "100 Technology Square, Suite 800, Boston, MA 02139"
+    },
+    "copyright": "© {year} NexMentor Solutions Inc. 全著作権所有。",
+    "legal": {
+      "privacyPolicy": "プライバシーポリシー",
+      "termsOfService": "利用規約",
+      "accreditations": "認定資格"
+    }
+  },
+  "CourseContent": {
+    "overviewWithCode": "{title}に関するこのインストラクター主導の{vendor}トレーニングは、{domain}に携わる専門家が実践的で即戦力となるスキルを身につけられるようにします。{duration}の間、ガイド付きラボ、実際のシナリオ、専門家によるメンタリングを通じて{level}レベルで取り組みます。カリキュラムは{code}認定資格トラックに対応しているため、試験を受けてスキルを職場で応用する準備が整います。",
+    "overviewWithoutCode": "{title}に関するこのインストラクター主導の{vendor}トレーニングは、{domain}に携わる専門家が実践的で即戦力となるスキルを身につけられるようにします。{duration}の間、ガイド付きラボ、実際のシナリオ、専門家によるメンタリングを通じて{level}レベルで取り組みます。NexMentorの修了証明書とスキルをすぐに応用できる自信を持って修了します。",
+    "outcomes": {
+      "understand": "{shortTitle}の背後にある核心的な{domain}の概念と、それがエンタープライズ環境にどう適合するかを理解する",
+      "configure": "{vendor}のベストプラクティスを使用して{shortTitle}を構成、展開、運用する",
+      "apply": "パフォーマンス、セキュリティ、コスト、信頼性のための実証済みパターンを適用する",
+      "diagnose": "本番環境に近いシナリオで一般的な問題を診断しトラブルシューティングする",
+      "examWithCode": "{code}認定試験に自信を持って備える",
+      "examNoCode": "ハンズオンラボと総合演習でスキルを検証する"
+    },
+    "audience": {
+      "professionals": "{vendor} {domain}に携わるITプロフェッショナルおよびエンジニア",
+      "architects": "プラットフォームの専門知識を拡大するアーキテクト、管理者、コンサルタント",
+      "teams": "認定資格取得や移行を前にスキルを標準化するチーム"
+    },
+    "certificationWithCode": "{code}試験に対応。修了時にはNexMentor参加証明書も授与されます。",
+    "certificationNoCode": "当社の企業研修パートナーに認められたNexMentor修了証明書が含まれます。",
+    "prerequisites": {
+      "foundation": {
+        "first": "事前経験は不要です——コースは基礎の原則から始まります。",
+        "second": "基本的なコンピューターリテラシーと最新のオペレーティングシステムの操作に慣れていること。"
+      },
+      "intermediate": {
+        "first": "基本的なITおよびネットワーキングの概念に精通していること。",
+        "second": "プラットフォームでの実務経験、または同等の基礎レベルコースの受講経験。"
+      },
+      "advanced": {
+        "first": "実環境またはラボ環境でのプラットフォームの実務経験。",
+        "second": "関連分野でのアソシエイトまたは中級レベルの背景。"
+      },
+      "expert": {
+        "first": "テクノロジーでの重要な本番運用経験。",
+        "second": "上級レベルの認定資格または同等の実務専門知識。"
+      }
+    },
+    "formats": {
+      "liveOnline": "ライブオンライン(インストラクター主導)",
+      "classroom": "教室",
+      "privateCohort": "1対1 / プライベートコホート",
+      "onSite": "Fly-me-a-trainer(オンサイト)"
+    },
+    "includes": {
+      "courseware": "公式スタイルの教材とラボガイド",
+      "labs": "ハンズオンラボと実践的な演習",
+      "practiceQuestions": "練習問題と試験対策レビュー",
+      "certificate": "修了証明書"
+    }
+  },
+  "CoursePage": {
+    "breadcrumb": {
+      "home": "ホーム",
+      "courses": "コース",
+      "label": "パンくずリスト"
+    },
+    "training": "トレーニング",
+    "examTrack": "試験 / トラック:",
+    "enrollButton": "登録 / スケジュールをリクエスト",
+    "talkToAdvisorButton": "コースアドバイザーに相談",
+    "overviewHeading": "コース概要",
+    "whatYoullLearnHeading": "学べること",
+    "prerequisitesHeading": "前提条件",
+    "whoShouldAttendHeading": "対象者",
+    "certificationHeading": "認定資格",
+    "programIncludesLabel": "このプログラムに含まれるもの",
+    "deliveryFormatsLabel": "提供形式",
+    "scheduleButton": "スケジュールと料金を取得",
+    "advisorReplyNote": "NexMentorアドバイザーが2営業時間以内に返信します。",
+    "backToDirectory": "コースディレクトリ全体に戻る",
+    "relatedCoursesHeading": "関連する{vendor}コース",
+    "viewLink": "表示",
+    "facts": {
+      "duration": "期間",
+      "level": "レベル",
+      "domain": "分野",
+      "examCode": "試験コード"
+    },
+    "enquirySubjects": {
+      "courseEnquiry": "コースに関するお問い合わせ",
+      "enrollment": "登録: {title}",
+      "advisorCall": "アドバイザー通話: {title}"
+    }
+  },
+  "LanguageSwitcher": {
+    "changeLanguage": "言語を変更"
   }
 }

@@ -2,92 +2,71 @@
 
 import React from 'react';
 import { CheckCircle2, Award, Users, Globe2, ShieldCheck, Sparkles } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 
 interface AboutSectionProps {
   onOpenContact: () => void;
 }
 
+const BULLET_IDS = ['whoWeAre', 'ourMission', 'globalInstructors'] as const;
+const BADGE_IDS = ['vendorAligned', 'globalDelivery', 'certifiedCourseware'] as const;
+
 export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenContact }) => {
   const containerRef = useScrollReveal({ y: 50, duration: 0.9 });
+  const t = useTranslations('About');
 
   return (
     <section id="about" className="py-20 bg-slate-50 dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800">
       <div ref={containerRef} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch">
-          
+
           {/* Left Column: About NexMentor Solutions text matching Image 1 */}
           <div className="lg:col-span-7 flex flex-col justify-between space-y-6 gsap-reveal">
             <div className="space-y-4">
               <span className="text-[#0B5198] dark:text-sky-400 font-bold text-sm uppercase tracking-wider block">
-                Company Overview
+                {t('eyebrow')}
               </span>
               <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0A2540] dark:text-white tracking-tight">
-                About NexMentor Solutions
+                {t('heading')}
               </h2>
               <p className="text-slate-600 dark:text-slate-300 text-base leading-relaxed font-normal">
-                NexMentor Solutions is a global leader in enterprise learning, industry-recognized vendor certifications, and technical workforce upskilling.
+                {t('description')}
               </p>
             </div>
 
             {/* Bullet points matching Image 1 exact content */}
             <div className="space-y-5">
-              <div className="flex items-start gap-3.5">
-                <div className="w-6 h-6 rounded-full bg-sky-100 dark:bg-sky-900/40 text-[#0B5198] dark:text-sky-400 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">
-                  ✓
+              {BULLET_IDS.map((id) => (
+                <div key={id} className="flex items-start gap-3.5">
+                  <div className="w-6 h-6 rounded-full bg-sky-100 dark:bg-sky-900/40 text-[#0B5198] dark:text-sky-400 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">
+                    ✓
+                  </div>
+                  <div>
+                    <h3 className="text-base font-bold text-[#0A2540] dark:text-white">
+                      {t(`bullets.${id}.title`)}
+                    </h3>
+                    <p className="text-slate-600 dark:text-slate-300 text-sm mt-0.5">
+                      {t(`bullets.${id}.description`)}
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="text-base font-bold text-[#0A2540] dark:text-white">
-                    Who We Are
-                  </h3>
-                  <p className="text-slate-600 dark:text-slate-300 text-sm mt-0.5">
-                    Leaders in cutting-edge corporate education delivering accredited training across 40+ countries.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-3.5">
-                <div className="w-6 h-6 rounded-full bg-sky-100 dark:bg-sky-900/40 text-[#0B5198] dark:text-sky-400 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">
-                  ✓
-                </div>
-                <div>
-                  <h3 className="text-base font-bold text-[#0A2540] dark:text-white">
-                    Our Mission
-                  </h3>
-                  <p className="text-slate-600 dark:text-slate-300 text-sm mt-0.5">
-                    To transform learning through technology, equipping workforce teams with verified, job-ready technology expertise.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-3.5">
-                <div className="w-6 h-6 rounded-full bg-sky-100 dark:bg-sky-900/40 text-[#0B5198] dark:text-sky-400 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">
-                  ✓
-                </div>
-                <div>
-                  <h3 className="text-base font-bold text-[#0A2540] dark:text-white">
-                    Global Certified Instructors
-                  </h3>
-                  <p className="text-slate-600 dark:text-slate-300 text-sm mt-0.5">
-                    A network of over 1,200+ certified practitioner trainers with real-world industry experience.
-                  </p>
-                </div>
-              </div>
+              ))}
             </div>
 
             {/* Quality Badges */}
             <div className="pt-4 grid grid-cols-2 sm:grid-cols-3 gap-4 border-t border-slate-200/80 dark:border-slate-800/80">
               <div className="flex items-center gap-2 text-xs font-semibold text-slate-700 dark:text-slate-200">
                 <ShieldCheck className="w-4 h-4 text-sky-600" />
-                <span>Vendor-Aligned</span>
+                <span>{t(`badges.${BADGE_IDS[0]}`)}</span>
               </div>
               <div className="flex items-center gap-2 text-xs font-semibold text-slate-700 dark:text-slate-200">
                 <Globe2 className="w-4 h-4 text-sky-600" />
-                <span>Global On-Site Delivery</span>
+                <span>{t(`badges.${BADGE_IDS[1]}`)}</span>
               </div>
               <div className="flex items-center gap-2 text-xs font-semibold text-slate-700 dark:text-slate-200">
                 <Award className="w-4 h-4 text-sky-600" />
-                <span>Certified Courseware</span>
+                <span>{t(`badges.${BADGE_IDS[2]}`)}</span>
               </div>
             </div>
           </div>
@@ -106,10 +85,10 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenContact }) => 
 
                 <div className="space-y-3">
                   <h3 className="text-2xl sm:text-3xl font-extrabold text-white leading-tight">
-                    Ready to Transform Your Workforce?
+                    {t('calloutHeading')}
                   </h3>
                   <p className="text-sky-100 text-sm font-light leading-relaxed">
-                    Join us and elevate your corporate training today. Get a customized quote for your enterprise team.
+                    {t('calloutDescription')}
                   </p>
                 </div>
               </div>
@@ -120,7 +99,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenContact }) => 
                   onClick={onOpenContact}
                   className="w-full sm:w-auto bg-white dark:bg-slate-900 hover:bg-sky-50 dark:hover:bg-slate-800 text-[#0B5198] dark:text-sky-400 px-8 py-3.5 rounded-xl font-bold text-sm shadow-xl transition-all active:scale-95 text-center"
                 >
-                  Contact Us
+                  {t('contactButton')}
                 </button>
               </div>
             </div>

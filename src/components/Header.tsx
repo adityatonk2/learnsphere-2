@@ -171,7 +171,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenContact, activeSection, se
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="p-2 rounded-lg text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
-            aria-label="Toggle menu"
+            aria-label={t('toggleMenu')}
           >
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>

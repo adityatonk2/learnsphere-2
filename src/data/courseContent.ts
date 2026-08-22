@@ -73,68 +73,56 @@ function tierOf(level?: string): Tier {
   return 'intermediate'; // associate, administration, intermediate, unknown
 }
 
-const PREREQS: Record<Tier, string[]> = {
-  foundation: [
-    'No prior experience required — the course starts from first principles.',
-    'Basic computer literacy and comfort navigating a modern operating system.',
-  ],
-  intermediate: [
-    'Familiarity with core IT and networking concepts.',
-    'Some hands-on exposure to the platform or an equivalent foundation-level course.',
-  ],
-  advanced: [
-    'Working experience with the platform in a real or lab environment.',
-    'An associate- or intermediate-level background in the relevant domain.',
-  ],
-  expert: [
-    'Significant production experience with the technology.',
-    'An advanced-level certification or equivalent practical expertise.',
-  ],
+type Translator = (key: string, values?: Record<string, string | number>) => string;
+
+const PREREQ_KEYS: Record<Tier, [string, string]> = {
+  foundation: ['prerequisites.foundation.first', 'prerequisites.foundation.second'],
+  intermediate: ['prerequisites.intermediate.first', 'prerequisites.intermediate.second'],
+  advanced: ['prerequisites.advanced.first', 'prerequisites.advanced.second'],
+  expert: ['prerequisites.expert.first', 'prerequisites.expert.second'],
 };
 
-export function getCourseContent(course: CatalogCourse): CourseContent {
+export function getCourseContent(course: CatalogCourse, t: Translator): CourseContent {
   const tier = tierOf(course.level);
   const domain = course.domain || 'cloud and enterprise technology';
   const vendor = course.vendorName;
   const dur = course.duration || 'the program';
   const shortTitle = course.title.replace(/\s*\(.*?\)\s*/g, '').trim();
+  const level = (course.level || 'professional').toLowerCase();
 
-  const overview =
-    `This instructor-led ${vendor} training on ${course.title} equips professionals working with ${domain} ` +
-    `to build practical, job-ready skills. Across ${dur.toLowerCase().includes('day') ? dur.toLowerCase() : dur}, ` +
-    `you will work through guided labs, real-world scenarios, and expert mentoring at a ${(course.level || 'professional').toLowerCase()} level. ` +
-    (course.code
-      ? `The curriculum maps to the ${course.code} certification track, so you finish ready to sit the exam and apply the skills on the job.`
-      : `You finish with a NexMentor certificate of completion and the confidence to apply the skills immediately.`);
+  const overview = course.code
+    ? t('overviewWithCode', { vendor, title: course.title, domain, duration: dur, level, code: course.code })
+    : t('overviewWithoutCode', { vendor, title: course.title, domain, duration: dur, level });
 
   const outcomes = [
-    `Understand the core ${domain} concepts behind ${shortTitle} and how they fit an enterprise environment`,
-    `Configure, deploy, and operate ${shortTitle} using ${vendor} best practices`,
-    `Apply proven patterns for performance, security, cost, and reliability`,
-    `Diagnose and troubleshoot common issues in production-style scenarios`,
-    course.code
-      ? `Prepare with confidence for the ${course.code} certification exam`
-      : `Validate your skills with hands-on labs and a capstone exercise`,
+    t('outcomes.understand', { domain, shortTitle }),
+    t('outcomes.configure', { shortTitle, vendor }),
+    t('outcomes.apply'),
+    t('outcomes.diagnose'),
+    course.code ? t('outcomes.examWithCode', { code: course.code }) : t('outcomes.examNoCode'),
   ];
 
   const audience = [
-    `IT professionals and engineers working with ${vendor} ${domain}`,
-    'Architects, administrators, and consultants expanding their platform expertise',
-    'Teams standardizing skills ahead of a certification or migration',
+    t('audience.professionals', { vendor, domain }),
+    t('audience.architects'),
+    t('audience.teams'),
   ];
 
   const certification = course.code
-    ? `Aligned to exam ${course.code}. On completion you also receive a NexMentor certificate of participation.`
-    : 'Includes a NexMentor certificate of completion recognised by our corporate training partners.';
+    ? t('certificationWithCode', { code: course.code })
+    : t('certificationNoCode');
 
-  const formats = ['Live online (instructor-led)', 'Classroom', '1-on-1 / private cohort', 'Fly-me-a-trainer (on-site)'];
+  const [prereq1Key, prereq2Key] = PREREQ_KEYS[tier];
+  const prerequisites = [t(prereq1Key), t(prereq2Key)];
+
+  const formats = [t('formats.liveOnline'), t('formats.classroom'), t('formats.privateCohort'), t('formats.onSite')];
 
   const includes = [
-    'Official-style courseware and lab guides',
-    'Hands-on labs and real-world exercises',
-    'Practice questions and exam-readiness review',
-    'Certificate of completion',
+    t('includes.courseware'),
+    t('includes.labs'),
+    t('includes.practiceQuestions'),
+    t('includes.certificate'),
   ];
 
-  return { overview, outcomes, audience, prerequisites: PREREQS[tier], certification, formats, includes };
+  return { overview, outcomes, audience, prerequisites, certification, formats, includes };
 }

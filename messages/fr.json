@@ -14,7 +14,8 @@
     },
     "connectAdvisor": "Contacter un conseiller",
     "connectAdvisorSubject": "Contacter un conseiller de formation",
-    "searchTitle": "Rechercher (⌘K)"
+    "searchTitle": "Rechercher (⌘K)",
+    "toggleMenu": "Basculer le menu"
   },
   "Hero": {
     "badge": "Partenaire mondial de confiance en formation d'entreprise",
@@ -24,7 +25,8 @@
     "browseCatalog": "Parcourir le catalogue",
     "statCourses": "Cours certifiés",
     "statEmployees": "Employés formés",
-    "statPassRate": "Taux de réussite aux examens"
+    "statPassRate": "Taux de réussite aux examens",
+    "imageAlt": "Équipe de formation en entreprise"
   },
   "Promo": {
     "badgeText": "Soldes de la mousson — Réservé aux membres :",
@@ -184,5 +186,422 @@
     "certificationVendors": "Éditeurs de certification",
     "successfulLearners": "Apprenants réussis",
     "countriesServed": "Pays desservis"
+  },
+  "Solutions": {
+    "eyebrow": "Nos solutions",
+    "heading": "Solutions d'apprentissage de nouvelle génération",
+    "subheading": "Des outils innovants pour faire progresser vos équipes",
+    "clickToLearnMore": "Cliquez pour en savoir plus →",
+    "bannerBadge": "LMS et formation de niveau entreprise",
+    "bannerHeading": "Dotez votre entreprise de programmes de transformation des compétences évolutifs et clé en main.",
+    "bannerBody": "NexMentor Solutions comble les lacunes de compétences en informatique, cybersécurité, infrastructure cloud, DevOps et gestion de projet grâce à des environnements de laboratoire pratiques et des formateurs certifiés.",
+    "bannerPoint1": "Intégration transparente avec SSO d'entreprise, Okta et synchronisation d'annuaire SCIM",
+    "bannerPoint2": "Bons d'examen officiels et préparation structurée aux examens",
+    "bannerPoint3": "Chargé de compte entreprise dédié et assistance technique 24/7",
+    "requestDemo": "Demander une démo entreprise",
+    "items": {
+      "elearning": {
+        "title": "Plateforme e-learning",
+        "subtitle": "Modules de formation en ligne engageants",
+        "description": "Portail numérique complet avec des milliers de cours autonomes, quiz et guides d'étude officiels."
+      },
+      "virtual-classrooms": {
+        "title": "Classes virtuelles",
+        "subtitle": "Sessions de formation interactives en direct",
+        "description": "Sessions virtuelles animées par un formateur en temps réel avec salles de sous-groupes, partage d'écran et tableaux blancs interactifs."
+      },
+      "analytics": {
+        "title": "Analyse de l'apprentissage",
+        "subtitle": "Insights de performance basés sur les données",
+        "description": "Tableaux de bord exécutifs mesurant l'acquisition de compétences, les taux d'achèvement, les scores de labo et le ROI."
+      },
+      "custom-programs": {
+        "title": "Programmes de formation personnalisés",
+        "subtitle": "Expériences d'apprentissage sur mesure",
+        "description": "Programme conçu sur mesure autour de vos outils d'infrastructure, environnements AWS/Azure et exigences de conformité."
+      }
+    },
+    "imageAlt": "Professionnels collaborant sur un ordinateur portable"
+  },
+  "TrainingModes": {
+    "eyebrow": "Options d'apprentissage flexibles",
+    "heading": "Formats de livraison adaptés à chaque organisation",
+    "subheading": "Choisissez comment, où et quand votre équipe apprend le mieux grâce à nos cadres de livraison flexibles.",
+    "seeWhatsIncluded": "Voir ce qui est inclus",
+    "hoverToFlip": "Survolez pour retourner",
+    "flipBack": "Retourner",
+    "bestForLabel": "Idéal pour :",
+    "inquire": "Se renseigner",
+    "details": "Détails",
+    "keyDeliverables": "Livrables clés",
+    "recommendedForLabel": "Recommandé pour :",
+    "inquireAbout": "Se renseigner sur {mode}",
+    "items": {
+      "fmat": {
+        "badge": "Le plus rapide",
+        "title": "Fly-Me-A-Trainer (FMAT)",
+        "description": "Apprentissage sur site flexible pour de plus grands groupes. Faites venir un expert où que vous soyez dans le monde.",
+        "features": [
+          "Formateur sur site dans votre bureau à l'international",
+          "Support de configuration matériel et labo personnalisé",
+          "Rentable pour des cohortes de 5 employés et plus",
+          "Planification flexible selon votre fuseau horaire"
+        ],
+        "recommendedFor": "Équipes d'entreprise nécessitant une immersion en personne dédiée sans frais de déplacement."
+      },
+      "flexi": {
+        "badge": "Le plus flexible",
+        "title": "Flexi (autonome)",
+        "description": "Apprentissage à son rythme avec cours filmés, supports pédagogiques, labos pratiques et sessions de questions optionnelles.",
+        "features": [
+          "Accès 24/7 aux enregistrements vidéo HD et supports officiels",
+          "Environnements de laboratoire pratiques hébergés dans le cloud",
+          "Sessions individuelles planifiées avec un mentor",
+          "Suivi de progression et analyses d'achèvement"
+        ],
+        "recommendedFor": "Professionnels occupés et équipes distantes ayant besoin d'horaires d'apprentissage non perturbateurs."
+      },
+      "1on1": {
+        "badge": "Le plus ciblé",
+        "title": "Formation individuelle",
+        "description": "Formateur dédié assigné exclusivement à un employé pour un maximum de concentration.",
+        "features": [
+          "Attention 100% personnalisée du formateur",
+          "Rythme adapté au niveau de l'apprenant",
+          "Débogage de projets réels et mentorat",
+          "Durées de session quotidiennes flexibles"
+        ],
+        "recommendedFor": "Décideurs clés, chefs d'équipe ou spécialistes ayant besoin d'une maîtrise accélérée."
+      },
+      "bespoke": {
+        "badge": "Sur mesure",
+        "title": "Programmes personnalisés",
+        "description": "Cursus sur mesure adaptés à votre stack technologique, vos processus métier et vos objectifs d'apprentissage.",
+        "features": [
+          "Programme co-conçu correspondant à votre stack technologique",
+          "Intégration avec vos dépôts internes/études de cas",
+          "Matrices d'évaluation des compétences avant et après formation",
+          "Responsable dédié de la réussite d'apprentissage entreprise"
+        ],
+        "recommendedFor": "Organisations menant des transformations numériques ou des migrations de stack technologique."
+      }
+    }
+  },
+  "About": {
+    "eyebrow": "Aperçu de l'entreprise",
+    "heading": "À propos de NexMentor Solutions",
+    "description": "NexMentor Solutions est un leader mondial de la formation en entreprise, des certifications de fournisseurs reconnues par l'industrie et du perfectionnement technique de la main-d'œuvre.",
+    "bullets": {
+      "whoWeAre": {
+        "title": "Qui nous sommes",
+        "description": "Leaders de l'éducation d'entreprise de pointe, dispensant une formation accréditée dans plus de 40 pays."
+      },
+      "ourMission": {
+        "title": "Notre mission",
+        "description": "Transformer l'apprentissage grâce à la technologie, en dotant les équipes d'une expertise technologique vérifiée et prête à l'emploi."
+      },
+      "globalInstructors": {
+        "title": "Instructeurs certifiés dans le monde entier",
+        "description": "Un réseau de plus de 1 200 formateurs praticiens certifiés dotés d'une expérience concrète du secteur."
+      }
+    },
+    "badges": {
+      "vendorAligned": "Aligné sur les fournisseurs",
+      "globalDelivery": "Livraison mondiale sur site",
+      "certifiedCourseware": "Supports de cours certifiés"
+    },
+    "calloutHeading": "Prêt à transformer votre main-d'œuvre ?",
+    "calloutDescription": "Rejoignez-nous et faites progresser votre formation en entreprise dès aujourd'hui. Obtenez un devis personnalisé pour votre équipe.",
+    "contactButton": "Contactez-nous"
+  },
+  "Leadership": {
+    "eyebrow": "Direction",
+    "heading": "Rencontrez les personnes derrière NexMentor Solutions",
+    "leaders": {
+      "shivamSharma": {
+        "role": "Fondateur et PDG",
+        "quote": "Nous avons construit NexMentor Solutions sur une conviction : la formation ne compte que si elle débouche sur une certification et une évolution de carrière."
+      },
+      "tarunSharma": {
+        "role": "Cofondateur et directeur",
+        "quote": "Chaque apprenant mérite la même rigueur qu'une équipe Fortune 500 — des supports officiels, de vrais instructeurs et une voie claire vers la maîtrise."
+      }
+    }
+  },
+  "MissionVisionValues": {
+    "eyebrow": "Ce qui nous motive",
+    "heading": "Mission, vision et valeurs",
+    "pillars": {
+      "mission": {
+        "label": "Notre mission",
+        "heading": "Rendre l'expertise de niveau certification accessible à toute main-d'œuvre.",
+        "description": "Transformer la façon dont les organisations développent leurs capacités techniques — en proposant une formation alignée sur les fournisseurs qui transforme les heures d'apprentissage en compétences certifiées et prêtes à l'emploi."
+      },
+      "vision": {
+        "label": "Notre vision",
+        "heading": "Devenir le partenaire de formation en entreprise le plus fiable au monde.",
+        "description": "Nous envisageons un avenir où chaque professionnel de la technologie dispose d'un parcours clair, guidé et vérifiable, des connaissances fondamentales à la certification de niveau expert."
+      },
+      "values": {
+        "label": "Nos valeurs",
+        "heading": "Intégrité, maîtrise et résultats plutôt que raccourcis.",
+        "description": "Nous défendons des supports de cours alignés sur les fournisseurs et des résultats authentiques — de vrais instructeurs, de vrais laboratoires, une réelle préparation aux examens et des rapports honnêtes pour chaque client."
+      }
+    }
+  },
+  "Testimonials": {
+    "eyebrow": "Avis des clients",
+    "heading": "Ce que disent les apprenants et partenaires",
+    "subheading": "Avis vérifiés provenant uniquement d'expériences de formation réelles",
+    "items": {
+      "ldManager": {
+        "role": "Responsable L&D — Équipe technologie d'entreprise",
+        "comment": "Notre équipe a réussi ses examens AWS Solutions Architect dès la première tentative après le parcours Architecting on AWS. L'instructeur était pratique et les laboratoires correspondaient étroitement au périmètre réel de l'examen."
+      },
+      "itDirector": {
+        "role": "Directeur informatique — Services financiers",
+        "comment": "Le format Fly-Me-A-Trainer nous a permis de former douze ingénieurs sur site sans perturber les délais de livraison. La planification et la coordination ont été fluides dès le premier jour."
+      },
+      "individualLearner": {
+        "role": "Apprenant individuel — Parcours Cloud Practitioner",
+        "comment": "L'apprentissage flexible à mon rythme s'est bien intégré à mon emploi à temps plein. Les sessions individuelles de clarification des doutes ont été la partie la plus utile pour moi."
+      }
+    }
+  },
+  "PartnerCTA": {
+    "heading": "Intéressé à devenir partenaire ?",
+    "description": "Revendeurs, organismes de formation et partenaires d'intégration — grandissons ensemble.",
+    "button": "Devenir partenaire"
+  },
+  "ContactModal": {
+    "eyebrow": "Consultation formation entreprise",
+    "heading": "Contactez NexMentor Solutions",
+    "subheading": "Parlez à un conseiller de compte entreprise pour des tarifs de groupe et des horaires personnalisés.",
+    "inquiryRegardingPrefix": "Demande concernant : {subject}",
+    "fields": {
+      "fullName": {
+        "label": "Nom complet *",
+        "placeholder": "Jean Dupont"
+      },
+      "email": {
+        "label": "E-mail professionnel *",
+        "placeholder": "jean@entreprise.com"
+      },
+      "phone": {
+        "label": "Numéro de téléphone",
+        "placeholder": "+1 (555) 000-0000"
+      },
+      "company": {
+        "label": "Entreprise / Organisation *",
+        "placeholder": "Acme Corp"
+      },
+      "trainingMode": {
+        "label": "Format de livraison préféré"
+      },
+      "participants": {
+        "label": "Apprenants estimés"
+      },
+      "message": {
+        "label": "Message / Intérêts de cours",
+        "placeholder": "Parlez-nous de vos objectifs d'apprentissage ou des cours spécifiques nécessaires..."
+      }
+    },
+    "trainingModeOptions": {
+      "fmat": "Fly-Me-A-Trainer (FMAT)",
+      "flexi": "Flexi (à son rythme)",
+      "oneOnOne": "Formation individuelle",
+      "customised": "Programmes personnalisés",
+      "virtual": "En ligne en direct"
+    },
+    "participantsOptions": {
+      "one": "1 employé",
+      "twoToFive": "2-5 employés",
+      "fiveToTen": "5-10 employés",
+      "tenToTwentyFive": "10-25 employés",
+      "fiftyPlus": "50+ cohorte d'entreprise"
+    },
+    "privacy": {
+      "prefix": "J'accepte la",
+      "privacyPolicy": "Politique de confidentialité",
+      "and": "et les",
+      "termsConditions": "Conditions générales",
+      "suffix": ", et je consens à être contacté au sujet de cette demande. *"
+    },
+    "submitButton": "Envoyer la demande de consultation",
+    "successHeading": "Demande reçue !",
+    "successMessagePart1": "Merci,",
+    "successMessagePart2": "Un conseiller en formation d'entreprise vous contactera à",
+    "successMessagePart3": "dans les 2 heures ouvrables.",
+    "closeButton": "Fermer la fenêtre"
+  },
+  "PartnerModal": {
+    "eyebrow": "Programme partenaire",
+    "heading": "Devenir partenaire",
+    "subheading": "Parlez-nous de votre entreprise et nous vous recontacterons avec les conditions de partenariat et les prochaines étapes.",
+    "fields": {
+      "companyName": {
+        "label": "Nom de l'entreprise *",
+        "placeholder": "Acme Training Partners Pvt. Ltd."
+      },
+      "contactPerson": {
+        "label": "Personne à contacter *",
+        "placeholder": "Jane Doe, Responsable développement commercial"
+      },
+      "email": {
+        "label": "E-mail professionnel *",
+        "placeholder": "jane@entreprise.com"
+      },
+      "phone": {
+        "label": "Numéro de téléphone *",
+        "placeholder": "+91 98765 43210"
+      },
+      "website": {
+        "label": "Site web de l'entreprise",
+        "placeholder": "https://www.entreprise.com"
+      },
+      "partnershipType": {
+        "label": "Type de partenariat"
+      },
+      "message": {
+        "label": "Parlez-nous du partenariat",
+        "placeholder": "Décrivez brièvement votre entreprise et le partenariat envisagé..."
+      }
+    },
+    "partnershipTypeOptions": {
+      "reseller": "Revendeur de formation d'entreprise",
+      "contentPartner": "Partenaire de contenu / supports pédagogiques",
+      "affiliate": "Partenaire affilié / référent",
+      "techIntegration": "Partenaire d'intégration technologique",
+      "other": "Autre"
+    },
+    "privacy": {
+      "prefix": "J'accepte la",
+      "privacyPolicy": "Politique de confidentialité",
+      "and": "et les",
+      "termsConditions": "Conditions générales",
+      "suffix": ". *"
+    },
+    "submitButton": "Envoyer la demande de partenariat",
+    "successHeading": "Demande reçue !",
+    "successMessagePart1": "Merci,",
+    "successMessagePart2": "Notre équipe partenariats vous contactera à",
+    "successMessagePart3": "dans les 2 jours ouvrables.",
+    "closeButton": "Fermer la fenêtre"
+  },
+  "Footer": {
+    "description": "Fournisseur mondial de formation d'entreprise, de certifications de fournisseurs informatiques reconnues par l'industrie et de solutions personnalisées de perfectionnement de la main-d'œuvre.",
+    "certification": "Partenaire de formation certifié ISO 9001:2015 et ISO 27001",
+    "navigation": {
+      "title": "Navigation",
+      "home": "Accueil",
+      "solutions": "Nos solutions",
+      "learningFormats": "Formats d'apprentissage",
+      "courseDirectory": "Répertoire des cours",
+      "aboutUs": "À propos de nous"
+    },
+    "deliveryOptions": {
+      "title": "Options de livraison",
+      "fmat": "Fly-Me-A-Trainer (FMAT)",
+      "flexi": "Flexi (à son rythme)",
+      "oneOnOne": "Formation individuelle",
+      "customised": "Programmes personnalisés",
+      "virtual": "En ligne en direct"
+    },
+    "contact": {
+      "title": "Siège social",
+      "address": "100 Technology Square, Suite 800, Boston, MA 02139"
+    },
+    "copyright": "© {year} NexMentor Solutions Inc. Tous droits réservés.",
+    "legal": {
+      "privacyPolicy": "Politique de confidentialité",
+      "termsOfService": "Conditions d'utilisation",
+      "accreditations": "Accréditations"
+    }
+  },
+  "CourseContent": {
+    "overviewWithCode": "Cette formation {vendor} dirigée par un instructeur sur {title} prépare les professionnels travaillant avec {domain} à acquérir des compétences pratiques et prêtes à l'emploi. Sur {duration}, vous travaillerez à travers des laboratoires guidés, des scénarios réels et un mentorat d'experts à un niveau {level}. Le programme correspond au parcours de certification {code}, vous finissez donc prêt à passer l'examen et à appliquer les compétences au travail.",
+    "overviewWithoutCode": "Cette formation {vendor} dirigée par un instructeur sur {title} prépare les professionnels travaillant avec {domain} à acquérir des compétences pratiques et prêtes à l'emploi. Sur {duration}, vous travaillerez à travers des laboratoires guidés, des scénarios réels et un mentorat d'experts à un niveau {level}. Vous terminez avec un certificat d'achèvement NexMentor et la confiance nécessaire pour appliquer les compétences immédiatement.",
+    "outcomes": {
+      "understand": "Comprendre les concepts fondamentaux de {domain} derrière {shortTitle} et comment ils s'intègrent dans un environnement d'entreprise",
+      "configure": "Configurer, déployer et exploiter {shortTitle} selon les meilleures pratiques {vendor}",
+      "apply": "Appliquer des modèles éprouvés pour la performance, la sécurité, le coût et la fiabilité",
+      "diagnose": "Diagnostiquer et résoudre les problèmes courants dans des scénarios de type production",
+      "examWithCode": "Se préparer avec confiance à l'examen de certification {code}",
+      "examNoCode": "Valider vos compétences avec des laboratoires pratiques et un exercice final"
+    },
+    "audience": {
+      "professionals": "Professionnels et ingénieurs informatiques travaillant avec {vendor} {domain}",
+      "architects": "Architectes, administrateurs et consultants élargissant leur expertise de la plateforme",
+      "teams": "Équipes standardisant leurs compétences avant une certification ou une migration"
+    },
+    "certificationWithCode": "Aligné sur l'examen {code}. À l'issue, vous recevez également un certificat de participation NexMentor.",
+    "certificationNoCode": "Comprend un certificat d'achèvement NexMentor reconnu par nos partenaires de formation en entreprise.",
+    "prerequisites": {
+      "foundation": {
+        "first": "Aucune expérience préalable requise — le cours commence par les principes de base.",
+        "second": "Culture informatique de base et aisance avec un système d'exploitation moderne."
+      },
+      "intermediate": {
+        "first": "Familiarité avec les concepts informatiques et réseau de base.",
+        "second": "Une certaine expérience pratique de la plateforme ou un cours de niveau fondamental équivalent."
+      },
+      "advanced": {
+        "first": "Expérience de travail avec la plateforme dans un environnement réel ou de laboratoire.",
+        "second": "Une formation de niveau associé ou intermédiaire dans le domaine concerné."
+      },
+      "expert": {
+        "first": "Expérience de production significative avec la technologie.",
+        "second": "Une certification de niveau avancé ou une expertise pratique équivalente."
+      }
+    },
+    "formats": {
+      "liveOnline": "En direct en ligne (avec instructeur)",
+      "classroom": "En salle",
+      "privateCohort": "Individuel / cohorte privée",
+      "onSite": "Fly-me-a-trainer (sur site)"
+    },
+    "includes": {
+      "courseware": "Supports de cours de style officiel et guides de laboratoire",
+      "labs": "Laboratoires pratiques et exercices réels",
+      "practiceQuestions": "Questions d'entraînement et révision de préparation à l'examen",
+      "certificate": "Certificat d'achèvement"
+    }
+  },
+  "CoursePage": {
+    "breadcrumb": {
+      "home": "Accueil",
+      "courses": "Cours",
+      "label": "Fil d'Ariane"
+    },
+    "training": "Formation",
+    "examTrack": "Examen / Parcours :",
+    "enrollButton": "S'inscrire / Demander un horaire",
+    "talkToAdvisorButton": "Parler à un conseiller de cours",
+    "overviewHeading": "Aperçu du cours",
+    "whatYoullLearnHeading": "Ce que vous apprendrez",
+    "prerequisitesHeading": "Prérequis",
+    "whoShouldAttendHeading": "Qui devrait y assister",
+    "certificationHeading": "Certification",
+    "programIncludesLabel": "Ce programme comprend",
+    "deliveryFormatsLabel": "Formats de livraison",
+    "scheduleButton": "Obtenir l'horaire et les tarifs",
+    "advisorReplyNote": "Un conseiller NexMentor répond sous 2 heures ouvrables.",
+    "backToDirectory": "Retour au répertoire complet des cours",
+    "relatedCoursesHeading": "Cours {vendor} associés",
+    "viewLink": "Voir",
+    "facts": {
+      "duration": "Durée",
+      "level": "Niveau",
+      "domain": "Domaine",
+      "examCode": "Code d'examen"
+    },
+    "enquirySubjects": {
+      "courseEnquiry": "Demande de renseignements sur le cours",
+      "enrollment": "Inscription : {title}",
+      "advisorCall": "Appel conseiller : {title}"
+    }
+  },
+  "LanguageSwitcher": {
+    "changeLanguage": "Changer de langue"
   }
 }

@@ -14,7 +14,8 @@
     },
     "connectAdvisor": "Connect with Advisor",
     "connectAdvisorSubject": "Connect with Course Advisor",
-    "searchTitle": "Search (⌘K)"
+    "searchTitle": "Search (⌘K)",
+    "toggleMenu": "Toggle menu"
   },
   "Hero": {
     "badge": "Trusted Global Corporate Education Partner",
@@ -24,7 +25,8 @@
     "browseCatalog": "Browse Catalog",
     "statCourses": "Certified Courses",
     "statEmployees": "Trained Employees",
-    "statPassRate": "Exam Pass Rate"
+    "statPassRate": "Exam Pass Rate",
+    "imageAlt": "Corporate learning team"
   },
   "Promo": {
     "badgeText": "Monsoon Sale — Members Only:",
@@ -184,5 +186,422 @@
     "certificationVendors": "Certification Vendors",
     "successfulLearners": "Successful Learners",
     "countriesServed": "Countries Served"
+  },
+  "Solutions": {
+    "eyebrow": "Our Solutions",
+    "heading": "Next-Generation Learning Solutions",
+    "subheading": "Innovative tools to elevate your workforce",
+    "clickToLearnMore": "Click to Learn More →",
+    "bannerBadge": "Enterprise Grade LMS & Training",
+    "bannerHeading": "Empower your enterprise with scalable, turn-key skill transformation programs.",
+    "bannerBody": "NexMentor Solutions bridges skill gaps across IT, Cybersecurity, Cloud Infrastructure, DevOps, and Project Management with hands-on lab environments and certified master instructors.",
+    "bannerPoint1": "Seamless integration with enterprise SSO, Okta, and SCIM directory sync",
+    "bannerPoint2": "Official exam vouchers and structured exam-readiness preparation",
+    "bannerPoint3": "Dedicated Enterprise Account Executive and 24/7 technical helpdesk",
+    "requestDemo": "Request Enterprise Demo",
+    "items": {
+      "elearning": {
+        "title": "E-Learning Platform",
+        "subtitle": "Engaging online training modules",
+        "description": "Comprehensive digital portal with thousands of self-paced courses, quizzes, and official vendor study guides."
+      },
+      "virtual-classrooms": {
+        "title": "Virtual Classrooms",
+        "subtitle": "Interactive live training sessions",
+        "description": "Real-time instructor-led virtual sessions complete with breakout rooms, screen sharing, and interactive whiteboards."
+      },
+      "analytics": {
+        "title": "Learning Analytics",
+        "subtitle": "Data-driven performance insights",
+        "description": "Executive dashboards measuring employee skill uptake, course completion rates, lab scores, and ROI."
+      },
+      "custom-programs": {
+        "title": "Custom Training Programs",
+        "subtitle": "Tailored learning experiences",
+        "description": "Curriculum custom-designed around your infrastructure tools, AWS/Azure environments, and compliance mandates."
+      }
+    },
+    "imageAlt": "Business professionals collaborating on laptop"
+  },
+  "TrainingModes": {
+    "eyebrow": "Flexible Learning Options",
+    "heading": "Tailored Delivery Formats for Every Organization",
+    "subheading": "Choose how, where, and when your team learns best with our flexible learning delivery frameworks.",
+    "seeWhatsIncluded": "See what's included",
+    "hoverToFlip": "Hover to flip",
+    "flipBack": "Flip back",
+    "bestForLabel": "Best for:",
+    "inquire": "Inquire",
+    "details": "Details",
+    "keyDeliverables": "Key Deliverables",
+    "recommendedForLabel": "Recommended for:",
+    "inquireAbout": "Inquire About {mode}",
+    "items": {
+      "fmat": {
+        "badge": "Fastest",
+        "title": "Fly-Me-A-Trainer (FMAT)",
+        "description": "Flexible on-site learning for larger groups. Fly an expert to your location anywhere in the world.",
+        "features": [
+          "On-site instructor delivery at your global office",
+          "Customized hardware and lab setup support",
+          "Cost-effective for cohorts of 5+ employees",
+          "Flexible scheduling aligned with your timezone"
+        ],
+        "recommendedFor": "Enterprise teams requiring dedicated, in-person expert immersion without employee travel costs."
+      },
+      "flexi": {
+        "badge": "Most Flexible",
+        "title": "Flexi (Self-Paced)",
+        "description": "Self-paced learning with edited lectures, courseware, hands-on labs, and optional doubt clearing sessions.",
+        "features": [
+          "24/7 access to HD video recordings & official courseware",
+          "Cloud-hosted hands-on laboratory environments",
+          "1-on-1 scheduled mentor doubt clearing sessions",
+          "Progress tracking and completion analytics"
+        ],
+        "recommendedFor": "Busy professionals and remote teams needing non-disruptive learning schedules."
+      },
+      "1on1": {
+        "badge": "Most Focused",
+        "title": "1-on-1 Training",
+        "description": "Dedicated instructor assigned exclusively to one employee for maximum focus.",
+        "features": [
+          "100% personalized instructor attention",
+          "Tailored speed adapted to learner knowledge",
+          "Real-world project debugging and mentoring",
+          "Flexible daily session durations"
+        ],
+        "recommendedFor": "Key decision makers, team leads, or specialists needing fast-track mastery."
+      },
+      "bespoke": {
+        "badge": "Bespoke",
+        "title": "Customised Programmes",
+        "description": "Bespoke curricula tailored to your tech stack, business processes, and learning goals.",
+        "features": [
+          "Co-designed syllabus matching your tech stack",
+          "Integration with your company internal repos/case studies",
+          "Pre & post training skill assessment matrices",
+          "Dedicated enterprise learning success manager"
+        ],
+        "recommendedFor": "Organizations executing digital transformations or tech stack migrations."
+      }
+    }
+  },
+  "About": {
+    "eyebrow": "Company Overview",
+    "heading": "About NexMentor Solutions",
+    "description": "NexMentor Solutions is a global leader in enterprise learning, industry-recognized vendor certifications, and technical workforce upskilling.",
+    "bullets": {
+      "whoWeAre": {
+        "title": "Who We Are",
+        "description": "Leaders in cutting-edge corporate education delivering accredited training across 40+ countries."
+      },
+      "ourMission": {
+        "title": "Our Mission",
+        "description": "To transform learning through technology, equipping workforce teams with verified, job-ready technology expertise."
+      },
+      "globalInstructors": {
+        "title": "Global Certified Instructors",
+        "description": "A network of over 1,200+ certified practitioner trainers with real-world industry experience."
+      }
+    },
+    "badges": {
+      "vendorAligned": "Vendor-Aligned",
+      "globalDelivery": "Global On-Site Delivery",
+      "certifiedCourseware": "Certified Courseware"
+    },
+    "calloutHeading": "Ready to Transform Your Workforce?",
+    "calloutDescription": "Join us and elevate your corporate training today. Get a customized quote for your enterprise team.",
+    "contactButton": "Contact Us"
+  },
+  "Leadership": {
+    "eyebrow": "Leadership",
+    "heading": "Meet the People Behind NexMentor Solutions",
+    "leaders": {
+      "shivamSharma": {
+        "role": "Founder & CEO",
+        "quote": "We built NexMentor Solutions on one belief — training only matters if it turns into a certification and a career outcome."
+      },
+      "tarunSharma": {
+        "role": "Co-Founder & Director",
+        "quote": "Every learner deserves the same rigor a Fortune 500 team gets — official courseware, real instructors, and a clear path to mastery."
+      }
+    }
+  },
+  "MissionVisionValues": {
+    "eyebrow": "What Drives Us",
+    "heading": "Mission, Vision & Values",
+    "pillars": {
+      "mission": {
+        "label": "Our Mission",
+        "heading": "Make certification-grade expertise accessible to every workforce.",
+        "description": "To transform how organizations build technical capability — delivering vendor-aligned training that turns learning hours into job-ready, certified skills."
+      },
+      "vision": {
+        "label": "Our Vision",
+        "heading": "To be the most trusted enterprise learning partner in the world.",
+        "description": "We envision a future where every technology professional has a clear, guided, and verifiable path from foundational knowledge to expert-level certification."
+      },
+      "values": {
+        "label": "Our Values",
+        "heading": "Integrity, mastery, and outcomes over shortcuts.",
+        "description": "We stand behind vendor-aligned courseware and genuine outcomes — real instructors, real labs, real exam readiness, and honest reporting to every client we serve."
+      }
+    }
+  },
+  "Testimonials": {
+    "eyebrow": "Client Feedback",
+    "heading": "What Learners & Partners Say",
+    "subheading": "Verified feedback from real training engagements only",
+    "items": {
+      "ldManager": {
+        "role": "L&D Manager — Enterprise Technology Team",
+        "comment": "Our team cleared their AWS Solutions Architect exams on the first attempt after the Architecting on AWS track. The instructor was hands-on and the labs matched the real exam scope closely."
+      },
+      "itDirector": {
+        "role": "IT Director — Financial Services",
+        "comment": "The Fly-Me-A-Trainer format let us upskill twelve engineers on-site without disrupting delivery timelines. Scheduling and coordination were smooth from day one."
+      },
+      "individualLearner": {
+        "role": "Individual Learner — Cloud Practitioner Track",
+        "comment": "Flexi self-paced learning fit around my full-time job. The 1-on-1 doubt-clearing sessions were the most useful part for me."
+      }
+    }
+  },
+  "PartnerCTA": {
+    "heading": "Interested in becoming a partner?",
+    "description": "Resellers, training companies, and integration partners — let's grow together.",
+    "button": "Become a Partner"
+  },
+  "ContactModal": {
+    "eyebrow": "Enterprise Training Consultation",
+    "heading": "Contact NexMentor Solutions",
+    "subheading": "Speak with an Enterprise Account Advisor for customized group rates and schedules.",
+    "inquiryRegardingPrefix": "Inquiry regarding: {subject}",
+    "fields": {
+      "fullName": {
+        "label": "Full Name *",
+        "placeholder": "John Doe"
+      },
+      "email": {
+        "label": "Work Email *",
+        "placeholder": "john@company.com"
+      },
+      "phone": {
+        "label": "Phone Number",
+        "placeholder": "+1 (555) 000-0000"
+      },
+      "company": {
+        "label": "Company / Organization *",
+        "placeholder": "Acme Corp"
+      },
+      "trainingMode": {
+        "label": "Preferred Delivery Format"
+      },
+      "participants": {
+        "label": "Estimated Learners"
+      },
+      "message": {
+        "label": "Message / Course Interests",
+        "placeholder": "Tell us about your learning goals or specific courses needed..."
+      }
+    },
+    "trainingModeOptions": {
+      "fmat": "Fly-Me-A-Trainer (FMAT)",
+      "flexi": "Flexi (Self-Paced)",
+      "oneOnOne": "1-on-1 Training",
+      "customised": "Customised Programmes",
+      "virtual": "Virtual Live Online"
+    },
+    "participantsOptions": {
+      "one": "1 Employee",
+      "twoToFive": "2-5 Employees",
+      "fiveToTen": "5-10 Employees",
+      "tenToTwentyFive": "10-25 Employees",
+      "fiftyPlus": "50+ Enterprise Cohort"
+    },
+    "privacy": {
+      "prefix": "I agree to the",
+      "privacyPolicy": "Privacy Policy",
+      "and": "and",
+      "termsConditions": "Terms & Conditions",
+      "suffix": ", and consent to being contacted regarding this inquiry. *"
+    },
+    "submitButton": "Submit Consultation Request",
+    "successHeading": "Inquiry Received!",
+    "successMessagePart1": "Thank you,",
+    "successMessagePart2": "An Enterprise Learning Advisor will reach out to",
+    "successMessagePart3": "within 2 business hours.",
+    "closeButton": "Close Window"
+  },
+  "PartnerModal": {
+    "eyebrow": "Partner Program",
+    "heading": "Become a Partner",
+    "subheading": "Tell us about your company and we'll get back with partnership terms and next steps.",
+    "fields": {
+      "companyName": {
+        "label": "Company Name *",
+        "placeholder": "Acme Training Partners Pvt. Ltd."
+      },
+      "contactPerson": {
+        "label": "Contact Person *",
+        "placeholder": "Jane Doe, Business Development Head"
+      },
+      "email": {
+        "label": "Work Email *",
+        "placeholder": "jane@company.com"
+      },
+      "phone": {
+        "label": "Phone Number *",
+        "placeholder": "+91 98765 43210"
+      },
+      "website": {
+        "label": "Company Website",
+        "placeholder": "https://www.company.com"
+      },
+      "partnershipType": {
+        "label": "Partnership Type"
+      },
+      "message": {
+        "label": "Tell us about the partnership",
+        "placeholder": "Briefly describe your company and the partnership you have in mind..."
+      }
+    },
+    "partnershipTypeOptions": {
+      "reseller": "Corporate Training Reseller",
+      "contentPartner": "Content / Courseware Partner",
+      "affiliate": "Affiliate / Referral Partner",
+      "techIntegration": "Technology Integration Partner",
+      "other": "Other"
+    },
+    "privacy": {
+      "prefix": "I agree to the",
+      "privacyPolicy": "Privacy Policy",
+      "and": "and",
+      "termsConditions": "Terms & Conditions",
+      "suffix": ". *"
+    },
+    "submitButton": "Submit Partnership Request",
+    "successHeading": "Request Received!",
+    "successMessagePart1": "Thank you,",
+    "successMessagePart2": "Our partnerships team will reach out to",
+    "successMessagePart3": "within 2 business days.",
+    "closeButton": "Close Window"
+  },
+  "Footer": {
+    "description": "Global provider of enterprise corporate learning, industry-recognized IT vendor certifications, and custom workforce upskilling solutions.",
+    "certification": "ISO 9001:2015 & ISO 27001 Certified Training Partner",
+    "navigation": {
+      "title": "Navigation",
+      "home": "Home",
+      "solutions": "Our Solutions",
+      "learningFormats": "Learning Formats",
+      "courseDirectory": "Course Directory",
+      "aboutUs": "About Us"
+    },
+    "deliveryOptions": {
+      "title": "Delivery Options",
+      "fmat": "Fly-Me-A-Trainer (FMAT)",
+      "flexi": "Flexi (Self-Paced)",
+      "oneOnOne": "1-on-1 Training",
+      "customised": "Customised Programmes",
+      "virtual": "Virtual Live Online"
+    },
+    "contact": {
+      "title": "Corporate Headquarters",
+      "address": "100 Technology Square, Suite 800, Boston, MA 02139"
+    },
+    "copyright": "© {year} NexMentor Solutions Inc. All rights reserved.",
+    "legal": {
+      "privacyPolicy": "Privacy Policy",
+      "termsOfService": "Terms of Service",
+      "accreditations": "Accreditations"
+    }
+  },
+  "CourseContent": {
+    "overviewWithCode": "This instructor-led {vendor} training on {title} equips professionals working with {domain} to build practical, job-ready skills. Across {duration}, you will work through guided labs, real-world scenarios, and expert mentoring at a {level} level. The curriculum maps to the {code} certification track, so you finish ready to sit the exam and apply the skills on the job.",
+    "overviewWithoutCode": "This instructor-led {vendor} training on {title} equips professionals working with {domain} to build practical, job-ready skills. Across {duration}, you will work through guided labs, real-world scenarios, and expert mentoring at a {level} level. You finish with a NexMentor certificate of completion and the confidence to apply the skills immediately.",
+    "outcomes": {
+      "understand": "Understand the core {domain} concepts behind {shortTitle} and how they fit an enterprise environment",
+      "configure": "Configure, deploy, and operate {shortTitle} using {vendor} best practices",
+      "apply": "Apply proven patterns for performance, security, cost, and reliability",
+      "diagnose": "Diagnose and troubleshoot common issues in production-style scenarios",
+      "examWithCode": "Prepare with confidence for the {code} certification exam",
+      "examNoCode": "Validate your skills with hands-on labs and a capstone exercise"
+    },
+    "audience": {
+      "professionals": "IT professionals and engineers working with {vendor} {domain}",
+      "architects": "Architects, administrators, and consultants expanding their platform expertise",
+      "teams": "Teams standardizing skills ahead of a certification or migration"
+    },
+    "certificationWithCode": "Aligned to exam {code}. On completion you also receive a NexMentor certificate of participation.",
+    "certificationNoCode": "Includes a NexMentor certificate of completion recognised by our corporate training partners.",
+    "prerequisites": {
+      "foundation": {
+        "first": "No prior experience required — the course starts from first principles.",
+        "second": "Basic computer literacy and comfort navigating a modern operating system."
+      },
+      "intermediate": {
+        "first": "Familiarity with core IT and networking concepts.",
+        "second": "Some hands-on exposure to the platform or an equivalent foundation-level course."
+      },
+      "advanced": {
+        "first": "Working experience with the platform in a real or lab environment.",
+        "second": "An associate- or intermediate-level background in the relevant domain."
+      },
+      "expert": {
+        "first": "Significant production experience with the technology.",
+        "second": "An advanced-level certification or equivalent practical expertise."
+      }
+    },
+    "formats": {
+      "liveOnline": "Live online (instructor-led)",
+      "classroom": "Classroom",
+      "privateCohort": "1-on-1 / private cohort",
+      "onSite": "Fly-me-a-trainer (on-site)"
+    },
+    "includes": {
+      "courseware": "Official-style courseware and lab guides",
+      "labs": "Hands-on labs and real-world exercises",
+      "practiceQuestions": "Practice questions and exam-readiness review",
+      "certificate": "Certificate of completion"
+    }
+  },
+  "CoursePage": {
+    "breadcrumb": {
+      "home": "Home",
+      "courses": "Courses",
+      "label": "Breadcrumb"
+    },
+    "training": "Training",
+    "examTrack": "Exam / Track:",
+    "enrollButton": "Enroll / Request Schedule",
+    "talkToAdvisorButton": "Talk to a Course Advisor",
+    "overviewHeading": "Course overview",
+    "whatYoullLearnHeading": "What you'll learn",
+    "prerequisitesHeading": "Prerequisites",
+    "whoShouldAttendHeading": "Who should attend",
+    "certificationHeading": "Certification",
+    "programIncludesLabel": "This program includes",
+    "deliveryFormatsLabel": "Delivery formats",
+    "scheduleButton": "Get schedule & pricing",
+    "advisorReplyNote": "A NexMentor advisor replies within 2 business hours.",
+    "backToDirectory": "Back to full course directory",
+    "relatedCoursesHeading": "Related {vendor} courses",
+    "viewLink": "View",
+    "facts": {
+      "duration": "Duration",
+      "level": "Level",
+      "domain": "Domain",
+      "examCode": "Exam Code"
+    },
+    "enquirySubjects": {
+      "courseEnquiry": "Course Enquiry",
+      "enrollment": "Enrollment: {title}",
+      "advisorCall": "Advisor call: {title}"
+    }
+  },
+  "LanguageSwitcher": {
+    "changeLanguage": "Change language"
   }
 }

@@ -14,7 +14,8 @@
     },
     "connectAdvisor": "Berater kontaktieren",
     "connectAdvisorSubject": "Kursberater kontaktieren",
-    "searchTitle": "Suchen (⌘K)"
+    "searchTitle": "Suchen (⌘K)",
+    "toggleMenu": "Menü umschalten"
   },
   "Hero": {
     "badge": "Vertrauenswürdiger globaler Partner für Unternehmensbildung",
@@ -24,7 +25,8 @@
     "browseCatalog": "Katalog durchsuchen",
     "statCourses": "Zertifizierte Kurse",
     "statEmployees": "Geschulte Mitarbeiter",
-    "statPassRate": "Prüfungserfolgsquote"
+    "statPassRate": "Prüfungserfolgsquote",
+    "imageAlt": "Team für Unternehmensschulungen"
   },
   "Promo": {
     "badgeText": "Monsun-Angebot — Nur für Mitglieder:",
@@ -184,5 +186,422 @@
     "certificationVendors": "Zertifizierungsanbieter",
     "successfulLearners": "Erfolgreiche Lernende",
     "countriesServed": "Betreute Länder"
+  },
+  "Solutions": {
+    "eyebrow": "Unsere Lösungen",
+    "heading": "Lernlösungen der nächsten Generation",
+    "subheading": "Innovative Tools zur Weiterentwicklung Ihrer Belegschaft",
+    "clickToLearnMore": "Klicken Sie, um mehr zu erfahren →",
+    "bannerBadge": "LMS und Schulung auf Unternehmensniveau",
+    "bannerHeading": "Stärken Sie Ihr Unternehmen mit skalierbaren, schlüsselfertigen Programmen zur Kompetenzentwicklung.",
+    "bannerBody": "NexMentor Solutions schließt Kompetenzlücken in IT, Cybersicherheit, Cloud-Infrastruktur, DevOps und Projektmanagement mit praxisnahen Laborumgebungen und zertifizierten Meistertrainern.",
+    "bannerPoint1": "Nahtlose Integration mit Unternehmens-SSO, Okta und SCIM-Verzeichnissynchronisierung",
+    "bannerPoint2": "Offizielle Prüfungsgutscheine und strukturierte Prüfungsvorbereitung",
+    "bannerPoint3": "Dedizierter Enterprise Account Executive und 24/7-technischer Support",
+    "requestDemo": "Enterprise-Demo anfordern",
+    "items": {
+      "elearning": {
+        "title": "E-Learning-Plattform",
+        "subtitle": "Ansprechende Online-Schulungsmodule",
+        "description": "Umfassendes digitales Portal mit tausenden selbstgesteuerten Kursen, Quiz und offiziellen Herstellerleitfäden."
+      },
+      "virtual-classrooms": {
+        "title": "Virtuelle Klassenräume",
+        "subtitle": "Interaktive Live-Schulungssitzungen",
+        "description": "Echtzeit-Trainergeführte virtuelle Sitzungen mit Breakout-Räumen, Bildschirmfreigabe und interaktiven Whiteboards."
+      },
+      "analytics": {
+        "title": "Lernanalysen",
+        "subtitle": "Datengestützte Leistungseinblicke",
+        "description": "Führungsdashboards zur Messung von Kompetenzaufnahme, Kursabschlussraten, Laborergebnissen und ROI."
+      },
+      "custom-programs": {
+        "title": "Individuelle Schulungsprogramme",
+        "subtitle": "Maßgeschneiderte Lernerfahrungen",
+        "description": "Individuell gestalteter Lehrplan rund um Ihre Infrastruktur-Tools, AWS/Azure-Umgebungen und Compliance-Anforderungen."
+      }
+    },
+    "imageAlt": "Geschäftsleute arbeiten gemeinsam am Laptop"
+  },
+  "TrainingModes": {
+    "eyebrow": "Flexible Lernoptionen",
+    "heading": "Maßgeschneiderte Durchführungsformate für jede Organisation",
+    "subheading": "Wählen Sie mit unseren flexiblen Lieferrahmen, wie, wo und wann Ihr Team am besten lernt.",
+    "seeWhatsIncluded": "Enthaltene Leistungen ansehen",
+    "hoverToFlip": "Zum Umdrehen bewegen",
+    "flipBack": "Zurückdrehen",
+    "bestForLabel": "Am besten für:",
+    "inquire": "Anfragen",
+    "details": "Details",
+    "keyDeliverables": "Wichtige Leistungen",
+    "recommendedForLabel": "Empfohlen für:",
+    "inquireAbout": "Zu {mode} anfragen",
+    "items": {
+      "fmat": {
+        "badge": "Am schnellsten",
+        "title": "Fly-Me-A-Trainer (FMAT)",
+        "description": "Flexibles Vor-Ort-Lernen für größere Gruppen. Lassen Sie einen Experten weltweit zu Ihrem Standort fliegen.",
+        "features": [
+          "Vor-Ort-Trainer in Ihrem globalen Büro",
+          "Individuelle Hardware- und Laborsetup-Unterstützung",
+          "Kosteneffizient für Gruppen ab 5 Mitarbeitern",
+          "Flexible Terminplanung nach Ihrer Zeitzone"
+        ],
+        "recommendedFor": "Unternehmensteams, die ein dediziertes, persönliches Experten-Immersion ohne Reisekosten benötigen."
+      },
+      "flexi": {
+        "badge": "Am flexibelsten",
+        "title": "Flexi (Selbstgesteuert)",
+        "description": "Selbstgesteuertes Lernen mit aufgezeichneten Vorlesungen, Kursmaterial, praktischen Labs und optionalen Fragestunden.",
+        "features": [
+          "24/7-Zugriff auf HD-Videoaufzeichnungen & offizielles Kursmaterial",
+          "Cloud-gehostete praktische Laborumgebungen",
+          "Geplante 1:1-Mentoring-Fragestunden",
+          "Fortschrittsverfolgung und Abschlussanalysen"
+        ],
+        "recommendedFor": "Vielbeschäftigte Fachkräfte und Remote-Teams, die störungsfreie Lernpläne benötigen."
+      },
+      "1on1": {
+        "badge": "Am fokussiertesten",
+        "title": "Einzelunterricht",
+        "description": "Dedizierter Trainer, der ausschließlich einem Mitarbeiter für maximale Konzentration zugewiesen ist.",
+        "features": [
+          "100 % personalisierte Trainerbetreuung",
+          "An das Wissen des Lernenden angepasstes Tempo",
+          "Debugging realer Projekte und Mentoring",
+          "Flexible tägliche Sitzungsdauern"
+        ],
+        "recommendedFor": "Wichtige Entscheidungsträger, Teamleiter oder Spezialisten, die eine schnelle Meisterschaft benötigen."
+      },
+      "bespoke": {
+        "badge": "Maßgeschneidert",
+        "title": "Individuelle Programme",
+        "description": "Maßgeschneiderte Lehrpläne, abgestimmt auf Ihren Tech-Stack, Ihre Geschäftsprozesse und Lernziele.",
+        "features": [
+          "Gemeinsam entwickelter Lehrplan passend zu Ihrem Tech-Stack",
+          "Integration mit Ihren internen Repos/Fallstudien",
+          "Kompetenzbewertungsmatrizen vor und nach der Schulung",
+          "Dedizierter Enterprise Learning Success Manager"
+        ],
+        "recommendedFor": "Organisationen, die digitale Transformationen oder Tech-Stack-Migrationen durchführen."
+      }
+    }
+  },
+  "About": {
+    "eyebrow": "Unternehmensüberblick",
+    "heading": "Über NexMentor Solutions",
+    "description": "NexMentor Solutions ist ein globaler Marktführer im Bereich Unternehmensschulungen, branchenweit anerkannter Herstellerzertifizierungen und technischer Weiterqualifizierung der Belegschaft.",
+    "bullets": {
+      "whoWeAre": {
+        "title": "Wer wir sind",
+        "description": "Führend in moderner Unternehmensbildung mit akkreditierten Schulungen in über 40 Ländern."
+      },
+      "ourMission": {
+        "title": "Unsere Mission",
+        "description": "Lernen durch Technologie zu transformieren und Teams mit verifiziertem, arbeitsmarktreifem technischen Know-how auszustatten."
+      },
+      "globalInstructors": {
+        "title": "Global zertifizierte Trainer",
+        "description": "Ein Netzwerk von über 1.200 zertifizierten Praxis-Trainern mit realer Branchenerfahrung."
+      }
+    },
+    "badges": {
+      "vendorAligned": "Herstellerkonform",
+      "globalDelivery": "Globale Vor-Ort-Durchführung",
+      "certifiedCourseware": "Zertifizierte Kursunterlagen"
+    },
+    "calloutHeading": "Bereit, Ihre Belegschaft zu transformieren?",
+    "calloutDescription": "Kontaktieren Sie uns noch heute und heben Sie Ihre Unternehmensschulung auf ein neues Niveau. Erhalten Sie ein individuelles Angebot für Ihr Team.",
+    "contactButton": "Kontaktieren Sie uns"
+  },
+  "Leadership": {
+    "eyebrow": "Führung",
+    "heading": "Lernen Sie die Menschen hinter NexMentor Solutions kennen",
+    "leaders": {
+      "shivamSharma": {
+        "role": "Gründer & CEO",
+        "quote": "Wir haben NexMentor Solutions auf einer Überzeugung aufgebaut — Schulung zählt nur, wenn sie zu einer Zertifizierung und einem Karriereerfolg führt."
+      },
+      "tarunSharma": {
+        "role": "Mitgründer & Direktor",
+        "quote": "Jeder Lernende verdient dieselbe Sorgfalt, die ein Fortune-500-Team erhält — offizielle Kursunterlagen, echte Trainer und einen klaren Weg zur Meisterschaft."
+      }
+    }
+  },
+  "MissionVisionValues": {
+    "eyebrow": "Was uns antreibt",
+    "heading": "Mission, Vision & Werte",
+    "pillars": {
+      "mission": {
+        "label": "Unsere Mission",
+        "heading": "Zertifizierungsreife Expertise für jede Belegschaft zugänglich machen.",
+        "description": "Zu verändern, wie Organisationen technische Kompetenz aufbauen — durch herstellerkonforme Schulungen, die Lernstunden in arbeitsmarktreife, zertifizierte Fähigkeiten verwandeln."
+      },
+      "vision": {
+        "label": "Unsere Vision",
+        "heading": "Der weltweit vertrauenswürdigste Partner für Unternehmensschulungen zu sein.",
+        "description": "Wir stellen uns eine Zukunft vor, in der jeder Technologieexperte einen klaren, geführten und verifizierbaren Weg vom Grundlagenwissen bis zur Expertenzertifizierung hat."
+      },
+      "values": {
+        "label": "Unsere Werte",
+        "heading": "Integrität, Können und Ergebnisse statt Abkürzungen.",
+        "description": "Wir stehen hinter herstellerkonformen Kursunterlagen und echten Ergebnissen — echte Trainer, echte Labore, echte Prüfungsvorbereitung und ehrliche Berichterstattung für jeden Kunden, den wir betreuen."
+      }
+    }
+  },
+  "Testimonials": {
+    "eyebrow": "Kundenfeedback",
+    "heading": "Was Lernende & Partner sagen",
+    "subheading": "Verifiziertes Feedback ausschließlich aus echten Schulungsprojekten",
+    "items": {
+      "ldManager": {
+        "role": "L&D-Manager — Enterprise-Technologieteam",
+        "comment": "Unser Team bestand die AWS Solutions Architect-Prüfungen nach dem Architecting on AWS-Kurs im ersten Anlauf. Der Trainer war praxisorientiert, und die Labore entsprachen eng dem tatsächlichen Prüfungsumfang."
+      },
+      "itDirector": {
+        "role": "IT-Direktor — Finanzdienstleistungen",
+        "comment": "Das Fly-Me-A-Trainer-Format ermöglichte es uns, zwölf Ingenieure vor Ort weiterzubilden, ohne die Lieferzeitpläne zu stören. Planung und Koordination liefen von Anfang an reibungslos."
+      },
+      "individualLearner": {
+        "role": "Einzelner Lernender — Cloud Practitioner Track",
+        "comment": "Das flexible, selbstgesteuerte Lernen passte gut zu meinem Vollzeitjob. Die 1-zu-1-Sitzungen zur Klärung von Fragen waren für mich am nützlichsten."
+      }
+    }
+  },
+  "PartnerCTA": {
+    "heading": "Interesse, Partner zu werden?",
+    "description": "Wiederverkäufer, Schulungsunternehmen und Integrationspartner — lassen Sie uns gemeinsam wachsen.",
+    "button": "Partner werden"
+  },
+  "ContactModal": {
+    "eyebrow": "Beratung für Unternehmensschulungen",
+    "heading": "Kontaktieren Sie NexMentor Solutions",
+    "subheading": "Sprechen Sie mit einem Enterprise Account Advisor für individuelle Gruppentarife und Zeitpläne.",
+    "inquiryRegardingPrefix": "Anfrage betreffend: {subject}",
+    "fields": {
+      "fullName": {
+        "label": "Vollständiger Name *",
+        "placeholder": "Max Mustermann"
+      },
+      "email": {
+        "label": "Geschäftliche E-Mail *",
+        "placeholder": "max@unternehmen.com"
+      },
+      "phone": {
+        "label": "Telefonnummer",
+        "placeholder": "+1 (555) 000-0000"
+      },
+      "company": {
+        "label": "Unternehmen / Organisation *",
+        "placeholder": "Acme Corp"
+      },
+      "trainingMode": {
+        "label": "Bevorzugtes Durchführungsformat"
+      },
+      "participants": {
+        "label": "Geschätzte Lernende"
+      },
+      "message": {
+        "label": "Nachricht / Kursinteressen",
+        "placeholder": "Erzählen Sie uns von Ihren Lernzielen oder benötigten Kursen..."
+      }
+    },
+    "trainingModeOptions": {
+      "fmat": "Fly-Me-A-Trainer (FMAT)",
+      "flexi": "Flexi (selbstgesteuert)",
+      "oneOnOne": "1-zu-1-Training",
+      "customised": "Individuelle Programme",
+      "virtual": "Virtuell live online"
+    },
+    "participantsOptions": {
+      "one": "1 Mitarbeiter",
+      "twoToFive": "2-5 Mitarbeiter",
+      "fiveToTen": "5-10 Mitarbeiter",
+      "tenToTwentyFive": "10-25 Mitarbeiter",
+      "fiftyPlus": "50+ Unternehmensgruppe"
+    },
+    "privacy": {
+      "prefix": "Ich stimme der",
+      "privacyPolicy": "Datenschutzrichtlinie",
+      "and": "und den",
+      "termsConditions": "Allgemeinen Geschäftsbedingungen",
+      "suffix": " zu und willige ein, bezüglich dieser Anfrage kontaktiert zu werden. *"
+    },
+    "submitButton": "Beratungsanfrage senden",
+    "successHeading": "Anfrage erhalten!",
+    "successMessagePart1": "Vielen Dank,",
+    "successMessagePart2": "Ein Enterprise Learning Advisor wird sich innerhalb von 2 Geschäftsstunden bei",
+    "successMessagePart3": "melden.",
+    "closeButton": "Fenster schließen"
+  },
+  "PartnerModal": {
+    "eyebrow": "Partnerprogramm",
+    "heading": "Partner werden",
+    "subheading": "Erzählen Sie uns von Ihrem Unternehmen, und wir melden uns mit Partnerschaftsbedingungen und nächsten Schritten zurück.",
+    "fields": {
+      "companyName": {
+        "label": "Firmenname *",
+        "placeholder": "Acme Training Partners Pvt. Ltd."
+      },
+      "contactPerson": {
+        "label": "Ansprechpartner *",
+        "placeholder": "Jane Doe, Leiterin Geschäftsentwicklung"
+      },
+      "email": {
+        "label": "Geschäftliche E-Mail *",
+        "placeholder": "jane@unternehmen.com"
+      },
+      "phone": {
+        "label": "Telefonnummer *",
+        "placeholder": "+91 98765 43210"
+      },
+      "website": {
+        "label": "Unternehmenswebsite",
+        "placeholder": "https://www.unternehmen.com"
+      },
+      "partnershipType": {
+        "label": "Art der Partnerschaft"
+      },
+      "message": {
+        "label": "Erzählen Sie uns von der Partnerschaft",
+        "placeholder": "Beschreiben Sie kurz Ihr Unternehmen und die geplante Partnerschaft..."
+      }
+    },
+    "partnershipTypeOptions": {
+      "reseller": "Wiederverkäufer für Unternehmensschulungen",
+      "contentPartner": "Content- / Kursmaterial-Partner",
+      "affiliate": "Affiliate- / Empfehlungspartner",
+      "techIntegration": "Technologie-Integrationspartner",
+      "other": "Sonstiges"
+    },
+    "privacy": {
+      "prefix": "Ich stimme der",
+      "privacyPolicy": "Datenschutzrichtlinie",
+      "and": "und den",
+      "termsConditions": "Allgemeinen Geschäftsbedingungen",
+      "suffix": " zu. *"
+    },
+    "submitButton": "Partnerschaftsanfrage senden",
+    "successHeading": "Anfrage erhalten!",
+    "successMessagePart1": "Vielen Dank,",
+    "successMessagePart2": "Unser Partnerschaftsteam wird sich innerhalb von 2 Geschäftstagen bei",
+    "successMessagePart3": "melden.",
+    "closeButton": "Fenster schließen"
+  },
+  "Footer": {
+    "description": "Globaler Anbieter für Unternehmensschulungen, branchenweit anerkannte IT-Herstellerzertifizierungen und individuelle Lösungen zur Weiterqualifizierung der Belegschaft.",
+    "certification": "ISO 9001:2015 & ISO 27001 zertifizierter Schulungspartner",
+    "navigation": {
+      "title": "Navigation",
+      "home": "Startseite",
+      "solutions": "Unsere Lösungen",
+      "learningFormats": "Lernformate",
+      "courseDirectory": "Kursverzeichnis",
+      "aboutUs": "Über uns"
+    },
+    "deliveryOptions": {
+      "title": "Durchführungsoptionen",
+      "fmat": "Fly-Me-A-Trainer (FMAT)",
+      "flexi": "Flexi (selbstgesteuert)",
+      "oneOnOne": "1-zu-1-Training",
+      "customised": "Individuelle Programme",
+      "virtual": "Virtuell live online"
+    },
+    "contact": {
+      "title": "Unternehmenszentrale",
+      "address": "100 Technology Square, Suite 800, Boston, MA 02139"
+    },
+    "copyright": "© {year} NexMentor Solutions Inc. Alle Rechte vorbehalten.",
+    "legal": {
+      "privacyPolicy": "Datenschutzrichtlinie",
+      "termsOfService": "Nutzungsbedingungen",
+      "accreditations": "Akkreditierungen"
+    }
+  },
+  "CourseContent": {
+    "overviewWithCode": "Diese von einem Trainer geleitete {vendor}-Schulung zu {title} befähigt Fachleute, die mit {domain} arbeiten, praktische, arbeitsmarktreife Fähigkeiten aufzubauen. Über {duration} hinweg arbeiten Sie durch geführte Labore, reale Szenarien und fachkundiges Mentoring auf {level}-Niveau. Der Lehrplan entspricht dem Zertifizierungspfad {code}, sodass Sie bereit sind, die Prüfung abzulegen und die Fähigkeiten im Beruf anzuwenden.",
+    "overviewWithoutCode": "Diese von einem Trainer geleitete {vendor}-Schulung zu {title} befähigt Fachleute, die mit {domain} arbeiten, praktische, arbeitsmarktreife Fähigkeiten aufzubauen. Über {duration} hinweg arbeiten Sie durch geführte Labore, reale Szenarien und fachkundiges Mentoring auf {level}-Niveau. Sie schließen mit einem NexMentor-Abschlusszertifikat und der Zuversicht ab, die Fähigkeiten sofort anzuwenden.",
+    "outcomes": {
+      "understand": "Die zentralen {domain}-Konzepte hinter {shortTitle} verstehen und wie sie in eine Unternehmensumgebung passen",
+      "configure": "{shortTitle} nach bewährten {vendor}-Verfahren konfigurieren, bereitstellen und betreiben",
+      "apply": "Bewährte Muster für Leistung, Sicherheit, Kosten und Zuverlässigkeit anwenden",
+      "diagnose": "Häufige Probleme in produktionsähnlichen Szenarien diagnostizieren und beheben",
+      "examWithCode": "Sich sicher auf die Zertifizierungsprüfung {code} vorbereiten",
+      "examNoCode": "Ihre Fähigkeiten mit praktischen Laboren und einer Abschlussübung validieren"
+    },
+    "audience": {
+      "professionals": "IT-Fachleute und Ingenieure, die mit {vendor} {domain} arbeiten",
+      "architects": "Architekten, Administratoren und Berater, die ihre Plattform-Expertise erweitern",
+      "teams": "Teams, die Fähigkeiten vor einer Zertifizierung oder Migration standardisieren"
+    },
+    "certificationWithCode": "Ausgerichtet auf die Prüfung {code}. Nach Abschluss erhalten Sie außerdem ein NexMentor-Teilnahmezertifikat.",
+    "certificationNoCode": "Beinhaltet ein NexMentor-Abschlusszertifikat, das von unseren Unternehmensschulungspartnern anerkannt wird.",
+    "prerequisites": {
+      "foundation": {
+        "first": "Keine Vorerfahrung erforderlich — der Kurs beginnt bei den Grundlagen.",
+        "second": "Grundlegende Computerkenntnisse und Vertrautheit mit einem modernen Betriebssystem."
+      },
+      "intermediate": {
+        "first": "Vertrautheit mit grundlegenden IT- und Netzwerkkonzepten.",
+        "second": "Etwas praktische Erfahrung mit der Plattform oder ein gleichwertiger Grundlagenkurs."
+      },
+      "advanced": {
+        "first": "Praktische Erfahrung mit der Plattform in einer realen oder Laborumgebung.",
+        "second": "Kenntnisse auf Associate- oder Intermediate-Niveau im relevanten Bereich."
+      },
+      "expert": {
+        "first": "Erhebliche Produktionserfahrung mit der Technologie.",
+        "second": "Eine fortgeschrittene Zertifizierung oder gleichwertige praktische Expertise."
+      }
+    },
+    "formats": {
+      "liveOnline": "Live online (mit Trainer)",
+      "classroom": "Präsenzunterricht",
+      "privateCohort": "1-zu-1 / private Gruppe",
+      "onSite": "Fly-me-a-trainer (vor Ort)"
+    },
+    "includes": {
+      "courseware": "Kursunterlagen im offiziellen Stil und Laborhandbücher",
+      "labs": "Praktische Labore und reale Übungen",
+      "practiceQuestions": "Übungsfragen und Prüfungsvorbereitung",
+      "certificate": "Abschlusszertifikat"
+    }
+  },
+  "CoursePage": {
+    "breadcrumb": {
+      "home": "Startseite",
+      "courses": "Kurse",
+      "label": "Brotkrümelnavigation"
+    },
+    "training": "Schulung",
+    "examTrack": "Prüfung / Track:",
+    "enrollButton": "Anmelden / Zeitplan anfragen",
+    "talkToAdvisorButton": "Mit einem Kursberater sprechen",
+    "overviewHeading": "Kursübersicht",
+    "whatYoullLearnHeading": "Was Sie lernen werden",
+    "prerequisitesHeading": "Voraussetzungen",
+    "whoShouldAttendHeading": "Wer sollte teilnehmen",
+    "certificationHeading": "Zertifizierung",
+    "programIncludesLabel": "Dieses Programm umfasst",
+    "deliveryFormatsLabel": "Durchführungsformate",
+    "scheduleButton": "Zeitplan & Preise erhalten",
+    "advisorReplyNote": "Ein NexMentor-Berater antwortet innerhalb von 2 Geschäftsstunden.",
+    "backToDirectory": "Zurück zum vollständigen Kursverzeichnis",
+    "relatedCoursesHeading": "Verwandte {vendor}-Kurse",
+    "viewLink": "Ansehen",
+    "facts": {
+      "duration": "Dauer",
+      "level": "Niveau",
+      "domain": "Bereich",
+      "examCode": "Prüfungscode"
+    },
+    "enquirySubjects": {
+      "courseEnquiry": "Kursanfrage",
+      "enrollment": "Anmeldung: {title}",
+      "advisorCall": "Beratungsgespräch: {title}"
+    }
+  },
+  "LanguageSwitcher": {
+    "changeLanguage": "Sprache ändern"
   }
 }

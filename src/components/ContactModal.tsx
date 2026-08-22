@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { X, CheckCircle2, Send, Building, Mail, Phone, User, MessageSquare } from 'lucide-react';
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 import { ContactFormData } from '../types';
 
 interface ContactModalProps {
@@ -11,7 +12,13 @@ interface ContactModalProps {
   defaultSubject?: string;
 }
 
+const TRAINING_MODE_VALUES = ['Fly-Me-A-Trainer (FMAT)', 'Flexi (Self-Paced)', '1-on-1 Training', 'Customised Programmes', 'Virtual Live Online'] as const;
+const TRAINING_MODE_KEYS = ['fmat', 'flexi', 'oneOnOne', 'customised', 'virtual'] as const;
+const PARTICIPANTS_VALUES = ['1 Employee', '2-5 Employees', '5-10 Employees', '10-25 Employees', '50+ Enterprise Cohort'] as const;
+const PARTICIPANTS_KEYS = ['one', 'twoToFive', 'fiveToTen', 'tenToTwentyFive', 'fiftyPlus'] as const;
+
 export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose, defaultSubject }) => {
+  const t = useTranslations('ContactModal');
   const [formData, setFormData] = useState<ContactFormData>({
     fullName: '',
     companyName: '',
@@ -29,10 +36,10 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose, def
     if (defaultSubject) {
       setFormData((prev) => ({
         ...prev,
-        message: `Inquiry regarding: ${defaultSubject}`
+        message: t('inquiryRegardingPrefix', { subject: defaultSubject })
       }));
     }
-  }, [defaultSubject]);
+  }, [defaultSubject, t]);
 
   if (!isOpen) return null;
 
@@ -55,27 +62,27 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose, def
           <form onSubmit={handleSubmit} className="space-y-5">
             <div>
               <span className="text-xs font-bold text-[#0B5198] dark:text-sky-400 uppercase tracking-wider block mb-1">
-                Enterprise Training Consultation
+                {t('eyebrow')}
               </span>
               <h3 className="text-2xl font-bold text-[#0A2540] dark:text-white">
-                Contact NexMentor Solutions
+                {t('heading')}
               </h3>
               <p className="text-slate-500 dark:text-slate-400 text-xs mt-1">
-                Speak with an Enterprise Account Advisor for customized group rates and schedules.
+                {t('subheading')}
               </p>
             </div>
 
             <div className="space-y-4">
               <div>
                 <label className="block text-xs font-semibold text-slate-700 dark:text-slate-200 mb-1">
-                  Full Name *
+                  {t('fields.fullName.label')}
                 </label>
                 <div className="relative">
                   <User className="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2" />
                   <input
                     type="text"
                     required
-                    placeholder="John Doe"
+                    placeholder={t('fields.fullName.placeholder')}
                     value={formData.fullName}
                     onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
                     className="w-full pl-9 pr-3 py-2.5 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#0B5198] focus:bg-white dark:focus:bg-slate-900"
@@ -86,14 +93,14 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose, def
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-xs font-semibold text-slate-700 dark:text-slate-200 mb-1">
-                    Work Email *
+                    {t('fields.email.label')}
                   </label>
                   <div className="relative">
                     <Mail className="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2" />
                     <input
                       type="email"
                       required
-                      placeholder="john@company.com"
+                      placeholder={t('fields.email.placeholder')}
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       className="w-full pl-9 pr-3 py-2.5 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#0B5198] focus:bg-white dark:focus:bg-slate-900"
@@ -103,13 +110,13 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose, def
 
                 <div>
                   <label className="block text-xs font-semibold text-slate-700 dark:text-slate-200 mb-1">
-                    Phone Number
+                    {t('fields.phone.label')}
                   </label>
                   <div className="relative">
                     <Phone className="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2" />
                     <input
                       type="tel"
-                      placeholder="+1 (555) 000-0000"
+                      placeholder={t('fields.phone.placeholder')}
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                       className="w-full pl-9 pr-3 py-2.5 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#0B5198] focus:bg-white dark:focus:bg-slate-900"
@@ -120,14 +127,14 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose, def
 
               <div>
                 <label className="block text-xs font-semibold text-slate-700 dark:text-slate-200 mb-1">
-                  Company / Organization *
+                  {t('fields.company.label')}
                 </label>
                 <div className="relative">
                   <Building className="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2" />
                   <input
                     type="text"
                     required
-                    placeholder="Acme Corp"
+                    placeholder={t('fields.company.placeholder')}
                     value={formData.companyName}
                     onChange={(e) => setFormData({ ...formData, companyName: e.target.value })}
                     className="w-full pl-9 pr-3 py-2.5 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#0B5198] focus:bg-white dark:focus:bg-slate-900"
@@ -138,47 +145,43 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose, def
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-xs font-semibold text-slate-700 dark:text-slate-200 mb-1">
-                    Preferred Delivery Format
+                    {t('fields.trainingMode.label')}
                   </label>
                   <select
                     value={formData.trainingMode}
                     onChange={(e) => setFormData({ ...formData, trainingMode: e.target.value })}
                     className="w-full px-3 py-2.5 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#0B5198] focus:bg-white dark:focus:bg-slate-900"
                   >
-                    <option value="Fly-Me-A-Trainer (FMAT)">Fly-Me-A-Trainer (FMAT)</option>
-                    <option value="Flexi (Self-Paced)">Flexi (Self-Paced)</option>
-                    <option value="1-on-1 Training">1-on-1 Training</option>
-                    <option value="Customised Programmes">Customised Programmes</option>
-                    <option value="Virtual Live Online">Virtual Live Online</option>
+                    {TRAINING_MODE_VALUES.map((value, i) => (
+                      <option key={value} value={value}>{t(`trainingModeOptions.${TRAINING_MODE_KEYS[i]}`)}</option>
+                    ))}
                   </select>
                 </div>
 
                 <div>
                   <label className="block text-xs font-semibold text-slate-700 dark:text-slate-200 mb-1">
-                    Estimated Learners
+                    {t('fields.participants.label')}
                   </label>
                   <select
                     value={formData.participants}
                     onChange={(e) => setFormData({ ...formData, participants: e.target.value })}
                     className="w-full px-3 py-2.5 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#0B5198] focus:bg-white dark:focus:bg-slate-900"
                   >
-                    <option value="1 Employee">1 Employee</option>
-                    <option value="2-5 Employees">2-5 Employees</option>
-                    <option value="5-10 Employees">5-10 Employees</option>
-                    <option value="10-25 Employees">10-25 Employees</option>
-                    <option value="50+ Enterprise Cohort">50+ Enterprise Cohort</option>
+                    {PARTICIPANTS_VALUES.map((value, i) => (
+                      <option key={value} value={value}>{t(`participantsOptions.${PARTICIPANTS_KEYS[i]}`)}</option>
+                    ))}
                   </select>
                 </div>
               </div>
 
               <div>
                 <label className="block text-xs font-semibold text-slate-700 dark:text-slate-200 mb-1">
-                  Message / Course Interests
+                  {t('fields.message.label')}
                 </label>
                 <div className="relative">
                   <textarea
                     rows={3}
-                    placeholder="Tell us about your learning goals or specific courses needed..."
+                    placeholder={t('fields.message.placeholder')}
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     className="w-full p-3 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#0B5198] focus:bg-white dark:focus:bg-slate-900"
@@ -196,15 +199,15 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose, def
                 className="mt-0.5 w-4 h-4 rounded border-slate-300 dark:border-slate-700 text-[#0B5198] dark:text-sky-400 focus:ring-2 focus:ring-[#0B5198] shrink-0"
               />
               <span className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
-                I agree to the{' '}
+                {t('privacy.prefix')}{' '}
                 <a href="/privacy-policy" target="_blank" className="text-[#0B5198] dark:text-sky-400 font-semibold hover:underline">
-                  Privacy Policy
+                  {t('privacy.privacyPolicy')}
                 </a>{' '}
-                and{' '}
+                {t('privacy.and')}{' '}
                 <a href="/terms-of-service" target="_blank" className="text-[#0B5198] dark:text-sky-400 font-semibold hover:underline">
-                  Terms &amp; Conditions
+                  {t('privacy.termsConditions')}
                 </a>
-                , and consent to being contacted regarding this inquiry. *
+                {t('privacy.suffix')}
               </span>
             </label>
 
@@ -214,7 +217,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose, def
               className="w-full bg-[#0052CC] hover:bg-[#003B99] disabled:bg-slate-300 disabled:cursor-not-allowed disabled:hover:bg-slate-300 text-white py-3.5 rounded-xl font-bold text-sm shadow-md transition-all flex items-center justify-center gap-2 active:scale-95"
             >
               <Send className="w-4 h-4" />
-              <span>Submit Consultation Request</span>
+              <span>{t('submitButton')}</span>
             </button>
           </form>
         ) : (
@@ -223,10 +226,10 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose, def
               <CheckCircle2 className="w-10 h-10" />
             </div>
             <h3 className="text-2xl font-bold text-[#0A2540] dark:text-white">
-              Inquiry Received!
+              {t('successHeading')}
             </h3>
             <p className="text-slate-600 dark:text-slate-300 text-sm max-w-sm mx-auto">
-              Thank you, <strong className="text-slate-800 dark:text-slate-100">{formData.fullName}</strong>. An Enterprise Learning Advisor will reach out to <span className="underline">{formData.email}</span> within 2 business hours.
+              {t('successMessagePart1')} <strong className="text-slate-800 dark:text-slate-100">{formData.fullName}</strong>. {t('successMessagePart2')} <span className="underline">{formData.email}</span> {t('successMessagePart3')}
             </p>
             <div className="pt-4">
               <button
@@ -237,7 +240,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose, def
                 }}
                 className="bg-slate-900 text-white px-6 py-2.5 rounded-xl text-sm font-semibold hover:bg-slate-800 transition-colors"
               >
-                Close Window
+                {t('closeButton')}
               </button>
             </div>
           </div>

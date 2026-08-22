@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { Globe, Mail, Phone, MapPin, ShieldCheck, Instagram, Facebook, Linkedin, Youtube, MessageCircle } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 
 const SOCIAL_LINKS = [
@@ -19,6 +20,7 @@ interface FooterProps {
 
 export const Footer: React.FC<FooterProps> = ({ onOpenContact, setActiveSection }) => {
   const containerRef = useScrollReveal({ y: 40, duration: 0.9 });
+  const t = useTranslations('Footer');
   const scrollTo = (id: string) => {
     setActiveSection(id);
     const element = typeof document !== 'undefined' ? document.getElementById(id) : null;
@@ -57,12 +59,12 @@ export const Footer: React.FC<FooterProps> = ({ onOpenContact, setActiveSection 
             </div>
 
             <p className="text-slate-400 text-xs sm:text-sm leading-relaxed max-w-sm font-light">
-              Global provider of enterprise corporate learning, industry-recognized IT vendor certifications, and custom workforce upskilling solutions.
+              {t('description')}
             </p>
 
             <div className="pt-2 flex items-center gap-2 text-xs text-sky-400 font-semibold">
               <ShieldCheck className="w-4 h-4 text-emerald-400" />
-              <span>ISO 9001:2015 & ISO 27001 Certified Training Partner</span>
+              <span>{t('certification')}</span>
             </div>
 
             {/* Social Media Links */}
@@ -97,32 +99,32 @@ export const Footer: React.FC<FooterProps> = ({ onOpenContact, setActiveSection 
           {/* Quick Navigation */}
           <div>
             <h4 className="text-xs font-bold text-white uppercase tracking-wider mb-4">
-              Navigation
+              {t('navigation.title')}
             </h4>
             <ul className="space-y-2.5 text-xs text-slate-400">
               <li>
                 <button onClick={() => scrollTo('home')} className="hover:text-white transition-colors">
-                  Home
+                  {t('navigation.home')}
                 </button>
               </li>
               <li>
                 <button onClick={() => scrollTo('solutions')} className="hover:text-white transition-colors">
-                  Our Solutions
+                  {t('navigation.solutions')}
                 </button>
               </li>
               <li>
                 <button onClick={() => scrollTo('training-modes')} className="hover:text-white transition-colors">
-                  Learning Formats
+                  {t('navigation.learningFormats')}
                 </button>
               </li>
               <li>
                 <button onClick={() => scrollTo('courses')} className="hover:text-white transition-colors">
-                  Course Directory
+                  {t('navigation.courseDirectory')}
                 </button>
               </li>
               <li>
                 <button onClick={() => scrollTo('about')} className="hover:text-white transition-colors">
-                  About Us
+                  {t('navigation.aboutUs')}
                 </button>
               </li>
             </ul>
@@ -131,32 +133,32 @@ export const Footer: React.FC<FooterProps> = ({ onOpenContact, setActiveSection 
           {/* Delivery Formats */}
           <div>
             <h4 className="text-xs font-bold text-white uppercase tracking-wider mb-4">
-              Delivery Options
+              {t('deliveryOptions.title')}
             </h4>
             <ul className="space-y-2.5 text-xs text-slate-400">
               <li>
                 <button onClick={() => scrollTo('training-modes')} className="hover:text-white transition-colors">
-                  Fly-Me-A-Trainer (FMAT)
+                  {t('deliveryOptions.fmat')}
                 </button>
               </li>
               <li>
                 <button onClick={() => scrollTo('training-modes')} className="hover:text-white transition-colors">
-                  Flexi (Self-Paced)
+                  {t('deliveryOptions.flexi')}
                 </button>
               </li>
               <li>
                 <button onClick={() => scrollTo('training-modes')} className="hover:text-white transition-colors">
-                  1-on-1 Training
+                  {t('deliveryOptions.oneOnOne')}
                 </button>
               </li>
               <li>
                 <button onClick={() => scrollTo('training-modes')} className="hover:text-white transition-colors">
-                  Customised Programmes
+                  {t('deliveryOptions.customised')}
                 </button>
               </li>
               <li>
                 <button onClick={() => scrollTo('training-modes')} className="hover:text-white transition-colors">
-                  Virtual Live Online
+                  {t('deliveryOptions.virtual')}
                 </button>
               </li>
             </ul>
@@ -165,12 +167,12 @@ export const Footer: React.FC<FooterProps> = ({ onOpenContact, setActiveSection 
           {/* Contact Details */}
           <div>
             <h4 className="text-xs font-bold text-white uppercase tracking-wider mb-4">
-              Corporate Headquarters
+              {t('contact.title')}
             </h4>
             <ul className="space-y-3 text-xs text-slate-400">
               <li className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 text-sky-400 shrink-0 mt-0.5" />
-                <span>100 Technology Square, Suite 800, Boston, MA 02139</span>
+                <span>{t('contact.address')}</span>
               </li>
               <li className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-sky-400 shrink-0" />
@@ -187,11 +189,11 @@ export const Footer: React.FC<FooterProps> = ({ onOpenContact, setActiveSection 
 
         {/* Bottom Bar */}
         <div className="mt-12 pt-8 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
-          <p>© {new Date().getFullYear()} NexMentor Solutions Inc. All rights reserved.</p>
+          <p>{t('copyright', { year: new Date().getFullYear() })}</p>
           <div className="flex gap-6">
-            <span className="hover:text-slate-400 cursor-pointer">Privacy Policy</span>
-            <span className="hover:text-slate-400 cursor-pointer">Terms of Service</span>
-            <span className="hover:text-slate-400 cursor-pointer">Accreditations</span>
+            <span className="hover:text-slate-400 cursor-pointer">{t('legal.privacyPolicy')}</span>
+            <span className="hover:text-slate-400 cursor-pointer">{t('legal.termsOfService')}</span>
+            <span className="hover:text-slate-400 cursor-pointer">{t('legal.accreditations')}</span>
           </div>
         </div>
       </div>

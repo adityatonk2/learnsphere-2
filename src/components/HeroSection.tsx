@@ -22,7 +22,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenContact, onExplo
       <div className="absolute inset-0 z-0">
         <Image
           src="/assets/images/hero_learning_team_1786357207634.jpg"
-          alt="Corporate learning team"
+          alt={t('imageAlt')}
           fill
           className="object-cover object-center scale-105"
           priority
