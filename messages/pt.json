@@ -7,5 +7,35 @@
     "connectAdvisor": "Falar com um consultor",
     "connectAdvisorSubject": "Falar com um consultor de cursos",
     "searchTitle": "Pesquisar (⌘K)"
+  },
+  "Hero": {
+    "badge": "Parceiro global de confiança em formação corporativa",
+    "headlineLine1": "Onde a tecnologia",
+    "headlineLine2": "encontra a excelência",
+    "subtitle": "Impulsionando o futuro da aprendizagem corporativa",
+    "browseCatalog": "Ver catálogo",
+    "statCourses": "Cursos certificados",
+    "statEmployees": "Colaboradores formados",
+    "statPassRate": "Taxa de aprovação em exames"
+  },
+  "Promo": {
+    "badgeText": "Promoção da monção — Apenas para membros:",
+    "offerText": "Até 70% de desconto em cursos e vouchers de exame dos principais fornecedores.",
+    "becomeMember": "Torne-se membro",
+    "membershipSubject": "Promoção da monção — Consulta de associação",
+    "dismiss": "Fechar promoção"
+  },
+  "WhyUs": {
+    "eyebrow": "A nossa vantagem",
+    "heading": "Porquê a NexMentor Solutions?",
+    "subheading": "Um parceiro de confiança para organizações que precisam de resultados prontos para certificação, não apenas horas de formação.",
+    "reasons": [
+      { "title": "Currículo alinhado com fornecedores", "description": "Currículo alinhado com AWS, Microsoft, EC-Council, ISC2, PMI e mais — cada curso corresponde diretamente a exames de certificação reais." },
+      { "title": "Formadores especialistas certificados", "description": "Uma equipa global com mais de 1.200 instrutores certificados e com experiência na indústria — não simples leitores de conteúdo." },
+      { "title": "Presença global de entrega", "description": "Entrega presencial, virtual ou híbrida em mais de 40 países, alinhada com o fuso horário e infraestrutura da sua equipa." },
+      { "title": "Formatos de aprendizagem flexíveis", "description": "De percursos Flexi ao próprio ritmo a coortes presenciais com formador dedicado — escolha o formato certo para a sua equipa." },
+      { "title": "Resultados de exame comprovados", "description": "Uma taxa de aprovação consistentemente alta, apoiada por material oficial, laboratórios práticos e percursos estruturados de preparação." },
+      { "title": "Apoio dedicado de consultor", "description": "Cada aluno e conta empresarial recebe um consultor de cursos para planeamento, agendamento e orientação de carreira." }
+    ]
   }
 }

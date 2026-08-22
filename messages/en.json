@@ -1,19 +1,41 @@
 {
-  "Common": {
-    "getStarted": "Get Started",
-    "search": "Search"
-  },
+  "Common": { "getStarted": "Get Started", "search": "Search" },
   "Header": {
     "globalReach": "Global Training Delivery across 40+ Countries",
     "enterpriseSupport": "Enterprise Support: +1 (800) 555-8920",
-    "nav": {
-      "solutions": "Solutions",
-      "training": "Training",
-      "courses": "Courses",
-      "about": "About"
-    },
+    "nav": { "solutions": "Solutions", "training": "Training", "courses": "Courses", "about": "About" },
     "connectAdvisor": "Connect with Advisor",
     "connectAdvisorSubject": "Connect with Course Advisor",
     "searchTitle": "Search (⌘K)"
+  },
+  "Hero": {
+    "badge": "Trusted Global Corporate Education Partner",
+    "headlineLine1": "Where Technology",
+    "headlineLine2": "Meets Excellence",
+    "subtitle": "Empowering the Future of Corporate Learning",
+    "browseCatalog": "Browse Catalog",
+    "statCourses": "Certified Courses",
+    "statEmployees": "Trained Employees",
+    "statPassRate": "Exam Pass Rate"
+  },
+  "Promo": {
+    "badgeText": "Monsoon Sale — Members Only:",
+    "offerText": "Up to 70% off Top Vendor courses & exam vouchers.",
+    "becomeMember": "Become a member",
+    "membershipSubject": "Monsoon Sale — Membership Inquiry",
+    "dismiss": "Dismiss promotion"
+  },
+  "WhyUs": {
+    "eyebrow": "Our Advantage",
+    "heading": "Why NexMentor Solutions?",
+    "subheading": "A trusted partner for organizations that need certification-ready results, not just training hours.",
+    "reasons": [
+      { "title": "Vendor-Aligned Curriculum", "description": "Curriculum aligned to AWS, Microsoft, EC-Council, ISC2, PMI, and more — every course maps directly to real certification exams." },
+      { "title": "Certified Master Trainers", "description": "A global bench of 1,200+ industry-practicing, vendor-certified instructors — not generic content readers." },
+      { "title": "Global Delivery Footprint", "description": "On-site, virtual, or hybrid delivery across 40+ countries, aligned to your team's timezone and infrastructure." },
+      { "title": "Flexible Learning Formats", "description": "From self-paced Flexi tracks to Fly-Me-A-Trainer on-site cohorts — choose the format that fits your workforce." },
+      { "title": "Proven Exam Outcomes", "description": "A consistently high exam pass rate backed by official courseware, hands-on labs, and structured exam-prep tracks." },
+      { "title": "Dedicated Advisor Support", "description": "Every learner and enterprise account gets a course advisor for planning, scheduling, and career-path guidance." }
+    ]
   }
 }

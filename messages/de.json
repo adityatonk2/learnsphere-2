@@ -7,5 +7,35 @@
     "connectAdvisor": "Berater kontaktieren",
     "connectAdvisorSubject": "Kursberater kontaktieren",
     "searchTitle": "Suchen (⌘K)"
+  },
+  "Hero": {
+    "badge": "Vertrauenswürdiger globaler Partner für Unternehmensbildung",
+    "headlineLine1": "Wo Technologie",
+    "headlineLine2": "auf Exzellenz trifft",
+    "subtitle": "Die Zukunft des Corporate Learning gestalten",
+    "browseCatalog": "Katalog durchsuchen",
+    "statCourses": "Zertifizierte Kurse",
+    "statEmployees": "Geschulte Mitarbeiter",
+    "statPassRate": "Prüfungserfolgsquote"
+  },
+  "Promo": {
+    "badgeText": "Monsun-Angebot — Nur für Mitglieder:",
+    "offerText": "Bis zu 70% Rabatt auf Kurse und Prüfungsgutscheine führender Anbieter.",
+    "becomeMember": "Mitglied werden",
+    "membershipSubject": "Monsun-Angebot — Mitgliedschaftsanfrage",
+    "dismiss": "Angebot schließen"
+  },
+  "WhyUs": {
+    "eyebrow": "Unser Vorteil",
+    "heading": "Warum NexMentor Solutions?",
+    "subheading": "Ein vertrauenswürdiger Partner für Organisationen, die zertifizierungsreife Ergebnisse brauchen — nicht nur Schulungsstunden.",
+    "reasons": [
+      { "title": "Herstellerorientierter Lehrplan", "description": "Lehrplan abgestimmt auf AWS, Microsoft, EC-Council, ISC2, PMI und mehr — jeder Kurs entspricht direkt echten Zertifizierungsprüfungen." },
+      { "title": "Zertifizierte Meistertrainer", "description": "Ein globales Team von über 1.200 praxiserfahrenen, herstellerzertifizierten Trainern — keine bloßen Inhaltevorleser." },
+      { "title": "Globale Präsenz", "description": "Vor-Ort-, virtuelle oder hybride Durchführung in über 40 Ländern, abgestimmt auf Zeitzone und Infrastruktur Ihres Teams." },
+      { "title": "Flexible Lernformate", "description": "Von selbstgesteuerten Flexi-Tracks bis zu Vor-Ort-Kohorten mit Trainer vor Ort — wählen Sie das passende Format für Ihre Belegschaft." },
+      { "title": "Bewährte Prüfungsergebnisse", "description": "Eine durchgehend hohe Erfolgsquote, gestützt durch offizielles Kursmaterial, praktische Labore und strukturierte Prüfungsvorbereitung." },
+      { "title": "Persönliche Beratung", "description": "Jeder Lernende und jedes Unternehmenskonto erhält einen Kursberater für Planung, Terminierung und Karriereberatung." }
+    ]
   }
 }

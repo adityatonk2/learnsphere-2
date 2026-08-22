@@ -7,5 +7,35 @@
     "connectAdvisor": "アドバイザーに相談",
     "connectAdvisorSubject": "コースアドバイザーに相談",
     "searchTitle": "検索 (⌘K)"
+  },
+  "Hero": {
+    "badge": "信頼されるグローバル企業教育パートナー",
+    "headlineLine1": "テクノロジーが",
+    "headlineLine2": "卓越性と出会う場所",
+    "subtitle": "企業研修の未来を切り拓く",
+    "browseCatalog": "カタログを見る",
+    "statCourses": "認定コース数",
+    "statEmployees": "研修修了者数",
+    "statPassRate": "試験合格率"
+  },
+  "Promo": {
+    "badgeText": "モンスーンセール — 会員限定：",
+    "offerText": "主要ベンダーのコースと試験バウチャーが最大70%オフ。",
+    "becomeMember": "会員になる",
+    "membershipSubject": "モンスーンセール — 会員登録に関するお問い合わせ",
+    "dismiss": "プロモーションを閉じる"
+  },
+  "WhyUs": {
+    "eyebrow": "私たちの強み",
+    "heading": "NexMentor Solutionsが選ばれる理由",
+    "subheading": "研修時間だけでなく、認定取得に直結する成果を求める組織にとって信頼できるパートナーです。",
+    "reasons": [
+      { "title": "ベンダー準拠カリキュラム", "description": "AWS、Microsoft、EC-Council、ISC2、PMIなどに準拠したカリキュラム — すべてのコースが実際の認定試験に直結しています。" },
+      { "title": "認定マスタートレーナー", "description": "1,200名以上の実務経験豊富なベンダー認定講師によるグローバルチーム — 単なる内容の読み上げではありません。" },
+      { "title": "グローバルな提供体制", "description": "40か国以上で対面・オンライン・ハイブリッド形式に対応し、チームのタイムゾーンとインフラに合わせて提供します。" },
+      { "title": "柔軟な学習形式", "description": "自己ペースのFlexiトラックから、講師派遣型の対面コホートまで、貴社に合った形式を選択できます。" },
+      { "title": "実証された試験結果", "description": "公式教材、実践ラボ、体系的な試験対策トラックに支えられた、常に高い試験合格率。" },
+      { "title": "専任アドバイザーサポート", "description": "すべての受講者・法人アカウントに、計画・スケジュール・キャリアパスの相談ができる専任アドバイザーが付きます。" }
+    ]
   }
 }

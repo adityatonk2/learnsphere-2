@@ -7,5 +7,35 @@
     "connectAdvisor": "Contacter un conseiller",
     "connectAdvisorSubject": "Contacter un conseiller de formation",
     "searchTitle": "Rechercher (⌘K)"
+  },
+  "Hero": {
+    "badge": "Partenaire mondial de confiance en formation d'entreprise",
+    "headlineLine1": "Là où la technologie",
+    "headlineLine2": "rencontre l'excellence",
+    "subtitle": "Façonner l'avenir de la formation en entreprise",
+    "browseCatalog": "Parcourir le catalogue",
+    "statCourses": "Cours certifiés",
+    "statEmployees": "Employés formés",
+    "statPassRate": "Taux de réussite aux examens"
+  },
+  "Promo": {
+    "badgeText": "Soldes de la mousson — Réservé aux membres :",
+    "offerText": "Jusqu'à 70% de réduction sur les cours et bons d'examen des principaux fournisseurs.",
+    "becomeMember": "Devenir membre",
+    "membershipSubject": "Soldes de la mousson — Demande d'adhésion",
+    "dismiss": "Fermer la promotion"
+  },
+  "WhyUs": {
+    "eyebrow": "Notre avantage",
+    "heading": "Pourquoi NexMentor Solutions ?",
+    "subheading": "Un partenaire de confiance pour les organisations qui veulent des résultats prêts pour la certification, pas seulement des heures de formation.",
+    "reasons": [
+      { "title": "Programme aligné sur les éditeurs", "description": "Programme aligné sur AWS, Microsoft, EC-Council, ISC2, PMI et plus — chaque cours correspond directement à un véritable examen de certification." },
+      { "title": "Formateurs experts certifiés", "description": "Une équipe mondiale de plus de 1 200 formateurs certifiés et expérimentés dans l'industrie — pas de simples lecteurs de contenu." },
+      { "title": "Présence mondiale", "description": "Formation sur site, virtuelle ou hybride dans plus de 40 pays, adaptée au fuseau horaire et à l'infrastructure de votre équipe." },
+      { "title": "Formats d'apprentissage flexibles", "description": "Des parcours autonomes Flexi aux cohortes sur site avec formateur dédié — choisissez le format adapté à votre équipe." },
+      { "title": "Résultats d'examen prouvés", "description": "Un taux de réussite constamment élevé, soutenu par du matériel pédagogique officiel, des laboratoires pratiques et des parcours de préparation structurés." },
+      { "title": "Accompagnement dédié", "description": "Chaque apprenant et compte entreprise bénéficie d'un conseiller pour la planification, la programmation et l'orientation de carrière." }
+    ]
   }
 }

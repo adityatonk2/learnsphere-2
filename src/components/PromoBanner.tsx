@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { Sparkles, X, ArrowRight } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
 interface PromoBannerProps {
   onOpenContact: (subject?: string) => void;
@@ -9,6 +10,7 @@ interface PromoBannerProps {
 
 export const PromoBanner: React.FC<PromoBannerProps> = ({ onOpenContact }) => {
   const [dismissed, setDismissed] = useState(false);
+  const t = useTranslations('Promo');
 
   if (dismissed) return null;
 
@@ -17,18 +19,18 @@ export const PromoBanner: React.FC<PromoBannerProps> = ({ onOpenContact }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2.5 flex items-center justify-center gap-3 text-center">
         <Sparkles className="w-4 h-4 shrink-0 hidden sm:block" />
         <p className="text-xs sm:text-sm font-semibold leading-snug">
-          <span className="font-extrabold">Monsoon Sale — Members Only:</span>{' '}
-          Up to 70% off Top Vendor courses & exam vouchers.{' '}
+          <span className="font-extrabold">{t('badgeText')}</span>{' '}
+          {t('offerText')}{' '}
           <button
-            onClick={() => onOpenContact('Monsoon Sale — Membership Inquiry')}
+            onClick={() => onOpenContact(t('membershipSubject'))}
             className="underline underline-offset-2 font-bold hover:no-underline inline-flex items-center gap-1"
           >
-            Become a member <ArrowRight className="w-3 h-3" />
+            {t('becomeMember')} <ArrowRight className="w-3 h-3" />
           </button>
         </p>
         <button
           onClick={() => setDismissed(true)}
-          aria-label="Dismiss promotion"
+          aria-label={t('dismiss')}
           className="absolute right-3 sm:right-6 top-1/2 -translate-y-1/2 p-1 rounded-full hover:bg-white/20 transition-colors"
         >
           <X className="w-4 h-4" />

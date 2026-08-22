@@ -7,5 +7,35 @@
     "connectAdvisor": "Hablar con un asesor",
     "connectAdvisorSubject": "Hablar con un asesor de cursos",
     "searchTitle": "Buscar (⌘K)"
+  },
+  "Hero": {
+    "badge": "Socio global de confianza en formación corporativa",
+    "headlineLine1": "Donde la tecnología",
+    "headlineLine2": "se encuentra con la excelencia",
+    "subtitle": "Impulsando el futuro del aprendizaje corporativo",
+    "browseCatalog": "Ver catálogo",
+    "statCourses": "Cursos certificados",
+    "statEmployees": "Empleados capacitados",
+    "statPassRate": "Tasa de aprobación de examen"
+  },
+  "Promo": {
+    "badgeText": "Oferta de temporada — Solo para miembros:",
+    "offerText": "Hasta 70% de descuento en cursos y bonos de examen de los principales proveedores.",
+    "becomeMember": "Hazte miembro",
+    "membershipSubject": "Oferta de temporada — Consulta de membresía",
+    "dismiss": "Cerrar promoción"
+  },
+  "WhyUs": {
+    "eyebrow": "Nuestra ventaja",
+    "heading": "¿Por qué NexMentor Solutions?",
+    "subheading": "Un socio de confianza para organizaciones que buscan resultados listos para certificación, no solo horas de formación.",
+    "reasons": [
+      { "title": "Currículo alineado con proveedores", "description": "Currículo alineado con AWS, Microsoft, EC-Council, ISC2, PMI y más — cada curso se relaciona directamente con exámenes de certificación reales." },
+      { "title": "Formadores expertos certificados", "description": "Un equipo global de más de 1,200 instructores certificados y con experiencia en la industria, no simples lectores de contenido." },
+      { "title": "Presencia global de entrega", "description": "Entrega presencial, virtual o híbrida en más de 40 países, adaptada a la zona horaria e infraestructura de su equipo." },
+      { "title": "Formatos de aprendizaje flexibles", "description": "Desde rutas Flexi de autoaprendizaje hasta cohortes presenciales con instructor dedicado — elija el formato adecuado para su equipo." },
+      { "title": "Resultados de examen comprobados", "description": "Una tasa de aprobación consistentemente alta respaldada por material oficial, laboratorios prácticos y rutas de preparación estructuradas." },
+      { "title": "Soporte de asesor dedicado", "description": "Cada estudiante y cuenta empresarial recibe un asesor de cursos para planificación, programación y orientación profesional." }
+    ]
   }
 }

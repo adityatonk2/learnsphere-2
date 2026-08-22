@@ -7,5 +7,35 @@
     "connectAdvisor": "联系顾问",
     "connectAdvisorSubject": "联系课程顾问",
     "searchTitle": "搜索 (⌘K)"
+  },
+  "Hero": {
+    "badge": "值得信赖的全球企业教育合作伙伴",
+    "headlineLine1": "科技与卓越",
+    "headlineLine2": "在此相遇",
+    "subtitle": "赋能企业学习的未来",
+    "browseCatalog": "浏览课程目录",
+    "statCourses": "认证课程",
+    "statEmployees": "受训员工",
+    "statPassRate": "考试通过率"
+  },
+  "Promo": {
+    "badgeText": "季风大促 — 仅限会员：",
+    "offerText": "顶级供应商课程及考试代金券最高享7折优惠。",
+    "becomeMember": "成为会员",
+    "membershipSubject": "季风大促 — 会员咨询",
+    "dismiss": "关闭促销"
+  },
+  "WhyUs": {
+    "eyebrow": "我们的优势",
+    "heading": "为什么选择NexMentor Solutions？",
+    "subheading": "对于需要认证就绪成果而非单纯培训时长的组织而言，我们是值得信赖的合作伙伴。",
+    "reasons": [
+      { "title": "供应商对齐课程体系", "description": "课程体系与AWS、Microsoft、EC-Council、ISC2、PMI等对齐 — 每门课程都直接对应真实的认证考试。" },
+      { "title": "认证资深培训师", "description": "拥有1200多名具有行业实践经验、通过供应商认证的讲师组成的全球团队 — 而非照本宣科的讲解者。" },
+      { "title": "全球交付网络", "description": "在40多个国家提供现场、在线或混合培训，与您团队的时区和基础设施相匹配。" },
+      { "title": "灵活的学习形式", "description": "从自定进度的Flexi课程到讲师上门的现场培训小组 — 选择适合您团队的形式。" },
+      { "title": "经验证的考试成绩", "description": "在官方教材、实践实验和系统化考前准备的支持下，持续保持较高的考试通过率。" },
+      { "title": "专属顾问支持", "description": "每位学员及企业账户都将获得专属课程顾问，提供规划、排期与职业发展指导。" }
+    ]
   }
 }
