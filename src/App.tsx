@@ -52,7 +52,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-white text-slate-900 font-sans selection:bg-sky-500 selection:text-white">
+    <div className="min-h-screen bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 font-sans selection:bg-sky-500 selection:text-white">
       {/* Monsoon Sale Promo Banner */}
       <PromoBanner onOpenContact={handleOpenContact} />
 

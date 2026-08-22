@@ -37,16 +37,16 @@ export const TestimonialsSection: React.FC = () => {
   const containerRef = useScrollReveal({ y: 40, duration: 0.8, stagger: 0.1 });
 
   return (
-    <section id="testimonials" className="py-20 bg-slate-50 border-t border-slate-100">
+    <section id="testimonials" className="py-20 bg-slate-50 dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800">
       <div ref={containerRef} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-14 gsap-reveal">
-          <span className="text-[#0B5198] font-bold text-sm uppercase tracking-wider block mb-2">
+          <span className="text-[#0B5198] dark:text-sky-400 font-bold text-sm uppercase tracking-wider block mb-2">
             Client Feedback
           </span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0A2540] tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0A2540] dark:text-white tracking-tight">
             What Learners & Partners Say
           </h2>
-          <p className="text-slate-500 text-base mt-3 flex items-center justify-center gap-1.5">
+          <p className="text-slate-500 dark:text-slate-400 text-base mt-3 flex items-center justify-center gap-1.5">
             <ShieldCheck className="w-4 h-4 text-emerald-500" />
             Verified feedback from real training engagements only
           </p>
@@ -56,7 +56,7 @@ export const TestimonialsSection: React.FC = () => {
           {TESTIMONIALS.map((t, idx) => (
             <div
               key={idx}
-              className="gsap-reveal bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-lg transition-all duration-300 p-7 flex flex-col"
+              className="gsap-reveal bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-lg transition-all duration-300 p-7 flex flex-col"
             >
               <div className="flex items-center gap-1 mb-4">
                 {Array.from({ length: 5 }).map((_, i) => (
@@ -66,8 +66,8 @@ export const TestimonialsSection: React.FC = () => {
                   />
                 ))}
               </div>
-              <p className="text-sm text-slate-600 leading-relaxed flex-1">"{t.comment}"</p>
-              <p className="text-xs font-semibold text-[#0B5198] mt-5 pt-4 border-t border-slate-100">
+              <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed flex-1">"{t.comment}"</p>
+              <p className="text-xs font-semibold text-[#0B5198] dark:text-sky-400 mt-5 pt-4 border-t border-slate-100 dark:border-slate-800">
                 {t.role}
               </p>
             </div>

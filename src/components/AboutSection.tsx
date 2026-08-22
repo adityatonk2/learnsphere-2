@@ -12,20 +12,20 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenContact }) => 
   const containerRef = useScrollReveal({ y: 50, duration: 0.9 });
 
   return (
-    <section id="about" className="py-20 bg-slate-50 border-t border-slate-100">
+    <section id="about" className="py-20 bg-slate-50 dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800">
       <div ref={containerRef} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch">
           
           {/* Left Column: About NexMentor Solutions text matching Image 1 */}
           <div className="lg:col-span-7 flex flex-col justify-between space-y-6 gsap-reveal">
             <div className="space-y-4">
-              <span className="text-[#0B5198] font-bold text-sm uppercase tracking-wider block">
+              <span className="text-[#0B5198] dark:text-sky-400 font-bold text-sm uppercase tracking-wider block">
                 Company Overview
               </span>
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0A2540] tracking-tight">
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0A2540] dark:text-white tracking-tight">
                 About NexMentor Solutions
               </h2>
-              <p className="text-slate-600 text-base leading-relaxed font-normal">
+              <p className="text-slate-600 dark:text-slate-300 text-base leading-relaxed font-normal">
                 NexMentor Solutions is a global leader in enterprise learning, industry-recognized vendor certifications, and technical workforce upskilling.
               </p>
             </div>
@@ -33,42 +33,42 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenContact }) => 
             {/* Bullet points matching Image 1 exact content */}
             <div className="space-y-5">
               <div className="flex items-start gap-3.5">
-                <div className="w-6 h-6 rounded-full bg-sky-100 text-[#0B5198] flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">
+                <div className="w-6 h-6 rounded-full bg-sky-100 dark:bg-sky-900/40 text-[#0B5198] dark:text-sky-400 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">
                   ✓
                 </div>
                 <div>
-                  <h3 className="text-base font-bold text-[#0A2540]">
+                  <h3 className="text-base font-bold text-[#0A2540] dark:text-white">
                     Who We Are
                   </h3>
-                  <p className="text-slate-600 text-sm mt-0.5">
+                  <p className="text-slate-600 dark:text-slate-300 text-sm mt-0.5">
                     Leaders in cutting-edge corporate education delivering accredited training across 40+ countries.
                   </p>
                 </div>
               </div>
 
               <div className="flex items-start gap-3.5">
-                <div className="w-6 h-6 rounded-full bg-sky-100 text-[#0B5198] flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">
+                <div className="w-6 h-6 rounded-full bg-sky-100 dark:bg-sky-900/40 text-[#0B5198] dark:text-sky-400 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">
                   ✓
                 </div>
                 <div>
-                  <h3 className="text-base font-bold text-[#0A2540]">
+                  <h3 className="text-base font-bold text-[#0A2540] dark:text-white">
                     Our Mission
                   </h3>
-                  <p className="text-slate-600 text-sm mt-0.5">
+                  <p className="text-slate-600 dark:text-slate-300 text-sm mt-0.5">
                     To transform learning through technology, equipping workforce teams with verified, job-ready technology expertise.
                   </p>
                 </div>
               </div>
 
               <div className="flex items-start gap-3.5">
-                <div className="w-6 h-6 rounded-full bg-sky-100 text-[#0B5198] flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">
+                <div className="w-6 h-6 rounded-full bg-sky-100 dark:bg-sky-900/40 text-[#0B5198] dark:text-sky-400 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">
                   ✓
                 </div>
                 <div>
-                  <h3 className="text-base font-bold text-[#0A2540]">
+                  <h3 className="text-base font-bold text-[#0A2540] dark:text-white">
                     Global Certified Instructors
                   </h3>
-                  <p className="text-slate-600 text-sm mt-0.5">
+                  <p className="text-slate-600 dark:text-slate-300 text-sm mt-0.5">
                     A network of over 1,200+ certified practitioner trainers with real-world industry experience.
                   </p>
                 </div>
@@ -76,16 +76,16 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenContact }) => 
             </div>
 
             {/* Quality Badges */}
-            <div className="pt-4 grid grid-cols-2 sm:grid-cols-3 gap-4 border-t border-slate-200/80">
-              <div className="flex items-center gap-2 text-xs font-semibold text-slate-700">
+            <div className="pt-4 grid grid-cols-2 sm:grid-cols-3 gap-4 border-t border-slate-200/80 dark:border-slate-800/80">
+              <div className="flex items-center gap-2 text-xs font-semibold text-slate-700 dark:text-slate-200">
                 <ShieldCheck className="w-4 h-4 text-sky-600" />
                 <span>Vendor-Aligned</span>
               </div>
-              <div className="flex items-center gap-2 text-xs font-semibold text-slate-700">
+              <div className="flex items-center gap-2 text-xs font-semibold text-slate-700 dark:text-slate-200">
                 <Globe2 className="w-4 h-4 text-sky-600" />
                 <span>Global On-Site Delivery</span>
               </div>
-              <div className="flex items-center gap-2 text-xs font-semibold text-slate-700">
+              <div className="flex items-center gap-2 text-xs font-semibold text-slate-700 dark:text-slate-200">
                 <Award className="w-4 h-4 text-sky-600" />
                 <span>Certified Courseware</span>
               </div>
@@ -118,7 +118,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenContact }) => 
               <div className="relative z-10 pt-8">
                 <button
                   onClick={onOpenContact}
-                  className="w-full sm:w-auto bg-white hover:bg-sky-50 text-[#0B5198] px-8 py-3.5 rounded-xl font-bold text-sm shadow-xl transition-all active:scale-95 text-center"
+                  className="w-full sm:w-auto bg-white dark:bg-slate-900 hover:bg-sky-50 dark:hover:bg-slate-800 text-[#0B5198] dark:text-sky-400 px-8 py-3.5 rounded-xl font-bold text-sm shadow-xl transition-all active:scale-95 text-center"
                 >
                   Contact Us
                 </button>

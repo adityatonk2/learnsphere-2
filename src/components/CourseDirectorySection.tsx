@@ -21,7 +21,7 @@ const CourseCard: React.FC<{ course: SearchCourse; showProvider?: boolean }> = (
   const inner = (
     <>
       <div className="space-y-1">
-        <h4 className="text-sm font-medium text-slate-800 group-hover:text-[#0B5198] transition-colors leading-snug">
+        <h4 className="text-sm font-medium text-slate-800 dark:text-slate-100 group-hover:text-[#0B5198] transition-colors leading-snug">
           {course.title}
         </h4>
         {showProvider && course.vendorName && (
@@ -30,15 +30,15 @@ const CourseCard: React.FC<{ course: SearchCourse; showProvider?: boolean }> = (
       </div>
       <div className="mt-2.5 flex items-center gap-2 flex-wrap">
         {course.code && (
-          <span className="text-[11px] font-mono font-medium text-slate-500 bg-slate-100 px-2 py-0.5 rounded">{course.code}</span>
+          <span className="text-[11px] font-mono font-medium text-slate-500 dark:text-slate-400 bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded">{course.code}</span>
         )}
         {course.level && (
-          <span className="text-[10px] font-semibold text-slate-500 bg-slate-50 border border-slate-200 px-1.5 py-0.5 rounded">{course.level}</span>
+          <span className="text-[10px] font-semibold text-slate-500 dark:text-slate-400 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 px-1.5 py-0.5 rounded">{course.level}</span>
         )}
         {course.popular && (
-          <span className="text-[10px] font-bold text-amber-700 bg-amber-50 px-1.5 py-0.5 rounded border border-amber-200">Popular</span>
+          <span className="text-[10px] font-bold text-amber-700 bg-amber-50 dark:bg-amber-950/40 px-1.5 py-0.5 rounded border border-amber-200">Popular</span>
         )}
-        <span className="ml-auto text-[11px] font-semibold text-[#0B5198] opacity-0 group-hover:opacity-100 flex items-center gap-0.5 transition-opacity">
+        <span className="ml-auto text-[11px] font-semibold text-[#0B5198] dark:text-sky-400 opacity-0 group-hover:opacity-100 flex items-center gap-0.5 transition-opacity">
           View <ArrowRight className="w-3 h-3" />
         </span>
       </div>
@@ -83,14 +83,14 @@ export const CourseDirectorySection: React.FC<CourseDirectorySectionProps> = ({ 
   }, [selectedVendor]);
 
   return (
-    <section id="courses" className="py-20 bg-white text-slate-900 border-t border-slate-100">
+    <section id="courses" className="py-20 bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 border-t border-slate-100 dark:border-slate-800">
       <div ref={containerRef} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header & Instant Course Search */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6 gsap-reveal">
           <div>
-            <span className="text-[#0B5198] font-bold text-sm uppercase tracking-wider block mb-1">Certification Directory</span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0A2540]">Top Technology Courses</h2>
-            <p className="text-slate-500 text-base mt-1">
+            <span className="text-[#0B5198] dark:text-sky-400 font-bold text-sm uppercase tracking-wider block mb-1">Certification Directory</span>
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0A2540] dark:text-white">Top Technology Courses</h2>
+            <p className="text-slate-500 dark:text-slate-400 text-base mt-1">
               Explore {VENDORS_DATA.reduce((n, v) => n + v.courses.length, 0)}+ official training programs across leading technology vendors.
             </p>
           </div>
@@ -102,17 +102,17 @@ export const CourseDirectorySection: React.FC<CourseDirectorySectionProps> = ({ 
               placeholder="Search CEH, CISSP, Azure, Kubernetes..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-10 pr-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#0B5198] focus:bg-white transition-all"
+              className="w-full pl-10 pr-4 py-2.5 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#0B5198] focus:bg-white dark:focus:bg-slate-900 transition-all"
             />
             {searchQuery && (
-              <button onClick={() => setSearchQuery('')} className="absolute right-3 top-1/2 -translate-y-1/2 text-xs text-slate-400 hover:text-slate-600">Clear</button>
+              <button onClick={() => setSearchQuery('')} className="absolute right-3 top-1/2 -translate-y-1/2 text-xs text-slate-400 hover:text-slate-600 dark:hover:text-slate-300">Clear</button>
             )}
           </div>
         </div>
 
-        <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden grid grid-cols-1 md:grid-cols-12 min-h-[500px] gsap-reveal">
+        <div className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden grid grid-cols-1 md:grid-cols-12 min-h-[500px] gsap-reveal">
           {/* Vendor sidebar */}
-          <div className="md:col-span-3 lg:col-span-3 border-r border-slate-200 bg-slate-50/50 py-2 md:max-h-[640px] md:overflow-y-auto">
+          <div className="md:col-span-3 lg:col-span-3 border-b md:border-b-0 md:border-r border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900/50 py-2 max-h-[320px] overflow-y-auto md:max-h-[640px]">
             <div className="px-4 py-2 text-[11px] font-bold text-slate-400 uppercase tracking-wider">Certification Providers</div>
             <div className="space-y-0.5">
               {VENDORS_DATA.map((vendor) => {
@@ -122,13 +122,13 @@ export const CourseDirectorySection: React.FC<CourseDirectorySectionProps> = ({ 
                     key={vendor.id}
                     onClick={() => { setSelectedVendorId(vendor.id); setSearchQuery(''); }}
                     className={`w-full text-left px-5 py-3 text-sm font-medium transition-all flex items-center justify-between group border-l-4 ${
-                      isSelected ? 'bg-[#EAF5FC] text-[#0B5198] font-bold border-[#0B5198]' : 'text-slate-700 hover:bg-slate-100 hover:text-slate-900 border-transparent'
+                      isSelected ? 'bg-[#EAF5FC] text-[#0B5198] dark:text-sky-400 font-bold border-[#0B5198]' : 'text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-slate-900 dark:hover:text-white border-transparent'
                     }`}
                   >
                     <span className="flex items-center gap-2">{vendor.name}</span>
                     <span className="flex items-center gap-2">
                       <span className="text-[10px] text-slate-400 font-normal">{vendor.courses.length}</span>
-                      <ChevronRight className={`w-4 h-4 transition-transform ${isSelected ? 'text-[#0B5198] translate-x-0.5' : 'text-slate-400 group-hover:translate-x-0.5'}`} />
+                      <ChevronRight className={`w-4 h-4 transition-transform ${isSelected ? 'text-[#0B5198] dark:text-sky-400 translate-x-0.5' : 'text-slate-400 group-hover:translate-x-0.5'}`} />
                     </span>
                   </button>
                 );
@@ -139,19 +139,19 @@ export const CourseDirectorySection: React.FC<CourseDirectorySectionProps> = ({ 
           {/* Course panel */}
           <div className="md:col-span-9 lg:col-span-9 p-6 sm:p-10 flex flex-col justify-between">
             <div>
-              <div className="flex items-center justify-between pb-6 mb-6 border-b border-slate-100">
+              <div className="flex items-center justify-between pb-6 mb-6 border-b border-slate-100 dark:border-slate-800">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-sky-50 text-[#0B5198] flex items-center justify-center font-bold text-lg border border-sky-100">
+                  <div className="w-10 h-10 rounded-xl bg-sky-50 dark:bg-slate-800 text-[#0B5198] dark:text-sky-400 flex items-center justify-center font-bold text-lg border border-sky-100 dark:border-sky-900/50">
                     {q ? <Search className="w-5 h-5" /> : selectedVendor.name.charAt(0)}
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-[#0A2540]">
+                    <h3 className="text-xl font-bold text-[#0A2540] dark:text-white">
                       {q ? `Search Results (${searchResults.length})` : `${selectedVendor.name} Courses`}
                     </h3>
-                    <p className="text-xs text-slate-500">{q ? `Matching "${searchQuery}"` : `${selectedVendor.courses.length} official training programs`}</p>
+                    <p className="text-xs text-slate-500 dark:text-slate-400">{q ? `Matching "${searchQuery}"` : `${selectedVendor.courses.length} official training programs`}</p>
                   </div>
                 </div>
-                <span className="hidden sm:inline-block text-xs font-semibold text-sky-700 bg-sky-50 px-3 py-1 rounded-full border border-sky-100">Vendor-Aligned Curriculum</span>
+                <span className="hidden sm:inline-block text-xs font-semibold text-sky-700 bg-sky-50 dark:bg-slate-800 px-3 py-1 rounded-full border border-sky-100 dark:border-sky-900/50">Vendor-Aligned Curriculum</span>
               </div>
 
               {q ? (
@@ -163,8 +163,8 @@ export const CourseDirectorySection: React.FC<CourseDirectorySectionProps> = ({ 
                   </div>
                 ) : (
                   <div className="py-16 text-center space-y-3">
-                    <p className="text-slate-500 text-sm">No courses matching "{searchQuery}" found.</p>
-                    <button onClick={() => setSearchQuery('')} className="text-xs font-semibold text-[#0B5198] hover:underline">Reset Search</button>
+                    <p className="text-slate-500 dark:text-slate-400 text-sm">No courses matching "{searchQuery}" found.</p>
+                    <button onClick={() => setSearchQuery('')} className="text-xs font-semibold text-[#0B5198] dark:text-sky-400 hover:underline">Reset Search</button>
                   </div>
                 )
               ) : (
@@ -175,7 +175,7 @@ export const CourseDirectorySection: React.FC<CourseDirectorySectionProps> = ({ 
                         <div className="flex items-center gap-3 mb-3">
                           <h4 className="text-[11px] font-bold text-slate-400 uppercase tracking-wider whitespace-nowrap">{domain}</h4>
                           <span className="text-[10px] text-slate-300">{courses.length}</span>
-                          <div className="h-px bg-slate-100 flex-1" />
+                          <div className="h-px bg-slate-100 dark:bg-slate-800 flex-1" />
                         </div>
                       )}
                       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-1.5">
@@ -189,7 +189,7 @@ export const CourseDirectorySection: React.FC<CourseDirectorySectionProps> = ({ 
               )}
             </div>
 
-            <div className="pt-10 flex justify-center border-t border-slate-100 mt-8">
+            <div className="pt-10 flex justify-center border-t border-slate-100 dark:border-slate-800 mt-8">
               <button
                 onClick={() => onOpenContact(`Catalog Inquiry for ${selectedVendor.name}`)}
                 className="bg-[#007AB8] hover:bg-[#006396] text-white px-8 py-3 rounded-full font-bold text-sm shadow-md hover:shadow-lg transition-all active:scale-95 flex items-center gap-2"

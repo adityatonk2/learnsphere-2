@@ -32,13 +32,13 @@ export const MissionVisionValuesSection: React.FC = () => {
   const containerRef = useScrollReveal({ y: 40, duration: 0.8, stagger: 0.1 });
 
   return (
-    <section id="mission-vision-values" className="py-20 bg-slate-50 border-t border-slate-100">
+    <section id="mission-vision-values" className="py-20 bg-slate-50 dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800">
       <div ref={containerRef} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-14 gsap-reveal">
-          <span className="text-[#0B5198] font-bold text-sm uppercase tracking-wider block mb-2">
+          <span className="text-[#0B5198] dark:text-sky-400 font-bold text-sm uppercase tracking-wider block mb-2">
             What Drives Us
           </span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0A2540] tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0A2540] dark:text-white tracking-tight">
             Mission, Vision & Values
           </h2>
         </div>
@@ -49,18 +49,18 @@ export const MissionVisionValuesSection: React.FC = () => {
             return (
               <div
                 key={pillar.label}
-                className="gsap-reveal bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-lg transition-all duration-300 p-8 flex flex-col"
+                className="gsap-reveal bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-lg transition-all duration-300 p-8 flex flex-col"
               >
                 <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#0B5198] to-[#0088FF] text-white flex items-center justify-center mb-6 shadow-md">
                   <Icon className="w-6 h-6" />
                 </div>
-                <span className="text-[#0B5198] font-bold text-xs uppercase tracking-wider mb-2">
+                <span className="text-[#0B5198] dark:text-sky-400 font-bold text-xs uppercase tracking-wider mb-2">
                   {pillar.label}
                 </span>
-                <h3 className="text-lg font-bold text-[#0A2540] mb-3 leading-snug">
+                <h3 className="text-lg font-bold text-[#0A2540] dark:text-white mb-3 leading-snug">
                   {pillar.heading}
                 </h3>
-                <p className="text-sm text-slate-500 leading-relaxed">
+                <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
                   {pillar.description}
                 </p>
               </div>

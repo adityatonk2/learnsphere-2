@@ -1,5 +1,16 @@
 @import "tailwindcss";
 
+/* Enable class-based dark mode (Tailwind v4): dark: applies inside .dark */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Base page surfaces + native form/scrollbar theming */
+:root {
+  color-scheme: light;
+}
+.dark {
+  color-scheme: dark;
+}
+
 /* --- Search palette animations (no external plugin; respects reduced motion) --- */
 @media (prefers-reduced-motion: no-preference) {
   .nx-fade-in {

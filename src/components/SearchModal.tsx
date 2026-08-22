@@ -39,8 +39,8 @@ const SECTIONS: Omit<SearchItem, 'searchText'>[] = [
 ];
 
 const KIND_META: Record<ResultKind, { icon: React.ElementType; badge: string; badgeClass: string }> = {
-  Course: { icon: GraduationCap, badge: 'Course', badgeClass: 'bg-sky-50 text-[#0B5198]' },
-  Section: { icon: Compass, badge: 'Page', badgeClass: 'bg-slate-100 text-slate-500' },
+  Course: { icon: GraduationCap, badge: 'Course', badgeClass: 'bg-sky-50 dark:bg-slate-800 text-[#0B5198] dark:text-sky-400' },
+  Section: { icon: Compass, badge: 'Page', badgeClass: 'bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400' },
   Learning: { icon: Layers, badge: 'Learning', badgeClass: 'bg-indigo-50 text-indigo-600' },
 };
 
@@ -95,7 +95,7 @@ function highlight(label: string, q: string): React.ReactNode {
   return (
     <>
       {label.slice(0, idx)}
-      <mark className="bg-sky-100 text-[#0B5198] rounded-sm px-0.5">{label.slice(idx, idx + q.length)}</mark>
+      <mark className="bg-sky-100 dark:bg-sky-900/40 text-[#0B5198] dark:text-sky-400 rounded-sm px-0.5">{label.slice(idx, idx + q.length)}</mark>
       {label.slice(idx + q.length)}
     </>
   );
@@ -214,25 +214,25 @@ export const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose, onNav
       />
 
       {/* Panel */}
-      <div className="relative w-full max-w-xl bg-white rounded-2xl shadow-2xl border border-slate-200 overflow-hidden nx-pop-in">
+      <div className="relative w-full max-w-xl bg-white dark:bg-slate-900 rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-800 overflow-hidden nx-pop-in">
         <div className="h-1 w-full bg-gradient-to-r from-[#003B73] via-[#0B5198] to-[#00A3FF]" />
 
         {/* Input row */}
-        <div className="flex items-center gap-3 px-4 py-3.5 border-b border-slate-100">
+        <div className="flex items-center gap-3 px-4 py-3.5 border-b border-slate-100 dark:border-slate-800">
           <Search className="w-5 h-5 text-slate-400 shrink-0" />
           <input
             ref={inputRef}
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder="Search courses, certifications, pages…"
-            className="flex-1 bg-transparent outline-none text-[15px] text-slate-800 placeholder:text-slate-400"
+            className="flex-1 bg-transparent outline-none text-[15px] text-slate-800 dark:text-slate-100 placeholder:text-slate-400"
             autoComplete="off"
             spellCheck={false}
             aria-label="Search"
           />
           <button
             onClick={onClose}
-            className="shrink-0 p-1.5 rounded-md text-slate-400 hover:text-slate-700 hover:bg-slate-100 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0B5198]"
+            className="shrink-0 p-1.5 rounded-md text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0B5198]"
             aria-label="Close search"
           >
             <X className="w-4 h-4" />
@@ -243,8 +243,8 @@ export const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose, onNav
         <div ref={listRef} className="max-h-[52vh] overflow-y-auto py-2">
           {flat.length === 0 ? (
             <div className="px-5 py-10 text-center">
-              <p className="text-sm text-slate-500">
-                No matches for <span className="font-semibold text-slate-700">“{query}”</span>
+              <p className="text-sm text-slate-500 dark:text-slate-400">
+                No matches for <span className="font-semibold text-slate-700 dark:text-slate-200">“{query}”</span>
               </p>
               <p className="text-xs text-slate-400 mt-1">Try a vendor (AWS, CISSP), a topic, or a page name.</p>
             </div>
@@ -268,18 +268,18 @@ export const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose, onNav
                         onClick={() => handleSelect(item)}
                         onMouseMove={() => setActiveIdx(idx)}
                         className={`w-full text-left px-4 py-2.5 flex items-center gap-3 transition-colors ${
-                          isActive ? 'bg-sky-50' : 'hover:bg-slate-50'
+                          isActive ? 'bg-sky-50 dark:bg-slate-800' : 'hover:bg-slate-50 dark:hover:bg-slate-800'
                         }`}
                       >
                         <span
                           className={`shrink-0 w-9 h-9 rounded-lg flex items-center justify-center ${
-                            isActive ? 'bg-white text-[#0B5198] shadow-sm' : 'bg-slate-100 text-slate-500'
+                            isActive ? 'bg-white dark:bg-slate-900 text-[#0B5198] dark:text-sky-400 shadow-sm' : 'bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400'
                           }`}
                         >
                           <Icon className="w-4.5 h-4.5" />
                         </span>
                         <span className="min-w-0 flex-1">
-                          <span className="block text-sm font-medium text-slate-800 truncate">
+                          <span className="block text-sm font-medium text-slate-800 dark:text-slate-100 truncate">
                             {highlight(item.label, q)}
                           </span>
                           <span className="block text-xs text-slate-400 truncate">{item.sub}</span>
@@ -299,22 +299,22 @@ export const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose, onNav
         </div>
 
         {/* Footer hint bar */}
-        <div className="hidden sm:flex items-center gap-4 px-4 py-2.5 border-t border-slate-100 bg-slate-50/60 text-[11px] text-slate-400">
+        <div className="hidden sm:flex items-center gap-4 px-4 py-2.5 border-t border-slate-100 dark:border-slate-800 bg-slate-50/60 dark:bg-slate-900/60 text-[11px] text-slate-400">
           <span className="flex items-center gap-1.5">
-            <kbd className="inline-flex items-center gap-0.5 bg-white border border-slate-200 rounded px-1.5 py-0.5">
+            <kbd className="inline-flex items-center gap-0.5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded px-1.5 py-0.5">
               <ArrowUp className="w-3 h-3" />
               <ArrowDown className="w-3 h-3" />
             </kbd>
             navigate
           </span>
           <span className="flex items-center gap-1.5">
-            <kbd className="inline-flex items-center bg-white border border-slate-200 rounded px-1.5 py-0.5">
+            <kbd className="inline-flex items-center bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded px-1.5 py-0.5">
               <CornerDownLeft className="w-3 h-3" />
             </kbd>
             open
           </span>
           <span className="flex items-center gap-1.5">
-            <kbd className="bg-white border border-slate-200 rounded px-1.5 py-0.5 font-sans">esc</kbd>
+            <kbd className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded px-1.5 py-0.5 font-sans">esc</kbd>
             close
           </span>
           <span className="ml-auto">{flat.length} result{flat.length === 1 ? '' : 's'}</span>

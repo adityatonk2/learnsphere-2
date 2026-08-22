@@ -81,8 +81,15 @@ export default function RootLayout({
           // eslint-disable-next-line react/no-danger
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
         />
+        <script
+          // Sets the theme class before first paint to avoid a flash of the wrong theme.
+          // eslint-disable-next-line react/no-danger
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var t=localStorage.getItem('theme');var d=t==='dark'||((!t||t==='system')&&window.matchMedia('(prefers-color-scheme: dark)').matches);if(d){document.documentElement.classList.add('dark');}}catch(e){}})();`,
+          }}
+        />
       </head>
-      <body className="antialiased font-sans selection:bg-sky-500 selection:text-white">{children}</body>
+      <body className="antialiased font-sans selection:bg-sky-500 selection:text-white bg-white text-slate-900 dark:bg-slate-950 dark:text-slate-200">{children}</body>
     </html>
   );
 }
