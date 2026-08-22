@@ -138,6 +138,13 @@ export const Header: React.FC<HeaderProps> = ({ onOpenContact, activeSection, se
           <span className="h-6 w-px bg-slate-200 dark:bg-slate-700 mx-1.5" aria-hidden="true" />
 
           <button
+            onClick={() => onOpenContact('Connect with Course Advisor')}
+            className="text-sm font-semibold text-[#0B5198] dark:text-sky-400 border border-[#0B5198]/30 hover:border-[#0B5198] hover:bg-sky-50 dark:hover:bg-slate-800 px-4 py-2.5 rounded-lg transition-all active:scale-95"
+          >
+            Connect with Advisor
+          </button>
+
+          <button
             onClick={() => onOpenContact()}
             className="bg-[#0052CC] hover:bg-[#003B99] text-white px-6 py-2.5 rounded-lg text-sm font-semibold shadow-md hover:shadow-lg transition-all active:scale-95"
           >
@@ -182,9 +189,18 @@ export const Header: React.FC<HeaderProps> = ({ onOpenContact, activeSection, se
           <button
             onClick={() => {
               setMobileMenuOpen(false);
+              onOpenContact('Connect with Course Advisor');
+            }}
+            className="w-full mt-3 border border-[#0B5198] text-[#0B5198] dark:text-sky-400 py-3 rounded-lg font-semibold text-center"
+          >
+            Connect with Advisor
+          </button>
+          <button
+            onClick={() => {
+              setMobileMenuOpen(false);
               onOpenContact();
             }}
-            className="w-full mt-3 bg-[#0052CC] text-white py-3 rounded-lg font-semibold text-center shadow-md"
+            className="w-full mt-2 bg-[#0052CC] text-white py-3 rounded-lg font-semibold text-center shadow-md"
           >
             Get Started
           </button>
