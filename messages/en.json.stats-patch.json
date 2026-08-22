@@ -1,0 +1,10 @@
+{
+  "Stats": {
+    "studentsTrained": "Students Trained",
+    "employeesTrained": "Employees Trained",
+    "coursesOffered": "Courses Offered",
+    "certificationVendors": "Certification Vendors",
+    "successfulLearners": "Successful Learners",
+    "countriesServed": "Countries Served"
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "CourseDirectory": {
+    "eyebrow": "Diretório de certificações",
+    "heading": "Melhores cursos de tecnologia",
+    "subtitle": "Explore mais de {count} programas de formação oficiais dos principais fornecedores de tecnologia.",
+    "searchPlaceholder": "Pesquisar CEH, CISSP, Azure, Kubernetes...",
+    "clear": "Limpar",
+    "providersLabel": "Fornecedores de certificação",
+    "providerPrefix": "Fornecedor: ",
+    "popular": "Popular",
+    "viewLabel": "Ver",
+    "searchResultsTitle": "Resultados da pesquisa ({count})",
+    "matchingQuery": "Correspondendo a \"{query}\"",
+    "vendorCoursesTitle": "Cursos {vendor}",
+    "programsCount": "{count} programas de formação oficiais",
+    "vendorAlignedBadge": "Currículo alinhado com fornecedores",
+    "noResults": "Nenhum curso encontrado para \"{query}\".",
+    "resetSearch": "Repor pesquisa",
+    "requestCatalog": "Solicitar catálogo completo e preços"
+  },
+  "Levels": {
+    "Foundation": "Fundamentos",
+    "Beginner": "Iniciante",
+    "Intermediate": "Intermédio",
+    "Advanced": "Avançado",
+    "Expert": "Especialista",
+    "Professional": "Profissional",
+    "Associate": "Associado",
+    "Administration": "Administração"
+  },
+  "SearchModal": {
+    "placeholder": "Pesquisar cursos, certificações, páginas…",
+    "closeLabel": "Fechar pesquisa",
+    "ariaLabel": "Pesquisar na NexMentor Solutions",
+    "noMatches": "Sem resultados para \"{query}\"",
+    "tryHint": "Experimente um fornecedor (AWS, CISSP), um tema ou o nome de uma página.",
+    "coursesGroup": "Cursos",
+    "pagesGroup": "Páginas",
+    "learningGroup": "Opções de aprendizagem",
+    "badgeCourse": "Curso",
+    "badgePage": "Página",
+    "badgeLearning": "Aprendizagem",
+    "navigate": "navegar",
+    "open": "abrir",
+    "close": "fechar",
+    "escKey": "esc",
+    "resultsCount": "{count, plural, one {# resultado} other {# resultados}}",
+    "learningOptionSub": "Opção de aprendizagem",
+    "sections": {
+      "home": { "label": "Início", "sub": "Voltar ao topo" },
+      "solutions": { "label": "Soluções", "sub": "Soluções de aprendizagem empresarial" },
+      "why-us": { "label": "Porquê a NexMentor Solutions", "sub": "O que nos distingue" },
+      "training-modes": { "label": "Modalidades de formação", "sub": "Formatos de entrega flexíveis" },
+      "courses": { "label": "Melhores cursos de tecnologia", "sub": "Diretório completo de certificações" },
+      "leadership": { "label": "Liderança", "sub": "Conheça os fundadores" },
+      "mission-vision-values": { "label": "Missão, visão e valores", "sub": "O que defendemos" },
+      "testimonials": { "label": "Testemunhos", "sub": "Opiniões de alunos e clientes" },
+      "about": { "label": "Sobre nós", "sub": "Visão geral da empresa" }
+    }
+  },
+  "LearningOptions": {
+    "items": ["Formação online ao vivo", "Formação presencial", "Formação individual", "Formador no local", "Flexi", "Formação personalizada", "Webinar como serviço", "MentorQuiz", "Próximos webinars"]
+  },
+  "Courses": {
+    "rh-1": "Red Hat Certified System Administrator (RHCSA)",
+    "rh-2": "Red Hat Certified Engineer (RHCE)",
+    "rh-3": "Administração Red Hat OpenShift II: operação de um cluster de produção",
+    "rh-4": "Automação Red Hat Enterprise Linux com Ansible",
+    "bcs-1": "Diploma internacional BCS em análise de negócio",
+    "bcs-2": "Certificado fundamental BCS em análise de negócio",
+    "bcs-3": "Certificado de praticante BCS em engenharia de requisitos",
+    "bcs-4": "Certificado fundamental BCS em experiência do utilizador",
+    "pmi-1": "Project Management Professional (PMP)",
+    "pmi-2": "Certified Associate in Project Management (CAPM)",
+    "pmi-3": "PMI Agile Certified Practitioner (PMI-ACP)",
+    "pmi-4": "PMI Professional in Business Analysis (PMI-PBA)"
+  }
+}
