@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Globe, Phone, Mail, Search } from 'lucide-react';
-import { useLocale } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { SearchModal } from './SearchModal';
 import { ThemeToggle } from './ThemeToggle';
 import { LanguageSwitcher } from './LanguageSwitcher';
@@ -12,13 +12,6 @@ interface HeaderProps {
   activeSection: string;
   setActiveSection: (section: string) => void;
 }
-
-const NAV_ITEMS: { id: string; label: string }[] = [
-  { id: 'solutions', label: 'Solutions' },
-  { id: 'training-modes', label: 'Training' },
-  { id: 'courses', label: 'Courses' },
-  { id: 'about', label: 'About' },
-];
 
 interface NavLinkProps {
   label: string;
@@ -44,8 +37,17 @@ const NavLink: React.FC<NavLinkProps> = ({ label, active, onClick }) => (
 
 export const Header: React.FC<HeaderProps> = ({ onOpenContact, activeSection, setActiveSection }) => {
   const locale = useLocale();
+  const t = useTranslations('Header');
+  const tCommon = useTranslations('Common');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
+
+  const NAV_ITEMS: { id: string; label: string }[] = [
+    { id: 'solutions', label: t('nav.solutions') },
+    { id: 'training-modes', label: t('nav.training') },
+    { id: 'courses', label: t('nav.courses') },
+    { id: 'about', label: t('nav.about') },
+  ];
 
   useEffect(() => {
     const handleShortcut = (e: KeyboardEvent) => {
@@ -70,7 +72,6 @@ export const Header: React.FC<HeaderProps> = ({ onOpenContact, activeSection, se
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     } else if (typeof window !== 'undefined') {
-      // Not on the home page (e.g. a /[locale]/courses/[slug] route) — go home to the anchor, locale-aware.
       window.location.href = id === 'home' ? `/${locale}` : `/${locale}#${id}`;
     }
   };
@@ -80,10 +81,10 @@ export const Header: React.FC<HeaderProps> = ({ onOpenContact, activeSection, se
       <div className="bg-slate-900 text-slate-300 text-xs py-1 px-4 sm:px-8 flex justify-between items-center border-b border-slate-800">
         <div className="flex items-center gap-6">
           <span className="flex items-center gap-1.5 hover:text-white transition-colors cursor-pointer">
-            <Globe className="w-3.5 h-3.5 text-sky-400" /> Global Training Delivery across 40+ Countries
+            <Globe className="w-3.5 h-3.5 text-sky-400" /> {t('globalReach')}
           </span>
           <span className="hidden md:flex items-center gap-1.5 hover:text-white transition-colors">
-            <Phone className="w-3.5 h-3.5 text-sky-400" /> Enterprise Support: +1 (800) 555-8920
+            <Phone className="w-3.5 h-3.5 text-sky-400" /> {t('enterpriseSupport')}
           </span>
         </div>
         <div className="flex items-center gap-4">
@@ -133,8 +134,8 @@ export const Header: React.FC<HeaderProps> = ({ onOpenContact, activeSection, se
           <ThemeToggle />
           <button
             onClick={() => setSearchOpen(true)}
-            aria-label="Search the site"
-            title="Search (⌘K)"
+            aria-label={t('searchTitle')}
+            title={t('searchTitle')}
             className="relative w-9 h-9 rounded-lg flex items-center justify-center text-slate-600 hover:text-[#0B5198] hover:bg-slate-100 dark:text-slate-300 dark:hover:text-sky-300 dark:hover:bg-slate-800 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0B5198]"
           >
             <Search className="w-5 h-5" />
@@ -143,17 +144,17 @@ export const Header: React.FC<HeaderProps> = ({ onOpenContact, activeSection, se
           <span className="h-6 w-px bg-slate-200 dark:bg-slate-700 mx-1.5" aria-hidden="true" />
 
           <button
-            onClick={() => onOpenContact('Connect with Course Advisor')}
+            onClick={() => onOpenContact(t('connectAdvisorSubject'))}
             className="text-sm font-semibold text-[#0B5198] dark:text-sky-400 border border-[#0B5198]/30 hover:border-[#0B5198] hover:bg-sky-50 dark:hover:bg-slate-800 px-4 py-2.5 rounded-lg transition-all active:scale-95"
           >
-            Connect with Advisor
+            {t('connectAdvisor')}
           </button>
 
           <button
             onClick={() => onOpenContact()}
             className="bg-[#0052CC] hover:bg-[#003B99] text-white px-6 py-2.5 rounded-lg text-sm font-semibold shadow-md hover:shadow-lg transition-all active:scale-95"
           >
-            Get Started
+            {tCommon('getStarted')}
           </button>
         </div>
 
@@ -163,7 +164,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenContact, activeSection, se
           <button
             onClick={() => setSearchOpen(true)}
             className="p-2 rounded-lg text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
-            aria-label="Search the site"
+            aria-label={t('searchTitle')}
           >
             <Search className="w-6 h-6" />
           </button>
@@ -195,11 +196,11 @@ export const Header: React.FC<HeaderProps> = ({ onOpenContact, activeSection, se
           <button
             onClick={() => {
               setMobileMenuOpen(false);
-              onOpenContact('Connect with Course Advisor');
+              onOpenContact(t('connectAdvisorSubject'));
             }}
             className="w-full mt-3 border border-[#0B5198] text-[#0B5198] dark:text-sky-400 py-3 rounded-lg font-semibold text-center"
           >
-            Connect with Advisor
+            {t('connectAdvisor')}
           </button>
           <button
             onClick={() => {
@@ -208,7 +209,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenContact, activeSection, se
             }}
             className="w-full mt-2 bg-[#0052CC] text-white py-3 rounded-lg font-semibold text-center shadow-md"
           >
-            Get Started
+            {tCommon('getStarted')}
           </button>
         </div>
       )}

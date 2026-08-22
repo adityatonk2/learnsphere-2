@@ -1,6 +1,11 @@
 {
-  "Common": {
-    "getStarted": "शुरू करें",
-    "search": "खोजें"
+  "Common": { "getStarted": "शुरू करें", "search": "खोजें" },
+  "Header": {
+    "globalReach": "40+ देशों में वैश्विक प्रशिक्षण सेवाएं",
+    "enterpriseSupport": "एंटरप्राइज़ सहायता: +1 (800) 555-8920",
+    "nav": { "solutions": "समाधान", "training": "प्रशिक्षण", "courses": "कोर्सेज़", "about": "हमारे बारे में" },
+    "connectAdvisor": "सलाहकार से जुड़ें",
+    "connectAdvisorSubject": "कोर्स सलाहकार से जुड़ें",
+    "searchTitle": "खोजें (⌘K)"
   }
 }

@@ -1,6 +1,11 @@
 {
-  "Common": {
-    "getStarted": "开始",
-    "search": "搜索"
+  "Common": { "getStarted": "开始", "search": "搜索" },
+  "Header": {
+    "globalReach": "在40多个国家提供全球培训服务",
+    "enterpriseSupport": "企业支持：+1 (800) 555-8920",
+    "nav": { "solutions": "解决方案", "training": "培训", "courses": "课程", "about": "关于我们" },
+    "connectAdvisor": "联系顾问",
+    "connectAdvisorSubject": "联系课程顾问",
+    "searchTitle": "搜索 (⌘K)"
   }
 }

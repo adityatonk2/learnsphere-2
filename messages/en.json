@@ -2,5 +2,18 @@
   "Common": {
     "getStarted": "Get Started",
     "search": "Search"
+  },
+  "Header": {
+    "globalReach": "Global Training Delivery across 40+ Countries",
+    "enterpriseSupport": "Enterprise Support: +1 (800) 555-8920",
+    "nav": {
+      "solutions": "Solutions",
+      "training": "Training",
+      "courses": "Courses",
+      "about": "About"
+    },
+    "connectAdvisor": "Connect with Advisor",
+    "connectAdvisorSubject": "Connect with Course Advisor",
+    "searchTitle": "Search (⌘K)"
   }
 }

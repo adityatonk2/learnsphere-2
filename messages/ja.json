@@ -1,6 +1,11 @@
 {
-  "Common": {
-    "getStarted": "始める",
-    "search": "検索"
+  "Common": { "getStarted": "始める", "search": "検索" },
+  "Header": {
+    "globalReach": "40か国以上でグローバルトレーニングを提供",
+    "enterpriseSupport": "エンタープライズサポート: +1 (800) 555-8920",
+    "nav": { "solutions": "ソリューション", "training": "トレーニング", "courses": "コース", "about": "会社概要" },
+    "connectAdvisor": "アドバイザーに相談",
+    "connectAdvisorSubject": "コースアドバイザーに相談",
+    "searchTitle": "検索 (⌘K)"
   }
 }

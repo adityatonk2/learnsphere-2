@@ -1,6 +1,11 @@
 {
-  "Common": {
-    "getStarted": "Começar",
-    "search": "Pesquisar"
+  "Common": { "getStarted": "Começar", "search": "Pesquisar" },
+  "Header": {
+    "globalReach": "Formação global em mais de 40 países",
+    "enterpriseSupport": "Suporte empresarial: +1 (800) 555-8920",
+    "nav": { "solutions": "Soluções", "training": "Formação", "courses": "Cursos", "about": "Sobre nós" },
+    "connectAdvisor": "Falar com um consultor",
+    "connectAdvisorSubject": "Falar com um consultor de cursos",
+    "searchTitle": "Pesquisar (⌘K)"
   }
 }

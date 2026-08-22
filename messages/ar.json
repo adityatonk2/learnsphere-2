@@ -1,6 +1,11 @@
 {
-  "Common": {
-    "getStarted": "ابدأ الآن",
-    "search": "بحث"
+  "Common": { "getStarted": "ابدأ الآن", "search": "بحث" },
+  "Header": {
+    "globalReach": "تدريب عالمي في أكثر من 40 دولة",
+    "enterpriseSupport": "دعم المؤسسات: +1 (800) 555-8920",
+    "nav": { "solutions": "الحلول", "training": "التدريب", "courses": "الدورات", "about": "من نحن" },
+    "connectAdvisor": "تواصل مع مستشار",
+    "connectAdvisorSubject": "تواصل مع مستشار الدورات",
+    "searchTitle": "بحث (⌘K)"
   }
 }
