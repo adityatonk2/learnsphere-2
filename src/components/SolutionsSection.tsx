@@ -111,7 +111,7 @@ export const SolutionsSection: React.FC<SolutionsSectionProps> = ({ onOpenContac
               </li>
               <li className="flex items-center gap-2.5">
                 <CheckCircle className="w-5 h-5 text-emerald-500 shrink-0" />
-                <span>Authorized official training vouchers & official certification exam pass guarantee</span>
+                <span>Official exam vouchers and structured exam-readiness preparation</span>
               </li>
               <li className="flex items-center gap-2.5">
                 <CheckCircle className="w-5 h-5 text-emerald-500 shrink-0" />

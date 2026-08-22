@@ -7,7 +7,7 @@ import { useEffect, useRef, useState } from 'react';
  * Returns a ref to attach to the trigger element and the current display value.
  */
 export function useCountUp(target: number, options: { duration?: number; start?: string } = {}) {
-  const { duration = 1600 } = options;
+  const { duration = 2800 } = options;
   const ref = useRef<HTMLElement | null>(null);
   const [value, setValue] = useState(0);
   const hasAnimated = useRef(false);
@@ -27,7 +27,7 @@ export function useCountUp(target: number, options: { duration?: number; start?:
               const elapsed = now - startTime;
               const progress = Math.min(elapsed / duration, 1);
               // ease-out-cubic
-              const eased = 1 - Math.pow(1 - progress, 3);
+              const eased = 1 - Math.pow(1 - progress, 5);
               setValue(Math.floor(eased * target));
               if (progress < 1) {
                 requestAnimationFrame(tick);

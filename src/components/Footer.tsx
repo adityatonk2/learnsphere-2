@@ -57,7 +57,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenContact, setActiveSection 
             </div>
 
             <p className="text-slate-400 text-xs sm:text-sm leading-relaxed max-w-sm font-light">
-              Global provider of enterprise corporate learning, authorized IT vendor certifications, and custom workforce upskilling solutions.
+              Global provider of enterprise corporate learning, industry-recognized IT vendor certifications, and custom workforce upskilling solutions.
             </p>
 
             <div className="pt-2 flex items-center gap-2 text-xs text-sky-400 font-semibold">

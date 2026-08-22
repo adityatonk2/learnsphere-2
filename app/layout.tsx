@@ -5,7 +5,7 @@ const SITE_URL = "https://www.nexmentorsolutions.com";
 const SITE_NAME = "NexMentor Solutions";
 const SITE_TITLE = "NexMentor Solutions - Enterprise Corporate Learning & Certification Training";
 const SITE_DESCRIPTION =
-  "Global provider of enterprise corporate learning, authorized IT vendor certifications (AWS, Microsoft, EC-Council, ISC2, PMI & more), and custom workforce upskilling solutions.";
+  "Global provider of enterprise corporate learning, industry-recognized IT vendor certification training (AWS, Microsoft, EC-Council, ISC2, PMI & more), and custom workforce upskilling solutions.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     "enterprise learning platform",
     "cybersecurity certification training",
     "PMP certification",
-    "authorized training partner",
+    "IT certification training",
     "workforce upskilling",
   ],
   authors: [{ name: SITE_NAME }],

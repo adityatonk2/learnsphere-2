@@ -42,7 +42,7 @@ export const TrainingModesSection: React.FC<TrainingModesSectionProps> = ({ onOp
             return (
               <div key={mode.id} className="group [perspective:1400px] h-[452px] gsap-reveal">
                 <div
-                  className={`relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] motion-reduce:transition-none motion-reduce:duration-0 ${
+                  className={`relative w-full h-full transition-transform duration-700 ease-out will-change-transform [transform-style:preserve-3d] motion-reduce:transition-none motion-reduce:duration-0 ${
                     isFlipped ? '[transform:rotateY(180deg)]' : 'md:group-hover:[transform:rotateY(180deg)]'
                   }`}
                 >

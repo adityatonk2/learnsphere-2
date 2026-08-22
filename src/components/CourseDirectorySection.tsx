@@ -151,7 +151,7 @@ export const CourseDirectorySection: React.FC<CourseDirectorySectionProps> = ({ 
                     <p className="text-xs text-slate-500">{q ? `Matching "${searchQuery}"` : `${selectedVendor.courses.length} official training programs`}</p>
                   </div>
                 </div>
-                <span className="hidden sm:inline-block text-xs font-semibold text-sky-700 bg-sky-50 px-3 py-1 rounded-full border border-sky-100">Authorized Training Partner</span>
+                <span className="hidden sm:inline-block text-xs font-semibold text-sky-700 bg-sky-50 px-3 py-1 rounded-full border border-sky-100">Vendor-Aligned Curriculum</span>
               </div>
 
               {q ? (

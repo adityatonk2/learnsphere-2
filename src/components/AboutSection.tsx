@@ -26,7 +26,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenContact }) => 
                 About NexMentor Solutions
               </h2>
               <p className="text-slate-600 text-base leading-relaxed font-normal">
-                NexMentor Solutions is a global leader in enterprise learning, authorized vendor certifications, and technical workforce upskilling.
+                NexMentor Solutions is a global leader in enterprise learning, industry-recognized vendor certifications, and technical workforce upskilling.
               </p>
             </div>
 
@@ -79,7 +79,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenContact }) => 
             <div className="pt-4 grid grid-cols-2 sm:grid-cols-3 gap-4 border-t border-slate-200/80">
               <div className="flex items-center gap-2 text-xs font-semibold text-slate-700">
                 <ShieldCheck className="w-4 h-4 text-sky-600" />
-                <span>Authorized Partner</span>
+                <span>Vendor-Aligned</span>
               </div>
               <div className="flex items-center gap-2 text-xs font-semibold text-slate-700">
                 <Globe2 className="w-4 h-4 text-sky-600" />

@@ -7,8 +7,8 @@ import { useScrollReveal } from '../hooks/useScrollReveal';
 const REASONS = [
   {
     icon: ShieldCheck,
-    title: 'Authorized Vendor Partner',
-    description: 'Official training partner for AWS, Microsoft, EC-Council, ISC2, PMI, and more — every course maps directly to real certification exams.',
+    title: 'Vendor-Aligned Curriculum',
+    description: 'Curriculum aligned to AWS, Microsoft, EC-Council, ISC2, PMI, and more — every course maps directly to real certification exams.',
   },
   {
     icon: Users2,
