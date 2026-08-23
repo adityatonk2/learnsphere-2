@@ -5,12 +5,18 @@
   },
   "Header": {
     "globalReach": "在40多个国家提供全球培训服务",
-    "enterpriseSupport": "企业支持：+1 (800) 555-8920",
+    "enterpriseSupport": "企业支持：+91 95489 88153",
     "nav": {
       "solutions": "解决方案",
       "training": "培训",
       "courses": "课程",
-      "about": "关于我们"
+      "about": "关于我们",
+      "exploreAllCourses": "浏览所有课程",
+      "vouchers": "代金券",
+      "exploreAllVouchers": "浏览所有代金券",
+      "contact": "联系我们",
+      "coursesPanelHeading": "认证提供商",
+      "coursesCount": "{count}门课程"
     },
     "connectAdvisor": "联系顾问",
     "connectAdvisorSubject": "联系课程顾问",
@@ -365,6 +371,30 @@
       "individualLearner": {
         "role": "个人学员 — 云从业者路径",
         "comment": "灵活的自主学习节奏很适合我的全职工作。一对一答疑环节对我来说是最有帮助的部分。"
+      },
+      "devopsLead": {
+        "role": "DevOps主管 — 云基础设施团队",
+        "comment": "AWS上的DevOps工程课程正是我们团队在重大平台迁移前所需要的。实验环境反映了我们真实的环境,而非通用场景。"
+      },
+      "programManager": {
+        "role": "项目经理 — 全球学习与发展",
+        "comment": "以往在五个时区协调认证培训是一场噩梦。NexMentor的排期和Flexi模式让我们的分布式团队轻松应对。"
+      },
+      "networkSecurityLead": {
+        "role": "网络安全主管 — 电信行业",
+        "comment": "扎实的CEH备考,实验内容确实与考试相近。希望在无线攻击模块上能有更多时间,但总体而言是一门优质课程。"
+      },
+      "dataScienceManager": {
+        "role": "数据科学经理 — 零售分析",
+        "comment": "我们团队的SageMaker技能在三周内从理论水平提升到可投入生产的水平。讲师显然每天都在使用这些工具。"
+      },
+      "hrPartner": {
+        "role": "人力资源业务伙伴 — 企业入职",
+        "comment": "我们与NexMentor团队共同打造了定制化的入职认证路径。新员工比以往提前数周即可投入实际工作。"
+      },
+      "solutionsConsultant": {
+        "role": "解决方案顾问 — 系统集成商",
+        "comment": "PMP课程内容覆盖面广,考试模拟题很有帮助。排期调整过一次,但支持团队很快就处理好了。"
       }
     }
   },
@@ -404,6 +434,12 @@
       "message": {
         "label": "留言 / 课程兴趣",
         "placeholder": "请告诉我们您的学习目标或所需的特定课程..."
+      },
+      "tocDocument": {
+        "label": "已签署的条款与条件 *",
+        "placeholder": "点击上传文件",
+        "hint": "PDF、DOC 或 DOCX — 最大10MB",
+        "remove": "移除文件"
       }
     },
     "trainingModeOptions": {
@@ -432,7 +468,13 @@
     "successMessagePart1": "谢谢您,",
     "successMessagePart2": "企业学习顾问将在2个工作小时内通过",
     "successMessagePart3": "与您联系。",
-    "closeButton": "关闭窗口"
+    "closeButton": "关闭窗口",
+    "sections": {
+      "contactDetails": "联系方式",
+      "preferences": "培训偏好"
+    },
+    "notARobot": "我不是机器人",
+    "verifying": "验证中..."
   },
   "PartnerModal": {
     "eyebrow": "合作伙伴计划",
@@ -465,6 +507,12 @@
       "message": {
         "label": "请告诉我们合作意向",
         "placeholder": "请简要描述贵公司及您所设想的合作方式..."
+      },
+      "tocDocument": {
+        "label": "已签署的条款与条件 *",
+        "placeholder": "点击上传文件",
+        "hint": "PDF、DOC 或 DOCX — 最大10MB",
+        "remove": "移除文件"
       }
     },
     "partnershipTypeOptions": {
@@ -486,7 +534,13 @@
     "successMessagePart1": "谢谢您,",
     "successMessagePart2": "我们的合作团队将在2个工作日内通过",
     "successMessagePart3": "与您联系。",
-    "closeButton": "关闭窗口"
+    "closeButton": "关闭窗口",
+    "notARobot": "我不是机器人",
+    "sections": {
+      "companyDetails": "公司详情",
+      "partnershipDetails": "合作详情"
+    },
+    "verifying": "验证中..."
   },
   "Footer": {
     "description": "企业学习、行业认可的IT供应商认证以及定制员工技能提升解决方案的全球提供商。",
@@ -497,7 +551,9 @@
       "solutions": "我们的解决方案",
       "learningFormats": "学习形式",
       "courseDirectory": "课程目录",
-      "aboutUs": "关于我们"
+      "aboutUs": "关于我们",
+      "vouchers": "代金券",
+      "contact": "联系我们"
     },
     "deliveryOptions": {
       "title": "交付方式",
@@ -509,13 +565,16 @@
     },
     "contact": {
       "title": "企业总部",
-      "address": "100 Technology Square, Suite 800, Boston, MA 02139"
+      "address": "Saharanpur Chowk, Dehradun, Uttarakhand, India"
     },
     "copyright": "© {year} NexMentor Solutions Inc. 保留所有权利。",
     "legal": {
       "privacyPolicy": "隐私政策",
       "termsOfService": "服务条款",
       "accreditations": "资质认证"
+    },
+    "trademarkDisclaimer": {
+      "heading": "商标免责声明"
     }
   },
   "CourseContent": {
@@ -599,9 +658,252 @@
       "courseEnquiry": "课程咨询",
       "enrollment": "报名:{title}",
       "advisorCall": "顾问通话:{title}"
+    },
+    "enrollment": {
+      "badge": "名额即将满",
+      "seatsLeft": "下一期仅剩{count}个名额",
+      "studentsEnrolled": "已有{count}多名专业人士报名"
     }
   },
   "LanguageSwitcher": {
     "changeLanguage": "更改语言"
+  },
+  "Vouchers": {
+    "eyebrow": "认证代金券",
+    "heading": "考试代金券",
+    "subtitle": "来自领先技术供应商的{count}+认证考试代金券。",
+    "providersLabel": "认证提供商",
+    "vendorVouchersTitle": "{vendor}代金券",
+    "vouchersCount": "{count}张代金券可用",
+    "requestButton": "申请代金券",
+    "requestSubject": "代金券申请:{title}",
+    "onRequest": "需询价"
+  },
+  "ContactPage": {
+    "eyebrow": "联系我们",
+    "heading": "让我们聊聊您的培训目标",
+    "subheading": "告诉我们您想实现的目标,企业学习顾问将为您提供定制方案和报价。",
+    "sidebar": {
+      "heading": "直接联系我们",
+      "address": "Saharanpur Chowk, Dehradun, Uttarakhand, India",
+      "responseTime": "NexMentor顾问将在2个工作小时内回复。"
+    },
+    "tabs": {
+      "general": "一般咨询",
+      "partner": "合作咨询"
+    },
+    "howItWorks": {
+      "heading": "运作方式",
+      "submit": {
+        "title": "提交您的咨询",
+        "description": "告诉我们您想实现的目标。"
+      },
+      "review": {
+        "title": "顾问进行审核",
+        "description": "我们为您匹配合适的课程和形式。"
+      },
+      "respond": {
+        "title": "获得回复",
+        "description": "2个工作小时内回复。"
+      }
+    },
+    "quickLinks": {
+      "heading": "在寻找其他内容?",
+      "courses": "浏览课程目录",
+      "vouchers": "浏览考试代金券"
+    }
+  },
+  "LegalPage": {
+    "eyebrow": "法律信息",
+    "lastUpdated": "最后更新:{date}",
+    "draftNotice": "这是一份作为起点的法律文件模板——尚未经过法律顾问审查。在完成专业法律审查和本地化之前,目前所有站点语言均以英文发布。"
+  },
+  "PrivacyPolicy": {
+    "heading": "隐私政策",
+    "sections": {
+      "introduction": {
+        "heading": "Introduction",
+        "body": "NexMentor Solutions (\"we\", \"us\", or \"our\") provides enterprise corporate learning, certification training, and workforce upskilling services. This Privacy Policy explains what information we collect through this website, how we use it, and the choices you have."
+      },
+      "informationWeCollect": {
+        "heading": "Information We Collect",
+        "body": "We collect information you provide directly, such as your name, company name, email address, phone number, and any message or document you submit through our contact, partnership, or enrollment forms. We may also collect standard technical information (such as browser type, device type, and pages visited) automatically when you use this site."
+      },
+      "howWeUseInformation": {
+        "heading": "How We Use Your Information",
+        "body": "We use the information we collect to respond to your enquiries, provide training and certification services, process partnership requests, send scheduling and course-related communications, and improve this website. We do not sell your personal information."
+      },
+      "cookies": {
+        "heading": "Cookies and Tracking Technologies",
+        "body": "This site may use cookies and similar technologies to remember your preferences (such as language and theme) and to understand how visitors use the site. You can control cookies through your browser settings."
+      },
+      "thirdPartyServices": {
+        "heading": "Third-Party Services",
+        "body": "We may rely on third-party providers for services such as email delivery, analytics, and hosting. These providers only receive the information necessary to perform their services and are expected to protect it accordingly."
+      },
+      "dataSecurity": {
+        "heading": "Data Security",
+        "body": "We take reasonable technical and organizational measures to protect the information you share with us. However, no method of transmission or storage is completely secure, and we cannot guarantee absolute security."
+      },
+      "dataRetention": {
+        "heading": "Data Retention",
+        "body": "We retain personal information for as long as necessary to fulfil the purposes described in this policy, respond to your enquiries, or comply with legal obligations, after which it is deleted or anonymized."
+      },
+      "yourRights": {
+        "heading": "Your Rights",
+        "body": "Depending on your location, you may have the right to access, correct, or request deletion of your personal information, or to object to certain uses of it. To exercise these rights, contact us using the details below."
+      },
+      "childrensPrivacy": {
+        "heading": "Children's Privacy",
+        "body": "Our services are intended for working professionals and organizations. This site is not directed at children, and we do not knowingly collect personal information from children."
+      },
+      "changes": {
+        "heading": "Changes to This Policy",
+        "body": "We may update this Privacy Policy from time to time. The \"Last updated\" date at the top of this page reflects the most recent revision."
+      },
+      "contactUs": {
+        "heading": "Contact Us",
+        "body": "If you have questions about this Privacy Policy or how we handle your information, contact us at info@nexmentorsolutions.com."
+      }
+    }
+  },
+  "TermsOfService": {
+    "heading": "服务条款",
+    "sections": {
+      "acceptance": {
+        "heading": "Acceptance of Terms",
+        "body": "By accessing or using this website or enrolling in any NexMentor Solutions training program, you agree to be bound by these Terms of Service. If you do not agree, please do not use this site or our services."
+      },
+      "services": {
+        "heading": "Description of Services",
+        "body": "NexMentor Solutions provides instructor-led and self-paced technical training, certification exam preparation, and related enterprise learning services, delivered online, in classrooms, or on-site, as described on this website."
+      },
+      "enrollmentAndPayment": {
+        "heading": "Enrollment and Payment",
+        "body": "Enrollment in a course or program is confirmed once we have received your request and any applicable payment. Pricing, schedules, and delivery formats are as communicated at the time of booking and may be updated for future cohorts."
+      },
+      "cancellations": {
+        "heading": "Cancellations and Rescheduling",
+        "body": "Cancellation and rescheduling requests should be submitted as early as possible. Specific cancellation windows, fees, and rescheduling options vary by program and will be confirmed with you at the time of enrollment."
+      },
+      "vouchers": {
+        "heading": "Certification Exam Vouchers",
+        "body": "Certification exam vouchers are subject to availability and the issuing certification body's own terms, including expiry dates and exam eligibility rules. NexMentor Solutions facilitates voucher requests but does not control third-party exam providers' policies."
+      },
+      "intellectualProperty": {
+        "heading": "Intellectual Property",
+        "body": "All course materials, courseware, trademarks, and content on this website are the property of NexMentor Solutions or its licensors and vendor partners, and may not be reproduced or redistributed without permission."
+      },
+      "userConduct": {
+        "heading": "User Conduct",
+        "body": "You agree to use this website and our services lawfully, and not to misuse, disrupt, or attempt to gain unauthorized access to our systems or those of our training partners."
+      },
+      "disclaimers": {
+        "heading": "Disclaimers and Limitation of Liability",
+        "body": "Our services are provided on an \"as is\" basis. While we work to ensure training quality and accuracy, we do not guarantee specific certification exam outcomes or career results. To the extent permitted by law, NexMentor Solutions is not liable for indirect or consequential damages arising from use of our services."
+      },
+      "trademarks": {
+        "heading": "Third-Party Trademarks",
+        "body": "References to third-party certifications, vendors, and trademarks on this website are for identification purposes only. See the trademark disclaimer in the site footer for details on specific third-party marks."
+      },
+      "governingLaw": {
+        "heading": "Governing Law",
+        "body": "These Terms are governed by the laws of the jurisdiction in which NexMentor Solutions is registered, without regard to conflict-of-law principles, unless otherwise required by applicable local law."
+      },
+      "changes": {
+        "heading": "Changes to These Terms",
+        "body": "We may update these Terms from time to time. The \"Last updated\" date at the top of this page reflects the most recent revision. Continued use of our services after changes constitutes acceptance of the updated Terms."
+      },
+      "contactUs": {
+        "heading": "Contact Us",
+        "body": "Questions about these Terms of Service can be directed to info@nexmentorsolutions.com."
+      }
+    }
+  },
+  "Partners": {
+    "heading": "深受各行业全球企业的信赖"
+  },
+  "RiseFramework": {
+    "eyebrow": "我们的学习框架",
+    "heading": "NEXMENTOR RISE框架",
+    "subheading": "从技能差距到面向未来的能力",
+    "description": "一种结构化的四阶段学习方法,旨在将培训从一次性学习事件转变为可衡量的技能发展、实践应用和职业成长之旅。",
+    "stages": {
+      "recognise": {
+        "title": "RECOGNISE",
+        "subtitle": "识别正确的技能",
+        "description": "我们首先了解学员和组织当前所处的状态。我们评估当前能力、岗位要求、业务目标和技术技能差距,以识别最重要的能力。",
+        "tags": [
+          "技能差距分析",
+          "学员评估",
+          "岗位映射",
+          "业务目标",
+          "能力基准评估"
+        ]
+      },
+      "individualise": {
+        "title": "INDIVIDUALISE",
+        "subtitle": "构建正确的学习路径",
+        "description": "没有两个学员或组织的需求是完全相同的。我们创建根据个人岗位、经验水平、技术环境、认证目标和业务优先事项量身定制的学习路径。",
+        "tags": [
+          "定制学习路径",
+          "基于岗位的培训",
+          "认证映射",
+          "课程设计",
+          "学习计划"
+        ]
+      },
+      "skill": {
+        "title": "SKILL",
+        "subtitle": "学习。练习。应用。",
+        "description": "知识只有能够应用时才有价值。我们的专业讲师将讲师主导的学习与动手实验、演示、真实场景、项目和实践练习相结合——帮助学员将概念转化为可直接投入工作的技能。",
+        "tags": [
+          "专业讲师",
+          "动手实验",
+          "真实使用案例",
+          "项目",
+          "工作坊",
+          "实践学习"
+        ]
+      },
+      "elevate": {
+        "title": "ELEVATE",
+        "subtitle": "衡量。验证。提升。",
+        "description": "学习不会在培训结束时终止。我们通过评估、实践考核、学员反馈和认证成果来衡量进展,同时提供洞察以持续加强技能和员工队伍能力。",
+        "tags": [
+          "技能评估",
+          "认证追踪",
+          "绩效洞察",
+          "学员反馈",
+          "持续改进"
+        ]
+      }
+    },
+    "journey": {
+      "eyebrow": "RISE旅程",
+      "steps": [
+        "识别差距",
+        "个性化旅程",
+        "构建实践技能",
+        "衡量影响"
+      ]
+    },
+    "closing": {
+      "line1": "在NEXMENTOR,我们不仅仅是提供培训。",
+      "line2": "我们帮助个人和组织实现RISE(提升)。"
+    },
+    "tagline": "将智慧转化为影响力。"
+  },
+  "ChatBot": {
+    "title": "NexMentor助手",
+    "subtitle": "咨询课程与认证相关问题",
+    "greeting": "您好!我是NexMentor助手。欢迎咨询我们的课程、认证或交付方式——很乐意为您提供帮助。",
+    "placeholder": "输入您的消息…",
+    "sendLabel": "发送消息",
+    "openLabel": "打开聊天助手",
+    "closeLabel": "关闭聊天助手",
+    "thinking": "思考中…",
+    "errorMessage": "出了点问题,请重试。",
+    "disclaimer": "AI助手——如需详细咨询,请使用我们的联系页面。"
   }
 }

@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 -c ' *)",
+      "Bash(npm run *)",
+      "Bash(curl -s http://localhost:3000/en/vouchers -o /tmp/vouchers.html)",
+      "Bash(curl -s \"http://localhost:3000/en/vouchers?vendor=cisco\" -o /tmp/vouchers-cisco.html)",
+      "Bash(node -e ' *)",
+      "Bash(sips -g hasAlpha /tmp/wordmark-extracted.png)",
+      "Bash(python3 -c \"import PIL; print\\(PIL.__version__\\)\")"
+    ]
+  }
+}

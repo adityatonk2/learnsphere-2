@@ -1,5 +1,6 @@
 import { VENDORS_DATA } from './coursesData';
 import { Course } from '../types';
+import { formatDuration } from '../lib/courseTranslation';
 
 export interface CatalogCourse extends Course {
   slug: string;
@@ -86,7 +87,7 @@ export function getCourseContent(course: CatalogCourse, t: Translator): CourseCo
   const tier = tierOf(course.level);
   const domain = course.domain || 'cloud and enterprise technology';
   const vendor = course.vendorName;
-  const dur = course.duration || 'the program';
+  const dur = formatDuration(course.duration) || 'the program';
   const shortTitle = course.title.replace(/\s*\(.*?\)\s*/g, '').trim();
   const level = (course.level || 'professional').toLowerCase();
 

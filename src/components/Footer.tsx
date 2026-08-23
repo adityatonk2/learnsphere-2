@@ -1,16 +1,30 @@
 "use client";
 
 import React from 'react';
-import { Globe, Mail, Phone, MapPin, ShieldCheck, Instagram, Facebook, Linkedin, Youtube, MessageCircle } from 'lucide-react';
+import Image from 'next/image';
+import { Globe, Mail, Phone, MapPin, ShieldCheck, Instagram, Youtube, MessageCircle } from 'lucide-react';
 import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/navigation';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 
+// Trademark ownership statements — kept verbatim/untranslated across all
+// locales since these are legally operative attributions of third-party
+// marks, not general UI copy.
+const TRADEMARK_DISCLAIMER = [
+  'SAFe is a registered trademark of Scaled Agile, Inc.',
+  'PMP, PMI are registered marks of the Project Management Institute, Inc.',
+  'Certified ScrumMaster® (CSM) and Certified Scrum Trainer® (CST) are registered trademarks of SCRUM ALLIANCE®',
+  'ITIL® is a registered trademark of AXELOS Limited.',
+  'Professional Scrum Master is a registered trademark of Scrum.org',
+  'Java is the registered trademarks of Oracle and/or its affiliates',
+  'Azure is a registered trademark of Microsoft Corporation.',
+  'Power BI is a registered trademark of Microsoft Corporation.',
+];
+
 const SOCIAL_LINKS = [
-  { name: 'Instagram', href: 'https://instagram.com/nexmentorsolutions', Icon: Instagram },
-  { name: 'Facebook', href: 'https://facebook.com/nexmentorsolutions', Icon: Facebook },
-  { name: 'LinkedIn', href: 'https://linkedin.com/company/nexmentorsolutions', Icon: Linkedin },
-  { name: 'YouTube', href: 'https://youtube.com/@nexmentorsolutions', Icon: Youtube },
-  { name: 'WhatsApp', href: 'https://wa.me/918005558920', Icon: MessageCircle },
+  { name: 'Instagram', href: 'https://www.instagram.com/nexmentorsolutions/?hl=en', Icon: Instagram },
+  { name: 'YouTube', href: 'https://www.youtube.com/@NEXMENTORSOLUTIONS', Icon: Youtube },
+  { name: 'WhatsApp', href: 'https://wa.me/919548988153', Icon: MessageCircle },
 ];
 
 interface FooterProps {
@@ -38,25 +52,13 @@ export const Footer: React.FC<FooterProps> = ({ onOpenContact, setActiveSection 
           
           {/* Brand Info */}
           <div className="lg:col-span-2 space-y-4">
-            <div className="flex items-center gap-3">
-              <div className="w-9 h-9 rounded-full bg-gradient-to-tr from-[#003B73] via-[#0B5198] to-[#0088FF] p-0.5">
-                <div className="w-full h-full bg-slate-900 rounded-full flex items-center justify-center p-1">
-                  <svg viewBox="0 0 100 100" className="w-full h-full text-sky-400" fill="currentColor">
-                    <circle cx="50" cy="50" r="38" fill="none" stroke="currentColor" strokeWidth="8" />
-                    <ellipse cx="50" cy="50" rx="45" ry="16" fill="none" stroke="#00A3FF" strokeWidth="6" transform="rotate(-25 50 50)" />
-                    <circle cx="50" cy="50" r="14" fill="#00A3FF" />
-                  </svg>
-                </div>
-              </div>
-              <div className="flex flex-col">
-                <span className="text-lg font-bold tracking-tight text-white">
-                  NexMentor
-                </span>
-                <span className="text-[9px] font-semibold tracking-widest text-slate-400 uppercase -mt-1">
-                  Solutions
-                </span>
-              </div>
-            </div>
+            <Image
+              src="/assets/images/nexmentor-logo-transparent.png"
+              alt="NexMentor Solutions"
+              width={1270}
+              height={281}
+              className="h-10 w-auto object-contain [filter:drop-shadow(0_0_1px_rgba(255,255,255,0.9))_drop-shadow(0_0_3px_rgba(255,255,255,0.6))]"
+            />
 
             <p className="text-slate-400 text-xs sm:text-sm leading-relaxed max-w-sm font-light">
               {t('description')}
@@ -83,7 +85,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenContact, setActiveSection 
               ))}
               {/* Pinterest (no dedicated lucide icon) */}
               <a
-                href="https://pinterest.com/nexmentorsolutions"
+                href="https://in.pinterest.com/nexmentorsolutions/?actingBusinessId=1100004415144240754"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Pinterest"
@@ -118,14 +120,24 @@ export const Footer: React.FC<FooterProps> = ({ onOpenContact, setActiveSection 
                 </button>
               </li>
               <li>
-                <button onClick={() => scrollTo('courses')} className="hover:text-white transition-colors">
+                <Link href="/courses" className="hover:text-white transition-colors">
                   {t('navigation.courseDirectory')}
-                </button>
+                </Link>
               </li>
               <li>
-                <button onClick={() => scrollTo('about')} className="hover:text-white transition-colors">
+                <Link href="/about" className="hover:text-white transition-colors">
                   {t('navigation.aboutUs')}
-                </button>
+                </Link>
+              </li>
+              <li>
+                <Link href="/vouchers" className="hover:text-white transition-colors">
+                  {t('navigation.vouchers')}
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact" className="hover:text-white transition-colors">
+                  {t('navigation.contact')}
+                </Link>
               </li>
             </ul>
           </div>
@@ -176,23 +188,33 @@ export const Footer: React.FC<FooterProps> = ({ onOpenContact, setActiveSection 
               </li>
               <li className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-sky-400 shrink-0" />
-                <span>+1 (800) 555-8920</span>
+                <span>+91 95489 88153</span>
               </li>
               <li className="flex items-center gap-2">
                 <Mail className="w-4 h-4 text-sky-400 shrink-0" />
-                <span>contact@nexmentorsolutions.com</span>
+                <span>info@nexmentorsolutions.com</span>
               </li>
             </ul>
           </div>
 
         </div>
 
+        {/* Trademark Disclaimer */}
+        <div className="mt-12 pt-8 border-t border-slate-800">
+          <h4 className="text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-3">{t('trademarkDisclaimer.heading')}</h4>
+          <ul className="text-[11px] text-slate-500 leading-relaxed space-y-1">
+            {TRADEMARK_DISCLAIMER.map((line) => (
+              <li key={line}>{line}</li>
+            ))}
+          </ul>
+        </div>
+
         {/* Bottom Bar */}
-        <div className="mt-12 pt-8 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+        <div className="mt-8 pt-8 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
           <p>{t('copyright', { year: new Date().getFullYear() })}</p>
           <div className="flex gap-6">
-            <span className="hover:text-slate-400 cursor-pointer">{t('legal.privacyPolicy')}</span>
-            <span className="hover:text-slate-400 cursor-pointer">{t('legal.termsOfService')}</span>
+            <Link href="/privacy-policy" className="hover:text-slate-400 transition-colors">{t('legal.privacyPolicy')}</Link>
+            <Link href="/terms-of-service" className="hover:text-slate-400 transition-colors">{t('legal.termsOfService')}</Link>
             <span className="hover:text-slate-400 cursor-pointer">{t('legal.accreditations')}</span>
           </div>
         </div>

@@ -28,3 +28,35 @@
   from { opacity: 0; transform: translateY(-16px) scale(0.98); }
   to { opacity: 1; transform: translateY(0) scale(1); }
 }
+
+/* --- Testimonial wall: vertical auto-scrolling columns --- */
+@media (prefers-reduced-motion: no-preference) {
+  .animate-marquee-up {
+    animation: nxMarqueeUp 34s linear infinite;
+  }
+  .animate-marquee-down {
+    animation: nxMarqueeDown 38s linear infinite;
+  }
+  .animate-marquee-up-slow {
+    animation: nxMarqueeUp 28s linear infinite;
+  }
+}
+@keyframes nxMarqueeUp {
+  from { transform: translateY(0); }
+  to { transform: translateY(-50%); }
+}
+@keyframes nxMarqueeDown {
+  from { transform: translateY(-50%); }
+  to { transform: translateY(0); }
+}
+
+/* --- Partner logos: horizontal auto-scrolling strip --- */
+@media (prefers-reduced-motion: no-preference) {
+  .animate-marquee-left {
+    animation: nxMarqueeLeft 30s linear infinite;
+  }
+}
+@keyframes nxMarqueeLeft {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}

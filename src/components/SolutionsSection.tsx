@@ -33,7 +33,7 @@ export const SolutionsSection: React.FC<SolutionsSectionProps> = ({ onOpenContac
 
   return (
     <section id="solutions" className="py-20 bg-slate-50 dark:bg-slate-900 relative overflow-hidden">
-      <div className="absolute top-0 left-0 right-0 h-16 bg-gradient-to-b from-white to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-16 bg-gradient-to-b from-white dark:from-slate-900 to-transparent" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div ref={containerRef}>

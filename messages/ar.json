@@ -5,12 +5,18 @@
   },
   "Header": {
     "globalReach": "تدريب عالمي في أكثر من 40 دولة",
-    "enterpriseSupport": "دعم المؤسسات: +1 (800) 555-8920",
+    "enterpriseSupport": "دعم المؤسسات: +91 95489 88153",
     "nav": {
       "solutions": "الحلول",
       "training": "التدريب",
       "courses": "الدورات",
-      "about": "من نحن"
+      "about": "من نحن",
+      "exploreAllCourses": "استكشف جميع الدورات",
+      "vouchers": "القسائم",
+      "exploreAllVouchers": "استكشف جميع القسائم",
+      "contact": "اتصل بنا",
+      "coursesPanelHeading": "مزودو الشهادات",
+      "coursesCount": "{count} دورة"
     },
     "connectAdvisor": "تواصل مع مستشار",
     "connectAdvisorSubject": "تواصل مع مستشار الدورات",
@@ -365,6 +371,30 @@
       "individualLearner": {
         "role": "متعلم فردي — مسار Cloud Practitioner",
         "comment": "تناسب التعلم الذاتي المرن مع وظيفتي بدوام كامل. كانت جلسات توضيح الشكوك الفردية الجزء الأكثر فائدة بالنسبة لي."
+      },
+      "devopsLead": {
+        "role": "قائد DevOps — فريق البنية التحتية السحابية",
+        "comment": "كانت دورة DevOps Engineering on AWS بالضبط ما احتاجه فريقنا قبل عملية ترحيل رئيسية للمنصة. طابقت المختبرات بيئتنا الحقيقية، وليست سيناريوهات عامة."
+      },
+      "programManager": {
+        "role": "مدير برامج — التعلم والتطوير العالمي",
+        "comment": "كان تنسيق التدريب على الشهادات عبر خمس مناطق زمنية كابوسًا في السابق. جعل جدولة نكس مينتور وتنسيق فليكسي الأمر سهلاً لفريقنا الموزع."
+      },
+      "networkSecurityLead": {
+        "role": "قائد أمن الشبكات — قطاع الاتصالات",
+        "comment": "تحضير قوي لشهادة CEH مع مختبرات عملية تشبه الامتحان فعليًا. كنت أتمنى وقتًا أطول في وحدات هجمات الشبكات اللاسلكية، لكنها بشكل عام دورة قوية."
+      },
+      "dataScienceManager": {
+        "role": "مدير علوم البيانات — تحليلات التجزئة",
+        "comment": "انتقلت مهارات فريقنا في SageMaker من النظرية إلى الجاهزية للإنتاج خلال ثلاثة أسابيع. من الواضح أن المدرب يعمل مع هذه الأدوات يوميًا."
+      },
+      "hrPartner": {
+        "role": "شريك أعمال الموارد البشرية — تأهيل المؤسسات",
+        "comment": "بنينا مسار تأهيل معتمد مخصص مع فريق نكس مينتور. أصبح الموظفون الجدد جاهزين للإنتاج بأسابيع أسرع من ذي قبل."
+      },
+      "solutionsConsultant": {
+        "role": "مستشار حلول — مُتكامل أنظمة",
+        "comment": "تغطية جيدة لمنهج PMP وأسئلة محاكاة امتحان مفيدة. تغير الجدول مرة واحدة، لكن الدعم تعامل معه بسرعة."
       }
     }
   },
@@ -404,6 +434,12 @@
       "message": {
         "label": "الرسالة / اهتمامات الدورة",
         "placeholder": "أخبرنا عن أهداف تعلمك أو الدورات المحددة المطلوبة..."
+      },
+      "tocDocument": {
+        "label": "الشروط والأحكام الموقعة *",
+        "placeholder": "انقر لتحميل المستند",
+        "hint": "PDF أو DOC أو DOCX — بحد أقصى 10 ميغابايت",
+        "remove": "إزالة الملف"
       }
     },
     "trainingModeOptions": {
@@ -432,7 +468,13 @@
     "successMessagePart1": "شكرًا لك،",
     "successMessagePart2": "سيتواصل معك مستشار تعلم المؤسسات على",
     "successMessagePart3": "خلال ساعتي عمل.",
-    "closeButton": "إغلاق النافذة"
+    "closeButton": "إغلاق النافذة",
+    "sections": {
+      "contactDetails": "تفاصيل الاتصال",
+      "preferences": "تفضيلات التدريب"
+    },
+    "notARobot": "أنا لست روبوتًا",
+    "verifying": "جارٍ التحقق..."
   },
   "PartnerModal": {
     "eyebrow": "برنامج الشركاء",
@@ -465,6 +507,12 @@
       "message": {
         "label": "أخبرنا عن الشراكة",
         "placeholder": "صف بإيجاز شركتك ونوع الشراكة التي تفكر بها..."
+      },
+      "tocDocument": {
+        "label": "الشروط والأحكام الموقعة *",
+        "placeholder": "انقر لتحميل المستند",
+        "hint": "PDF أو DOC أو DOCX — بحد أقصى 10 ميغابايت",
+        "remove": "إزالة الملف"
       }
     },
     "partnershipTypeOptions": {
@@ -486,7 +534,13 @@
     "successMessagePart1": "شكرًا لك،",
     "successMessagePart2": "سيتواصل معك فريق الشراكات على",
     "successMessagePart3": "خلال يومي عمل.",
-    "closeButton": "إغلاق النافذة"
+    "closeButton": "إغلاق النافذة",
+    "notARobot": "أنا لست روبوتًا",
+    "sections": {
+      "companyDetails": "تفاصيل الشركة",
+      "partnershipDetails": "تفاصيل الشراكة"
+    },
+    "verifying": "جارٍ التحقق..."
   },
   "Footer": {
     "description": "مزود عالمي للتعلم المؤسسي، وشهادات موردي تكنولوجيا المعلومات المعترف بها في الصناعة، وحلول تطوير مهارات القوى العاملة المخصصة.",
@@ -497,7 +551,9 @@
       "solutions": "حلولنا",
       "learningFormats": "أشكال التعلم",
       "courseDirectory": "دليل الدورات",
-      "aboutUs": "من نحن"
+      "aboutUs": "من نحن",
+      "vouchers": "القسائم",
+      "contact": "اتصل بنا"
     },
     "deliveryOptions": {
       "title": "خيارات التسليم",
@@ -509,13 +565,16 @@
     },
     "contact": {
       "title": "المقر الرئيسي",
-      "address": "100 Technology Square, Suite 800, Boston, MA 02139"
+      "address": "Saharanpur Chowk, Dehradun, Uttarakhand, India"
     },
     "copyright": "© {year} نكس مينتور سوليوشنز. جميع الحقوق محفوظة.",
     "legal": {
       "privacyPolicy": "سياسة الخصوصية",
       "termsOfService": "شروط الخدمة",
       "accreditations": "الاعتمادات"
+    },
+    "trademarkDisclaimer": {
+      "heading": "إخلاء مسؤولية العلامات التجارية"
     }
   },
   "CourseContent": {
@@ -599,9 +658,252 @@
       "courseEnquiry": "استفسار عن دورة",
       "enrollment": "التسجيل: {title}",
       "advisorCall": "مكالمة استشارية: {title}"
+    },
+    "enrollment": {
+      "badge": "يمتلئ بسرعة",
+      "seatsLeft": "تبقى {count} مقعدًا فقط في الدفعة القادمة",
+      "studentsEnrolled": "التحق بالفعل أكثر من {count} محترف"
     }
   },
   "LanguageSwitcher": {
     "changeLanguage": "تغيير اللغة"
+  },
+  "Vouchers": {
+    "eyebrow": "قسائم الشهادات",
+    "heading": "قسائم الامتحانات",
+    "subtitle": "أكثر من {count} قسيمة امتحان شهادة عبر أبرز موردي التكنولوجيا.",
+    "providersLabel": "مزودو الشهادات",
+    "vendorVouchersTitle": "قسائم {vendor}",
+    "vouchersCount": "{count} قسيمة متاحة",
+    "requestButton": "طلب قسيمة",
+    "requestSubject": "طلب قسيمة: {title}",
+    "onRequest": "عند الطلب"
+  },
+  "ContactPage": {
+    "eyebrow": "تواصل معنا",
+    "heading": "لنتحدث عن أهداف التدريب الخاصة بك",
+    "subheading": "أخبرنا بما تريد تحقيقه وسيتواصل معك مستشار تعلم مؤسسي بخطة وأسعار مخصصة.",
+    "sidebar": {
+      "heading": "تواصل معنا مباشرة",
+      "address": "Saharanpur Chowk, Dehradun, Uttarakhand, India",
+      "responseTime": "سيرد مستشار نكس مينتور خلال ساعتي عمل."
+    },
+    "tabs": {
+      "general": "استفسار عام",
+      "partner": "استفسار شراكة"
+    },
+    "howItWorks": {
+      "heading": "كيف تعمل الخدمة",
+      "submit": {
+        "title": "أرسل استفسارك",
+        "description": "أخبرنا بما تريد تحقيقه."
+      },
+      "review": {
+        "title": "يراجعه مستشار",
+        "description": "نطابقك مع البرنامج والتنسيق المناسبين."
+      },
+      "respond": {
+        "title": "احصل على رد",
+        "description": "استلم ردًا خلال ساعتي عمل."
+      }
+    },
+    "quickLinks": {
+      "heading": "تبحث عن شيء آخر؟",
+      "courses": "تصفح دليل الدورات",
+      "vouchers": "تصفح قسائم الامتحانات"
+    }
+  },
+  "LegalPage": {
+    "eyebrow": "قانوني",
+    "lastUpdated": "آخر تحديث: {date}",
+    "draftNotice": "هذا مستند قانوني نموذجي يُقصد به أن يكون نقطة انطلاق — ولم تتم مراجعته بعد من قبل مستشار قانوني. يُنشر حاليًا باللغة الإنجليزية عبر جميع لغات الموقع في انتظار المراجعة القانونية المهنية والتوطين."
+  },
+  "PrivacyPolicy": {
+    "heading": "سياسة الخصوصية",
+    "sections": {
+      "introduction": {
+        "heading": "Introduction",
+        "body": "NexMentor Solutions (\"we\", \"us\", or \"our\") provides enterprise corporate learning, certification training, and workforce upskilling services. This Privacy Policy explains what information we collect through this website, how we use it, and the choices you have."
+      },
+      "informationWeCollect": {
+        "heading": "Information We Collect",
+        "body": "We collect information you provide directly, such as your name, company name, email address, phone number, and any message or document you submit through our contact, partnership, or enrollment forms. We may also collect standard technical information (such as browser type, device type, and pages visited) automatically when you use this site."
+      },
+      "howWeUseInformation": {
+        "heading": "How We Use Your Information",
+        "body": "We use the information we collect to respond to your enquiries, provide training and certification services, process partnership requests, send scheduling and course-related communications, and improve this website. We do not sell your personal information."
+      },
+      "cookies": {
+        "heading": "Cookies and Tracking Technologies",
+        "body": "This site may use cookies and similar technologies to remember your preferences (such as language and theme) and to understand how visitors use the site. You can control cookies through your browser settings."
+      },
+      "thirdPartyServices": {
+        "heading": "Third-Party Services",
+        "body": "We may rely on third-party providers for services such as email delivery, analytics, and hosting. These providers only receive the information necessary to perform their services and are expected to protect it accordingly."
+      },
+      "dataSecurity": {
+        "heading": "Data Security",
+        "body": "We take reasonable technical and organizational measures to protect the information you share with us. However, no method of transmission or storage is completely secure, and we cannot guarantee absolute security."
+      },
+      "dataRetention": {
+        "heading": "Data Retention",
+        "body": "We retain personal information for as long as necessary to fulfil the purposes described in this policy, respond to your enquiries, or comply with legal obligations, after which it is deleted or anonymized."
+      },
+      "yourRights": {
+        "heading": "Your Rights",
+        "body": "Depending on your location, you may have the right to access, correct, or request deletion of your personal information, or to object to certain uses of it. To exercise these rights, contact us using the details below."
+      },
+      "childrensPrivacy": {
+        "heading": "Children's Privacy",
+        "body": "Our services are intended for working professionals and organizations. This site is not directed at children, and we do not knowingly collect personal information from children."
+      },
+      "changes": {
+        "heading": "Changes to This Policy",
+        "body": "We may update this Privacy Policy from time to time. The \"Last updated\" date at the top of this page reflects the most recent revision."
+      },
+      "contactUs": {
+        "heading": "Contact Us",
+        "body": "If you have questions about this Privacy Policy or how we handle your information, contact us at info@nexmentorsolutions.com."
+      }
+    }
+  },
+  "TermsOfService": {
+    "heading": "شروط الخدمة",
+    "sections": {
+      "acceptance": {
+        "heading": "Acceptance of Terms",
+        "body": "By accessing or using this website or enrolling in any NexMentor Solutions training program, you agree to be bound by these Terms of Service. If you do not agree, please do not use this site or our services."
+      },
+      "services": {
+        "heading": "Description of Services",
+        "body": "NexMentor Solutions provides instructor-led and self-paced technical training, certification exam preparation, and related enterprise learning services, delivered online, in classrooms, or on-site, as described on this website."
+      },
+      "enrollmentAndPayment": {
+        "heading": "Enrollment and Payment",
+        "body": "Enrollment in a course or program is confirmed once we have received your request and any applicable payment. Pricing, schedules, and delivery formats are as communicated at the time of booking and may be updated for future cohorts."
+      },
+      "cancellations": {
+        "heading": "Cancellations and Rescheduling",
+        "body": "Cancellation and rescheduling requests should be submitted as early as possible. Specific cancellation windows, fees, and rescheduling options vary by program and will be confirmed with you at the time of enrollment."
+      },
+      "vouchers": {
+        "heading": "Certification Exam Vouchers",
+        "body": "Certification exam vouchers are subject to availability and the issuing certification body's own terms, including expiry dates and exam eligibility rules. NexMentor Solutions facilitates voucher requests but does not control third-party exam providers' policies."
+      },
+      "intellectualProperty": {
+        "heading": "Intellectual Property",
+        "body": "All course materials, courseware, trademarks, and content on this website are the property of NexMentor Solutions or its licensors and vendor partners, and may not be reproduced or redistributed without permission."
+      },
+      "userConduct": {
+        "heading": "User Conduct",
+        "body": "You agree to use this website and our services lawfully, and not to misuse, disrupt, or attempt to gain unauthorized access to our systems or those of our training partners."
+      },
+      "disclaimers": {
+        "heading": "Disclaimers and Limitation of Liability",
+        "body": "Our services are provided on an \"as is\" basis. While we work to ensure training quality and accuracy, we do not guarantee specific certification exam outcomes or career results. To the extent permitted by law, NexMentor Solutions is not liable for indirect or consequential damages arising from use of our services."
+      },
+      "trademarks": {
+        "heading": "Third-Party Trademarks",
+        "body": "References to third-party certifications, vendors, and trademarks on this website are for identification purposes only. See the trademark disclaimer in the site footer for details on specific third-party marks."
+      },
+      "governingLaw": {
+        "heading": "Governing Law",
+        "body": "These Terms are governed by the laws of the jurisdiction in which NexMentor Solutions is registered, without regard to conflict-of-law principles, unless otherwise required by applicable local law."
+      },
+      "changes": {
+        "heading": "Changes to These Terms",
+        "body": "We may update these Terms from time to time. The \"Last updated\" date at the top of this page reflects the most recent revision. Continued use of our services after changes constitutes acceptance of the updated Terms."
+      },
+      "contactUs": {
+        "heading": "Contact Us",
+        "body": "Questions about these Terms of Service can be directed to info@nexmentorsolutions.com."
+      }
+    }
+  },
+  "Partners": {
+    "heading": "موثوق به من قبل شركات عالمية عبر مختلف الصناعات"
+  },
+  "RiseFramework": {
+    "eyebrow": "إطار عملنا التعليمي",
+    "heading": "إطار عمل NEXMENTOR RISE",
+    "subheading": "من فجوات المهارات إلى القدرات الجاهزة للمستقبل",
+    "description": "نهج تعليمي منظم من 4 مراحل مصمم لتحويل التدريب من حدث تعليمي لمرة واحدة إلى رحلة قابلة للقياس من تطوير المهارات والتطبيق العملي والنمو المهني.",
+    "stages": {
+      "recognise": {
+        "title": "RECOGNISE",
+        "subtitle": "تحديد المهارات الصحيحة",
+        "description": "نبدأ بفهم أين يقف المتعلمون والمؤسسات اليوم. نقيّم القدرات الحالية ومتطلبات الأدوار والأهداف التجارية وفجوات المهارات التقنية لتحديد الكفاءات الأكثر أهمية.",
+        "tags": [
+          "تحليل فجوة المهارات",
+          "تقييم المتعلم",
+          "تخطيط الأدوار",
+          "الأهداف التجارية",
+          "قياس القدرات"
+        ]
+      },
+      "individualise": {
+        "title": "INDIVIDUALISE",
+        "subtitle": "بناء رحلة التعلم الصحيحة",
+        "description": "لا يوجد متعلمان أو مؤسستان لهما نفس الاحتياجات. ننشئ مسارات تعلم مخصصة تتماشى مع الأدوار الفردية ومستويات الخبرة والبيئات التقنية وأهداف الشهادات والأولويات التجارية.",
+        "tags": [
+          "مسارات تعلم مخصصة",
+          "تدريب قائم على الأدوار",
+          "تخطيط الشهادات",
+          "تصميم المناهج",
+          "خطط التعلم"
+        ]
+      },
+      "skill": {
+        "title": "SKILL",
+        "subtitle": "تعلّم. تدرّب. طبّق.",
+        "description": "تصبح المعرفة ذات قيمة عندما يمكن تطبيقها. يجمع مدربونا الخبراء بين التعلم بقيادة المدرب والمختبرات العملية والعروض التوضيحية والسيناريوهات الواقعية والمشاريع والتمارين العملية—مما يساعد المتعلمين على تحويل المفاهيم إلى مهارات جاهزة للوظيفة.",
+        "tags": [
+          "مدربون خبراء",
+          "مختبرات عملية",
+          "حالات استخدام واقعية",
+          "مشاريع",
+          "ورش عمل",
+          "تعلم عملي"
+        ]
+      },
+      "elevate": {
+        "title": "ELEVATE",
+        "subtitle": "قِس. تحقق. تقدّم.",
+        "description": "لا ينتهي التعلم عند انتهاء التدريب. نقيس التقدم من خلال التقييمات والتقييمات العملية وملاحظات المتعلمين ونتائج الشهادات، مع تقديم رؤى لتعزيز المهارات وقدرات القوى العاملة باستمرار.",
+        "tags": [
+          "تقييم المهارات",
+          "تتبع الشهادات",
+          "رؤى الأداء",
+          "ملاحظات المتعلم",
+          "التحسين المستمر"
+        ]
+      }
+    },
+    "journey": {
+      "eyebrow": "رحلة RISE",
+      "steps": [
+        "تحديد الفجوة",
+        "تخصيص الرحلة",
+        "بناء المهارات العملية",
+        "قياس الأثر"
+      ]
+    },
+    "closing": {
+      "line1": "في NEXMENTOR، نحن لا نقدم التدريب فحسب.",
+      "line2": "نحن نساعد الأفراد والمؤسسات على الارتقاء (RISE)."
+    },
+    "tagline": "تحويل الذكاء إلى تأثير."
+  },
+  "ChatBot": {
+    "title": "مساعد نكس مينتور",
+    "subtitle": "اسأل عن الدورات والشهادات",
+    "greeting": "مرحبًا! أنا مساعد نكس مينتور. اسألني عن دوراتنا أو شهاداتنا أو صيغ التسليم — يسعدني مساعدتك.",
+    "placeholder": "اكتب رسالتك…",
+    "sendLabel": "إرسال الرسالة",
+    "openLabel": "فتح مساعد الدردشة",
+    "closeLabel": "إغلاق مساعد الدردشة",
+    "thinking": "أفكر…",
+    "errorMessage": "حدث خطأ ما. يرجى المحاولة مرة أخرى.",
+    "disclaimer": "مساعد ذكاء اصطناعي — للاستفسارات التفصيلية، استخدم صفحة الاتصال."
   }
 }

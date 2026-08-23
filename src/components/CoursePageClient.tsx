@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import {
   ArrowLeft, Clock, BarChart3, Layers, Award, CheckCircle2, GraduationCap,
   Users, ChevronRight, Home, Sparkles, ShieldCheck, Calendar,
@@ -10,6 +10,8 @@ import { useTranslations } from 'next-intl';
 import { Header } from './Header';
 import { Footer } from './Footer';
 import { ContactModal } from './ContactModal';
+import { EnrollmentPulse } from './EnrollmentPulse';
+import { formatDuration } from '../lib/courseTranslation';
 import type { CatalogCourse, CourseContent } from '../data/courseContent';
 
 interface CoursePageClientProps {
@@ -30,7 +32,7 @@ export const CoursePageClient: React.FC<CoursePageClientProps> = ({ course, cont
   };
 
   const facts = [
-    course.duration && { icon: Clock, label: t('facts.duration'), value: course.duration },
+    course.duration && { icon: Clock, label: t('facts.duration'), value: formatDuration(course.duration)! },
     course.level && { icon: BarChart3, label: t('facts.level'), value: course.level },
     course.domain && { icon: Layers, label: t('facts.domain'), value: course.domain },
     course.code && { icon: Award, label: t('facts.examCode'), value: course.code },
@@ -62,7 +64,7 @@ export const CoursePageClient: React.FC<CoursePageClientProps> = ({ course, cont
               <Home className="w-3.5 h-3.5" /> {t('breadcrumb.home')}
             </Link>
             <ChevronRight className="w-3.5 h-3.5 opacity-60" />
-            <Link href="/#courses" className="hover:text-white transition-colors">{t('breadcrumb.courses')}</Link>
+            <Link href="/courses" className="hover:text-white transition-colors">{t('breadcrumb.courses')}</Link>
             <ChevronRight className="w-3.5 h-3.5 opacity-60" />
             <span className="text-sky-100/70">{course.vendorName}</span>
           </nav>
@@ -191,6 +193,8 @@ export const CoursePageClient: React.FC<CoursePageClientProps> = ({ course, cont
                   </div>
                 </div>
 
+                <EnrollmentPulse courseId={course.id} />
+
                 <button
                   onClick={() => openEnroll(t('enquirySubjects.enrollment', { title: course.title }))}
                   className="w-full bg-[#0052CC] hover:bg-[#003B99] text-white py-3.5 rounded-xl font-bold shadow-md transition-all active:scale-95 flex items-center justify-center gap-2"
@@ -202,7 +206,7 @@ export const CoursePageClient: React.FC<CoursePageClientProps> = ({ course, cont
             </div>
 
             <Link
-              href="/#courses"
+              href="/courses"
               className="flex items-center justify-center gap-2 text-sm font-semibold text-[#0B5198] dark:text-sky-400 hover:text-[#003B99] transition-colors"
             >
               <ArrowLeft className="w-4 h-4" /> {t('backToDirectory')}

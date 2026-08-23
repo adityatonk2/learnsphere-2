@@ -6,25 +6,22 @@ import { HeroSection } from './components/HeroSection';
 import { SolutionsSection } from './components/SolutionsSection';
 import { WhyUsSection } from './components/WhyUsSection';
 import { TrainingModesSection } from './components/TrainingModesSection';
-import { CourseDirectorySection } from './components/CourseDirectorySection';
-import { LeadershipSection } from './components/LeadershipSection';
-import { MissionVisionValuesSection } from './components/MissionVisionValuesSection';
 import { TestimonialsSection } from './components/TestimonialsSection';
 import { StatsSection } from './components/StatsSection';
-import { PartnerCTASection } from './components/PartnerCTASection';
+import { PartnersCarousel } from './components/PartnersCarousel';
+import { RiseFrameworkSection } from './components/RiseFrameworkSection';
 import { PromoBanner } from './components/PromoBanner';
-import { AboutSection } from './components/AboutSection';
 import { ContactModal } from './components/ContactModal';
-import { PartnerModal } from './components/PartnerModal';
 import { Footer } from './components/Footer';
+import { useRouter } from '@/i18n/navigation';
 
 export default function App() {
+  const router = useRouter();
   const [activeSection, setActiveSection] = useState('home');
   const [isContactOpen, setIsContactOpen] = useState(false);
   const [contactDefaultSubject, setContactDefaultSubject] = useState<string>('');
-  const [isPartnerOpen, setIsPartnerOpen] = useState(false);
 
-  // When arriving from another route with a hash (e.g. /#courses), scroll there.
+  // When arriving from another route with a hash (e.g. /#solutions), scroll there.
   useEffect(() => {
     if (typeof window !== 'undefined' && window.location.hash) {
       const id = window.location.hash.slice(1);
@@ -44,11 +41,7 @@ export default function App() {
   };
 
   const handleExploreCourses = () => {
-    setActiveSection('courses');
-    const elem = document.getElementById('courses');
-    if (elem) {
-      elem.scrollIntoView({ behavior: 'smooth' });
-    }
+    router.push('/courses');
   };
 
   return (
@@ -76,38 +69,25 @@ export default function App() {
           onOpenContact={() => handleOpenContact('Learning Solutions Demo')}
         />
 
+        {/* Trusted-by partner logos */}
+        <PartnersCarousel />
+
+        {/* Business Stats */}
+        <StatsSection />
+
         {/* Why NexMentor Solutions? */}
         <WhyUsSection />
+
+        {/* The NEXMENTOR RISE Framework */}
+        <RiseFrameworkSection />
 
         {/* Flexible Learning Options Section (Image 2) */}
         <TrainingModesSection
           onOpenContact={(modeTitle) => handleOpenContact(modeTitle)}
         />
 
-        {/* Certification Directory Section (Image 3) */}
-        <CourseDirectorySection
-          onOpenContact={(courseName) => handleOpenContact(courseName)}
-        />
-
-        {/* Business Stats */}
-        <StatsSection />
-
-        {/* Leadership Profiles */}
-        <LeadershipSection />
-
-        {/* Mission, Vision & Values */}
-        <MissionVisionValuesSection />
-
         {/* Client & Learner Testimonials */}
         <TestimonialsSection />
-
-        {/* Become a Partner CTA */}
-        <PartnerCTASection onOpenPartnerForm={() => setIsPartnerOpen(true)} />
-
-        {/* About NexMentor Solutions & Callout Card (Image 1 bottom) */}
-        <AboutSection
-          onOpenContact={() => handleOpenContact('Corporate Partnership')}
-        />
       </main>
 
       {/* Footer */}
@@ -121,12 +101,6 @@ export default function App() {
         isOpen={isContactOpen}
         onClose={() => setIsContactOpen(false)}
         defaultSubject={contactDefaultSubject}
-      />
-
-      {/* Become a Partner Modal */}
-      <PartnerModal
-        isOpen={isPartnerOpen}
-        onClose={() => setIsPartnerOpen(false)}
       />
     </div>
   );

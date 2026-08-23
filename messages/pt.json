@@ -5,12 +5,18 @@
   },
   "Header": {
     "globalReach": "Formação global em mais de 40 países",
-    "enterpriseSupport": "Suporte empresarial: +1 (800) 555-8920",
+    "enterpriseSupport": "Suporte empresarial: +91 95489 88153",
     "nav": {
       "solutions": "Soluções",
       "training": "Formação",
       "courses": "Cursos",
-      "about": "Sobre nós"
+      "about": "Sobre nós",
+      "exploreAllCourses": "Explorar todos os cursos",
+      "vouchers": "Vouchers",
+      "exploreAllVouchers": "Explorar todos os vouchers",
+      "contact": "Contato",
+      "coursesPanelHeading": "Fornecedores de certificação",
+      "coursesCount": "{count} cursos"
     },
     "connectAdvisor": "Falar com um consultor",
     "connectAdvisorSubject": "Falar com um consultor de cursos",
@@ -365,6 +371,30 @@
       "individualLearner": {
         "role": "Aluno individual — Trilha Cloud Practitioner",
         "comment": "O aprendizado flexível no meu ritmo se encaixou bem no meu trabalho em tempo integral. As sessões individuais de esclarecimento de dúvidas foram a parte mais útil para mim."
+      },
+      "devopsLead": {
+        "role": "Líder de DevOps — Equipe de infraestrutura em nuvem",
+        "comment": "O curso DevOps Engineering on AWS foi exatamente o que nossa equipe precisava antes de uma grande migração de plataforma. Os laboratórios refletiam nosso ambiente real, não cenários genéricos."
+      },
+      "programManager": {
+        "role": "Gerente de programa — Aprendizagem e desenvolvimento global",
+        "comment": "Coordenar treinamento de certificação em cinco fusos horários costumava ser um pesadelo. O agendamento e o formato Flexi da NexMentor tornaram isso simples para nossa equipe distribuída."
+      },
+      "networkSecurityLead": {
+        "role": "Líder de segurança de rede — Setor de telecomunicações",
+        "comment": "Boa preparação para o CEH com laboratórios práticos que realmente se pareciam com o exame. Gostaria de mais tempo nos módulos de ataques sem fio, mas no geral um curso sólido."
+      },
+      "dataScienceManager": {
+        "role": "Gerente de ciência de dados — Análise de varejo",
+        "comment": "As habilidades de SageMaker da nossa equipe passaram de teóricas para prontas para produção em três semanas. O instrutor claramente trabalha com essas ferramentas diariamente."
+      },
+      "hrPartner": {
+        "role": "Parceiro de RH — Integração corporativa",
+        "comment": "Construímos uma trilha de certificação de integração personalizada com a equipe da NexMentor. Os novos contratados ficam prontos para produção semanas antes."
+      },
+      "solutionsConsultant": {
+        "role": "Consultor de soluções — Integrador de sistemas",
+        "comment": "Boa abrangência no currículo do PMP e perguntas úteis de simulação de exame. O agendamento mudou uma vez, mas o suporte resolveu rapidamente."
       }
     }
   },
@@ -404,6 +434,12 @@
       "message": {
         "label": "Mensagem / Interesses de curso",
         "placeholder": "Conte-nos sobre seus objetivos de aprendizado ou cursos específicos necessários..."
+      },
+      "tocDocument": {
+        "label": "Termos e Condições assinados *",
+        "placeholder": "Clique para enviar o documento",
+        "hint": "PDF, DOC ou DOCX — máx. 10MB",
+        "remove": "Remover arquivo"
       }
     },
     "trainingModeOptions": {
@@ -432,7 +468,13 @@
     "successMessagePart1": "Obrigado,",
     "successMessagePart2": "Um consultor de aprendizagem corporativa entrará em contato com",
     "successMessagePart3": "dentro de 2 horas úteis.",
-    "closeButton": "Fechar janela"
+    "closeButton": "Fechar janela",
+    "sections": {
+      "contactDetails": "Detalhes de contato",
+      "preferences": "Preferências de treinamento"
+    },
+    "notARobot": "Não sou um robô",
+    "verifying": "Verificando..."
   },
   "PartnerModal": {
     "eyebrow": "Programa de parceiros",
@@ -465,6 +507,12 @@
       "message": {
         "label": "Conte-nos sobre a parceria",
         "placeholder": "Descreva brevemente sua empresa e a parceria que você tem em mente..."
+      },
+      "tocDocument": {
+        "label": "Termos e Condições assinados *",
+        "placeholder": "Clique para enviar o documento",
+        "hint": "PDF, DOC ou DOCX — máx. 10MB",
+        "remove": "Remover arquivo"
       }
     },
     "partnershipTypeOptions": {
@@ -486,7 +534,13 @@
     "successMessagePart1": "Obrigado,",
     "successMessagePart2": "Nossa equipe de parcerias entrará em contato com",
     "successMessagePart3": "dentro de 2 dias úteis.",
-    "closeButton": "Fechar janela"
+    "closeButton": "Fechar janela",
+    "notARobot": "Não sou um robô",
+    "sections": {
+      "companyDetails": "Detalhes da empresa",
+      "partnershipDetails": "Detalhes da parceria"
+    },
+    "verifying": "Verificando..."
   },
   "Footer": {
     "description": "Fornecedor global de aprendizagem corporativa, certificações de fornecedores de TI reconhecidas pela indústria e soluções personalizadas de capacitação da força de trabalho.",
@@ -497,7 +551,9 @@
       "solutions": "Nossas soluções",
       "learningFormats": "Formatos de aprendizagem",
       "courseDirectory": "Diretório de cursos",
-      "aboutUs": "Sobre nós"
+      "aboutUs": "Sobre nós",
+      "vouchers": "Vouchers",
+      "contact": "Contato"
     },
     "deliveryOptions": {
       "title": "Opções de entrega",
@@ -509,13 +565,16 @@
     },
     "contact": {
       "title": "Sede corporativa",
-      "address": "100 Technology Square, Suite 800, Boston, MA 02139"
+      "address": "Saharanpur Chowk, Dehradun, Uttarakhand, India"
     },
     "copyright": "© {year} NexMentor Solutions Inc. Todos os direitos reservados.",
     "legal": {
       "privacyPolicy": "Política de Privacidade",
       "termsOfService": "Termos de Serviço",
       "accreditations": "Credenciamentos"
+    },
+    "trademarkDisclaimer": {
+      "heading": "Aviso de marcas registradas"
     }
   },
   "CourseContent": {
@@ -599,9 +658,252 @@
       "courseEnquiry": "Consulta sobre curso",
       "enrollment": "Matrícula: {title}",
       "advisorCall": "Chamada de consultor: {title}"
+    },
+    "enrollment": {
+      "badge": "Vagas se esgotando",
+      "seatsLeft": "Restam apenas {count} vagas na próxima turma",
+      "studentsEnrolled": "Mais de {count} profissionais já inscritos"
     }
   },
   "LanguageSwitcher": {
     "changeLanguage": "Alterar idioma"
+  },
+  "Vouchers": {
+    "eyebrow": "Vouchers de certificação",
+    "heading": "Vouchers de exame",
+    "subtitle": "Mais de {count} vouchers de exame de certificação dos principais fornecedores de tecnologia.",
+    "providersLabel": "Fornecedores de certificação",
+    "vendorVouchersTitle": "Vouchers {vendor}",
+    "vouchersCount": "{count} vouchers disponíveis",
+    "requestButton": "Solicitar um voucher",
+    "requestSubject": "Solicitação de voucher: {title}",
+    "onRequest": "Sob consulta"
+  },
+  "ContactPage": {
+    "eyebrow": "Entre em contato",
+    "heading": "Vamos falar sobre suas metas de treinamento",
+    "subheading": "Conte-nos o que você deseja alcançar e um consultor de aprendizagem corporativa entrará em contato com um plano e preços personalizados.",
+    "sidebar": {
+      "heading": "Fale conosco diretamente",
+      "address": "Saharanpur Chowk, Dehradun, Uttarakhand, India",
+      "responseTime": "Um consultor NexMentor responde em até 2 horas úteis."
+    },
+    "tabs": {
+      "general": "Consulta geral",
+      "partner": "Consulta de parceria"
+    },
+    "howItWorks": {
+      "heading": "Como funciona",
+      "submit": {
+        "title": "Envie sua consulta",
+        "description": "Conte-nos o que você deseja alcançar."
+      },
+      "review": {
+        "title": "Um consultor analisa",
+        "description": "Nós o direcionamos ao programa e formato certos."
+      },
+      "respond": {
+        "title": "Receba uma resposta",
+        "description": "Resposta em até 2 horas úteis."
+      }
+    },
+    "quickLinks": {
+      "heading": "Procurando outra coisa?",
+      "courses": "Ver catálogo de cursos",
+      "vouchers": "Ver vouchers de exame"
+    }
+  },
+  "LegalPage": {
+    "eyebrow": "Legal",
+    "lastUpdated": "Última atualização: {date}",
+    "draftNotice": "Este é um modelo de documento legal destinado a servir como ponto de partida — ainda não foi revisado por um consultor jurídico. Atualmente é publicado em inglês em todos os idiomas do site, aguardando revisão jurídica profissional e localização."
+  },
+  "PrivacyPolicy": {
+    "heading": "Política de Privacidade",
+    "sections": {
+      "introduction": {
+        "heading": "Introduction",
+        "body": "NexMentor Solutions (\"we\", \"us\", or \"our\") provides enterprise corporate learning, certification training, and workforce upskilling services. This Privacy Policy explains what information we collect through this website, how we use it, and the choices you have."
+      },
+      "informationWeCollect": {
+        "heading": "Information We Collect",
+        "body": "We collect information you provide directly, such as your name, company name, email address, phone number, and any message or document you submit through our contact, partnership, or enrollment forms. We may also collect standard technical information (such as browser type, device type, and pages visited) automatically when you use this site."
+      },
+      "howWeUseInformation": {
+        "heading": "How We Use Your Information",
+        "body": "We use the information we collect to respond to your enquiries, provide training and certification services, process partnership requests, send scheduling and course-related communications, and improve this website. We do not sell your personal information."
+      },
+      "cookies": {
+        "heading": "Cookies and Tracking Technologies",
+        "body": "This site may use cookies and similar technologies to remember your preferences (such as language and theme) and to understand how visitors use the site. You can control cookies through your browser settings."
+      },
+      "thirdPartyServices": {
+        "heading": "Third-Party Services",
+        "body": "We may rely on third-party providers for services such as email delivery, analytics, and hosting. These providers only receive the information necessary to perform their services and are expected to protect it accordingly."
+      },
+      "dataSecurity": {
+        "heading": "Data Security",
+        "body": "We take reasonable technical and organizational measures to protect the information you share with us. However, no method of transmission or storage is completely secure, and we cannot guarantee absolute security."
+      },
+      "dataRetention": {
+        "heading": "Data Retention",
+        "body": "We retain personal information for as long as necessary to fulfil the purposes described in this policy, respond to your enquiries, or comply with legal obligations, after which it is deleted or anonymized."
+      },
+      "yourRights": {
+        "heading": "Your Rights",
+        "body": "Depending on your location, you may have the right to access, correct, or request deletion of your personal information, or to object to certain uses of it. To exercise these rights, contact us using the details below."
+      },
+      "childrensPrivacy": {
+        "heading": "Children's Privacy",
+        "body": "Our services are intended for working professionals and organizations. This site is not directed at children, and we do not knowingly collect personal information from children."
+      },
+      "changes": {
+        "heading": "Changes to This Policy",
+        "body": "We may update this Privacy Policy from time to time. The \"Last updated\" date at the top of this page reflects the most recent revision."
+      },
+      "contactUs": {
+        "heading": "Contact Us",
+        "body": "If you have questions about this Privacy Policy or how we handle your information, contact us at info@nexmentorsolutions.com."
+      }
+    }
+  },
+  "TermsOfService": {
+    "heading": "Termos de Serviço",
+    "sections": {
+      "acceptance": {
+        "heading": "Acceptance of Terms",
+        "body": "By accessing or using this website or enrolling in any NexMentor Solutions training program, you agree to be bound by these Terms of Service. If you do not agree, please do not use this site or our services."
+      },
+      "services": {
+        "heading": "Description of Services",
+        "body": "NexMentor Solutions provides instructor-led and self-paced technical training, certification exam preparation, and related enterprise learning services, delivered online, in classrooms, or on-site, as described on this website."
+      },
+      "enrollmentAndPayment": {
+        "heading": "Enrollment and Payment",
+        "body": "Enrollment in a course or program is confirmed once we have received your request and any applicable payment. Pricing, schedules, and delivery formats are as communicated at the time of booking and may be updated for future cohorts."
+      },
+      "cancellations": {
+        "heading": "Cancellations and Rescheduling",
+        "body": "Cancellation and rescheduling requests should be submitted as early as possible. Specific cancellation windows, fees, and rescheduling options vary by program and will be confirmed with you at the time of enrollment."
+      },
+      "vouchers": {
+        "heading": "Certification Exam Vouchers",
+        "body": "Certification exam vouchers are subject to availability and the issuing certification body's own terms, including expiry dates and exam eligibility rules. NexMentor Solutions facilitates voucher requests but does not control third-party exam providers' policies."
+      },
+      "intellectualProperty": {
+        "heading": "Intellectual Property",
+        "body": "All course materials, courseware, trademarks, and content on this website are the property of NexMentor Solutions or its licensors and vendor partners, and may not be reproduced or redistributed without permission."
+      },
+      "userConduct": {
+        "heading": "User Conduct",
+        "body": "You agree to use this website and our services lawfully, and not to misuse, disrupt, or attempt to gain unauthorized access to our systems or those of our training partners."
+      },
+      "disclaimers": {
+        "heading": "Disclaimers and Limitation of Liability",
+        "body": "Our services are provided on an \"as is\" basis. While we work to ensure training quality and accuracy, we do not guarantee specific certification exam outcomes or career results. To the extent permitted by law, NexMentor Solutions is not liable for indirect or consequential damages arising from use of our services."
+      },
+      "trademarks": {
+        "heading": "Third-Party Trademarks",
+        "body": "References to third-party certifications, vendors, and trademarks on this website are for identification purposes only. See the trademark disclaimer in the site footer for details on specific third-party marks."
+      },
+      "governingLaw": {
+        "heading": "Governing Law",
+        "body": "These Terms are governed by the laws of the jurisdiction in which NexMentor Solutions is registered, without regard to conflict-of-law principles, unless otherwise required by applicable local law."
+      },
+      "changes": {
+        "heading": "Changes to These Terms",
+        "body": "We may update these Terms from time to time. The \"Last updated\" date at the top of this page reflects the most recent revision. Continued use of our services after changes constitutes acceptance of the updated Terms."
+      },
+      "contactUs": {
+        "heading": "Contact Us",
+        "body": "Questions about these Terms of Service can be directed to info@nexmentorsolutions.com."
+      }
+    }
+  },
+  "Partners": {
+    "heading": "Confiado por empresas globais em diversos setores"
+  },
+  "RiseFramework": {
+    "eyebrow": "Nosso Framework de Aprendizagem",
+    "heading": "O Framework NEXMENTOR RISE",
+    "subheading": "De Lacunas de Habilidades a Capacidades Prontas para o Futuro",
+    "description": "Uma abordagem de aprendizagem estruturada em 4 etapas, projetada para transformar o treinamento de um evento único em uma jornada mensurável de desenvolvimento de habilidades, aplicação prática e crescimento profissional.",
+    "stages": {
+      "recognise": {
+        "title": "RECOGNISE",
+        "subtitle": "Identificar as Habilidades Certas",
+        "description": "Começamos entendendo onde os alunos e as organizações estão hoje. Avaliamos capacidades atuais, requisitos de função, objetivos de negócio e lacunas de habilidades tecnológicas para identificar as competências mais importantes.",
+        "tags": [
+          "Análise de Lacunas de Habilidades",
+          "Avaliação do Aluno",
+          "Mapeamento de Funções",
+          "Objetivos de Negócio",
+          "Benchmarking de Capacidades"
+        ]
+      },
+      "individualise": {
+        "title": "INDIVIDUALISE",
+        "subtitle": "Construir a Jornada de Aprendizagem Certa",
+        "description": "Não há dois alunos ou organizações com as mesmas necessidades. Criamos trilhas de aprendizagem personalizadas alinhadas a funções individuais, níveis de experiência, ambientes tecnológicos, metas de certificação e prioridades de negócio.",
+        "tags": [
+          "Trilhas de Aprendizagem Personalizadas",
+          "Treinamento Baseado em Função",
+          "Mapeamento de Certificações",
+          "Design de Currículo",
+          "Planos de Aprendizagem"
+        ]
+      },
+      "skill": {
+        "title": "SKILL",
+        "subtitle": "Aprenda. Pratique. Aplique.",
+        "description": "O conhecimento se torna valioso quando pode ser aplicado. Nossos instrutores especialistas combinam aprendizagem conduzida por instrutor com laboratórios práticos, demonstrações, cenários do mundo real, projetos e exercícios práticos—ajudando os alunos a transformar conceitos em habilidades prontas para o trabalho.",
+        "tags": [
+          "Instrutores Especialistas",
+          "Laboratórios Práticos",
+          "Casos de Uso Reais",
+          "Projetos",
+          "Workshops",
+          "Aprendizagem Prática"
+        ]
+      },
+      "elevate": {
+        "title": "ELEVATE",
+        "subtitle": "Meça. Valide. Avance.",
+        "description": "A aprendizagem não termina quando o treinamento é concluído. Medimos o progresso por meio de avaliações, avaliações práticas, feedback dos alunos e resultados de certificação, enquanto fornecemos insights para fortalecer continuamente as habilidades e a capacidade da força de trabalho.",
+        "tags": [
+          "Avaliação de Habilidades",
+          "Rastreamento de Certificações",
+          "Insights de Desempenho",
+          "Feedback do Aluno",
+          "Melhoria Contínua"
+        ]
+      }
+    },
+    "journey": {
+      "eyebrow": "A Jornada RISE",
+      "steps": [
+        "Identificar a Lacuna",
+        "Personalizar a Jornada",
+        "Construir Habilidades Práticas",
+        "Medir o Impacto"
+      ]
+    },
+    "closing": {
+      "line1": "Na NEXMENTOR, não simplesmente entregamos treinamento.",
+      "line2": "Ajudamos pessoas e organizações a RISE (se elevarem)."
+    },
+    "tagline": "Transformando Inteligência em Impacto."
+  },
+  "ChatBot": {
+    "title": "Assistente NexMentor",
+    "subtitle": "Pergunte sobre cursos e certificações",
+    "greeting": "Olá! Sou o assistente da NexMentor. Pergunte-me sobre nossos cursos, certificações ou formatos de entrega — terei prazer em ajudar.",
+    "placeholder": "Digite sua mensagem…",
+    "sendLabel": "Enviar mensagem",
+    "openLabel": "Abrir assistente de chat",
+    "closeLabel": "Fechar assistente de chat",
+    "thinking": "Pensando…",
+    "errorMessage": "Algo deu errado. Por favor, tente novamente.",
+    "disclaimer": "Assistente de IA — para consultas detalhadas, use nossa página de contato."
   }
 }

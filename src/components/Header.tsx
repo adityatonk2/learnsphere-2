@@ -1,11 +1,16 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Globe, Phone, Mail, Search } from 'lucide-react';
+import Image from 'next/image';
+import { Menu, X, Globe, Phone, Mail, Search, ChevronDown } from 'lucide-react';
 import { useLocale, useTranslations } from 'next-intl';
 import { SearchModal } from './SearchModal';
 import { ThemeToggle } from './ThemeToggle';
 import { LanguageSwitcher } from './LanguageSwitcher';
+import { NavDropdown } from './NavDropdown';
+import { VENDORS_DATA } from '../data/coursesData';
+import { VOUCHERS_DATA } from '../data/vouchersData';
+import { Link as IntlLink } from '@/i18n/navigation';
 
 interface HeaderProps {
   onOpenContact: (subject?: string) => void;
@@ -35,6 +40,22 @@ const NavLink: React.FC<NavLinkProps> = ({ label, active, onClick }) => (
   </button>
 );
 
+const NavRouteLink: React.FC<{ label: string; href: string; active: boolean }> = ({ label, href, active }) => (
+  <IntlLink
+    href={href}
+    className={`text-sm font-medium transition-colors relative py-2 ${
+      active
+        ? 'text-[#0B5198] dark:text-sky-400 font-semibold'
+        : 'text-slate-700 dark:text-slate-200 hover:text-[#0B5198] dark:hover:text-sky-400'
+    }`}
+  >
+    {label}
+    {active && (
+      <span className="absolute bottom-0 left-0 w-full h-0.5 bg-[#0B5198] dark:bg-sky-400 rounded-full" />
+    )}
+  </IntlLink>
+);
+
 export const Header: React.FC<HeaderProps> = ({ onOpenContact, activeSection, setActiveSection }) => {
   const locale = useLocale();
   const t = useTranslations('Header');
@@ -45,9 +66,12 @@ export const Header: React.FC<HeaderProps> = ({ onOpenContact, activeSection, se
   const NAV_ITEMS: { id: string; label: string }[] = [
     { id: 'solutions', label: t('nav.solutions') },
     { id: 'training-modes', label: t('nav.training') },
-    { id: 'courses', label: t('nav.courses') },
-    { id: 'about', label: t('nav.about') },
   ];
+
+  const [mobileCoursesOpen, setMobileCoursesOpen] = useState(false);
+  const [mobileVouchersOpen, setMobileVouchersOpen] = useState(false);
+  const courseVendorItems = VENDORS_DATA.map((v) => ({ id: v.id, label: v.name, href: `/courses?vendor=${v.id}`, count: v.courses.length }));
+  const voucherVendorItems = VOUCHERS_DATA.map((v) => ({ id: v.id, label: v.name, href: `/vouchers?vendor=${v.id}` }));
 
   useEffect(() => {
     const handleShortcut = (e: KeyboardEvent) => {
@@ -88,8 +112,8 @@ export const Header: React.FC<HeaderProps> = ({ onOpenContact, activeSection, se
           </span>
         </div>
         <div className="flex items-center gap-4">
-          <a href="mailto:contact@nexmentorsolutions.com" className="hover:text-white transition-colors hidden sm:flex items-center gap-1">
-            <Mail className="w-3.5 h-3.5 text-sky-400" /> contact@nexmentorsolutions.com
+          <a href="mailto:info@nexmentorsolutions.com" className="hover:text-white transition-colors hidden sm:flex items-center gap-1">
+            <Mail className="w-3.5 h-3.5 text-sky-400" /> info@nexmentorsolutions.com
           </a>
         </div>
       </div>
@@ -97,36 +121,48 @@ export const Header: React.FC<HeaderProps> = ({ onOpenContact, activeSection, se
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         <div
           onClick={() => scrollToSection('home')}
-          className="flex items-center gap-3 cursor-pointer group select-none"
+          className="flex items-center cursor-pointer group select-none"
         >
-          <div className="w-9 h-9 rounded-full bg-gradient-to-tr from-[#003B73] via-[#0B5198] to-[#0088FF] p-0.5 shadow-md group-hover:scale-105 transition-transform">
-            <div className="w-full h-full bg-white dark:bg-slate-900 rounded-full flex items-center justify-center p-1.5">
-              <svg viewBox="0 0 100 100" className="w-full h-full text-[#0B5198] dark:text-sky-400" fill="currentColor">
-                <circle cx="50" cy="50" r="38" fill="none" stroke="currentColor" strokeWidth="8" />
-                <ellipse cx="50" cy="50" rx="45" ry="16" fill="none" stroke="#00A3FF" strokeWidth="6" transform="rotate(-25 50 50)" />
-                <circle cx="50" cy="50" r="14" fill="#0B5198" />
-              </svg>
-            </div>
-          </div>
-          <div className="flex flex-col">
-            <span className="text-xl font-bold tracking-tight text-[#0A2540] dark:text-white flex items-center gap-1">
-              NexMentor
-            </span>
-            <span className="text-[10px] font-semibold tracking-widest text-slate-500 dark:text-slate-400 uppercase -mt-1">
-              Solutions
-            </span>
-          </div>
+          <Image
+            src="/assets/images/nexmentor-logo-transparent.png"
+            alt="NexMentor Solutions"
+            width={1270}
+            height={281}
+            priority
+            className="h-8 w-auto object-contain group-hover:scale-105 transition-transform dark:[filter:drop-shadow(0_0_1px_rgba(255,255,255,0.9))_drop-shadow(0_0_3px_rgba(255,255,255,0.6))]"
+          />
         </div>
 
         <nav className="hidden lg:flex items-center gap-8">
-          {NAV_ITEMS.map((item) => (
-            <NavLink
-              key={item.id}
-              label={item.label}
-              active={activeSection === item.id}
-              onClick={() => scrollToSection(item.id)}
-            />
-          ))}
+          <NavLink
+            label={NAV_ITEMS[0].label}
+            active={activeSection === NAV_ITEMS[0].id}
+            onClick={() => scrollToSection(NAV_ITEMS[0].id)}
+          />
+          <NavLink
+            label={NAV_ITEMS[1].label}
+            active={activeSection === NAV_ITEMS[1].id}
+            onClick={() => scrollToSection(NAV_ITEMS[1].id)}
+          />
+          <NavDropdown
+            label={t('nav.courses')}
+            active={activeSection === 'courses'}
+            items={courseVendorItems}
+            exploreAllLabel={t('nav.exploreAllCourses')}
+            exploreAllHref="/courses"
+            variant="grid"
+            panelHeading={t('nav.coursesPanelHeading')}
+            countLabel={(count) => t('nav.coursesCount', { count })}
+          />
+          <NavDropdown
+            label={t('nav.vouchers')}
+            active={activeSection === 'vouchers'}
+            items={voucherVendorItems}
+            exploreAllLabel={t('nav.exploreAllVouchers')}
+            exploreAllHref="/vouchers"
+          />
+          <NavRouteLink label={t('nav.about')} href="/about" active={activeSection === 'about'} />
+          <NavRouteLink label={t('nav.contact')} href="/contact" active={activeSection === 'contact'} />
         </nav>
 
         <div className="hidden lg:flex items-center gap-1.5">
@@ -180,19 +216,113 @@ export const Header: React.FC<HeaderProps> = ({ onOpenContact, activeSection, se
 
       {mobileMenuOpen && (
         <div className="lg:hidden bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 px-4 pt-3 pb-6 space-y-1 shadow-xl">
-          {NAV_ITEMS.map((item) => (
+          <button
+            onClick={() => scrollToSection(NAV_ITEMS[0].id)}
+            className={`block w-full text-left py-2 px-3 text-base font-medium rounded-lg transition-colors ${
+              activeSection === NAV_ITEMS[0].id
+                ? 'text-[#0B5198] dark:text-sky-400 bg-sky-50 dark:bg-slate-800'
+                : 'text-slate-800 dark:text-slate-100 hover:bg-slate-50 dark:hover:bg-slate-800'
+            }`}
+          >
+            {NAV_ITEMS[0].label}
+          </button>
+          <button
+            onClick={() => scrollToSection(NAV_ITEMS[1].id)}
+            className={`block w-full text-left py-2 px-3 text-base font-medium rounded-lg transition-colors ${
+              activeSection === NAV_ITEMS[1].id
+                ? 'text-[#0B5198] dark:text-sky-400 bg-sky-50 dark:bg-slate-800'
+                : 'text-slate-800 dark:text-slate-100 hover:bg-slate-50 dark:hover:bg-slate-800'
+            }`}
+          >
+            {NAV_ITEMS[1].label}
+          </button>
+
+          <div>
             <button
-              key={item.id}
-              onClick={() => scrollToSection(item.id)}
-              className={`block w-full text-left py-2 px-3 text-base font-medium rounded-lg transition-colors ${
-                activeSection === item.id
-                  ? 'text-[#0B5198] dark:text-sky-400 bg-sky-50 dark:bg-slate-800'
-                  : 'text-slate-800 dark:text-slate-100 hover:bg-slate-50 dark:hover:bg-slate-800'
-              }`}
+              onClick={() => setMobileCoursesOpen((v) => !v)}
+              aria-expanded={mobileCoursesOpen}
+              className="flex items-center justify-between w-full text-left py-2 px-3 text-base font-medium rounded-lg transition-colors text-slate-800 dark:text-slate-100 hover:bg-slate-50 dark:hover:bg-slate-800"
             >
-              {item.label}
+              {t('nav.courses')}
+              <ChevronDown className={`w-4 h-4 transition-transform ${mobileCoursesOpen ? 'rotate-180' : ''}`} />
             </button>
-          ))}
+            {mobileCoursesOpen && (
+              <div className="pl-4 mt-1 space-y-0.5 border-l-2 border-slate-100 dark:border-slate-800 ml-3">
+                <IntlLink
+                  href="/courses"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="block py-1.5 px-3 text-sm font-semibold text-[#0B5198] dark:text-sky-400"
+                >
+                  {t('nav.exploreAllCourses')}
+                </IntlLink>
+                {courseVendorItems.map((item) => (
+                  <IntlLink
+                    key={item.id}
+                    href={item.href}
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="block py-1.5 px-3 text-sm text-slate-600 dark:text-slate-300 hover:text-[#0B5198] dark:hover:text-sky-400"
+                  >
+                    {item.label}
+                  </IntlLink>
+                ))}
+              </div>
+            )}
+          </div>
+
+          <div>
+            <button
+              onClick={() => setMobileVouchersOpen((v) => !v)}
+              aria-expanded={mobileVouchersOpen}
+              className="flex items-center justify-between w-full text-left py-2 px-3 text-base font-medium rounded-lg transition-colors text-slate-800 dark:text-slate-100 hover:bg-slate-50 dark:hover:bg-slate-800"
+            >
+              {t('nav.vouchers')}
+              <ChevronDown className={`w-4 h-4 transition-transform ${mobileVouchersOpen ? 'rotate-180' : ''}`} />
+            </button>
+            {mobileVouchersOpen && (
+              <div className="pl-4 mt-1 space-y-0.5 border-l-2 border-slate-100 dark:border-slate-800 ml-3">
+                <IntlLink
+                  href="/vouchers"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="block py-1.5 px-3 text-sm font-semibold text-[#0B5198] dark:text-sky-400"
+                >
+                  {t('nav.exploreAllVouchers')}
+                </IntlLink>
+                {voucherVendorItems.map((item) => (
+                  <IntlLink
+                    key={item.id}
+                    href={item.href}
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="block py-1.5 px-3 text-sm text-slate-600 dark:text-slate-300 hover:text-[#0B5198] dark:hover:text-sky-400"
+                  >
+                    {item.label}
+                  </IntlLink>
+                ))}
+              </div>
+            )}
+          </div>
+
+          <IntlLink
+            href="/about"
+            onClick={() => setMobileMenuOpen(false)}
+            className={`block w-full text-left py-2 px-3 text-base font-medium rounded-lg transition-colors ${
+              activeSection === 'about'
+                ? 'text-[#0B5198] dark:text-sky-400 bg-sky-50 dark:bg-slate-800'
+                : 'text-slate-800 dark:text-slate-100 hover:bg-slate-50 dark:hover:bg-slate-800'
+            }`}
+          >
+            {t('nav.about')}
+          </IntlLink>
+          <IntlLink
+            href="/contact"
+            onClick={() => setMobileMenuOpen(false)}
+            className={`block w-full text-left py-2 px-3 text-base font-medium rounded-lg transition-colors ${
+              activeSection === 'contact'
+                ? 'text-[#0B5198] dark:text-sky-400 bg-sky-50 dark:bg-slate-800'
+                : 'text-slate-800 dark:text-slate-100 hover:bg-slate-50 dark:hover:bg-slate-800'
+            }`}
+          >
+            {t('nav.contact')}
+          </IntlLink>
           <button
             onClick={() => {
               setMobileMenuOpen(false);

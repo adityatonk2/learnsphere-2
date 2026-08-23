@@ -5,12 +5,18 @@
   },
   "Header": {
     "globalReach": "40+ देशों में वैश्विक प्रशिक्षण सेवाएं",
-    "enterpriseSupport": "एंटरप्राइज़ सहायता: +1 (800) 555-8920",
+    "enterpriseSupport": "एंटरप्राइज़ सहायता: +91 95489 88153",
     "nav": {
       "solutions": "समाधान",
       "training": "प्रशिक्षण",
       "courses": "कोर्सेज़",
-      "about": "हमारे बारे में"
+      "about": "हमारे बारे में",
+      "exploreAllCourses": "सभी कोर्स देखें",
+      "vouchers": "वाउचर",
+      "exploreAllVouchers": "सभी वाउचर देखें",
+      "contact": "संपर्क करें",
+      "coursesPanelHeading": "प्रमाणन प्रदाता",
+      "coursesCount": "{count} कोर्स"
     },
     "connectAdvisor": "सलाहकार से जुड़ें",
     "connectAdvisorSubject": "कोर्स सलाहकार से जुड़ें",
@@ -365,6 +371,30 @@
       "individualLearner": {
         "role": "व्यक्तिगत शिक्षार्थी — क्लाउड प्रैक्टिशनर ट्रैक",
         "comment": "फ्लेक्सी सेल्फ-पेस्ड लर्निंग मेरी फुल-टाइम नौकरी के साथ अच्छी तरह फिट बैठी। 1-ऑन-1 डाउट-क्लियरिंग सेशंस मेरे लिए सबसे उपयोगी हिस्सा थे।"
+      },
+      "devopsLead": {
+        "role": "DevOps लीड — क्लाउड इन्फ्रास्ट्रक्चर टीम",
+        "comment": "AWS पर DevOps इंजीनियरिंग कोर्स बिल्कुल वही था जो हमारी टीम को एक बड़े प्लेटफ़ॉर्म माइग्रेशन से पहले चाहिए था। लैब हमारे वास्तविक वातावरण को दर्शाती थीं, सामान्य परिदृश्यों को नहीं।"
+      },
+      "programManager": {
+        "role": "प्रोग्राम मैनेजर — ग्लोबल लर्निंग एंड डेवलपमेंट",
+        "comment": "पांच टाइम ज़ोन में प्रमाणन प्रशिक्षण का समन्वय करना पहले एक दुःस्वप्न था। नेक्समेंटर की शेड्यूलिंग और फ्लेक्सी फॉर्मेट ने हमारी वितरित टीम के लिए इसे आसान बना दिया।"
+      },
+      "networkSecurityLead": {
+        "role": "नेटवर्क सुरक्षा लीड — दूरसंचार क्षेत्र",
+        "comment": "हैंड्स-ऑन लैब के साथ ठोस CEH तैयारी जो वास्तव में परीक्षा जैसी लगती थी। वायरलेस अटैक मॉड्यूल पर थोड़ा और समय पसंद होता, लेकिन कुल मिलाकर एक मजबूत कोर्स।"
+      },
+      "dataScienceManager": {
+        "role": "डेटा साइंस मैनेजर — रिटेल एनालिटिक्स",
+        "comment": "हमारी टीम का SageMaker कौशल तीन हफ्तों में सैद्धांतिक से प्रोडक्शन-रेडी हो गया। प्रशिक्षक स्पष्ट रूप से रोज़ इन टूल्स के साथ काम करते हैं।"
+      },
+      "hrPartner": {
+        "role": "एचआर बिज़नेस पार्टनर — एंटरप्राइज़ ऑनबोर्डिंग",
+        "comment": "हमने नेक्समेंटर की टीम के साथ एक कस्टमाइज़्ड ऑनबोर्डिंग प्रमाणन ट्रैक बनाया। नए कर्मचारी पहले की तुलना में हफ्तों पहले प्रोडक्शन-रेडी हो जाते हैं।"
+      },
+      "solutionsConsultant": {
+        "role": "सॉल्यूशंस कंसल्टेंट — सिस्टम्स इंटीग्रेटर",
+        "comment": "PMP पाठ्यक्रम में अच्छी व्यापकता और उपयोगी परीक्षा-सिमुलेशन प्रश्न। शेड्यूलिंग एक बार बदली, लेकिन सपोर्ट ने इसे जल्दी संभाल लिया।"
       }
     }
   },
@@ -404,6 +434,12 @@
       "message": {
         "label": "संदेश / कोर्स रुचियां",
         "placeholder": "अपने सीखने के लक्ष्यों या विशिष्ट पाठ्यक्रमों के बारे में बताएं..."
+      },
+      "tocDocument": {
+        "label": "हस्ताक्षरित नियम एवं शर्तें *",
+        "placeholder": "दस्तावेज़ अपलोड करने के लिए क्लिक करें",
+        "hint": "PDF, DOC, या DOCX — अधिकतम 10MB",
+        "remove": "फ़ाइल हटाएं"
       }
     },
     "trainingModeOptions": {
@@ -432,7 +468,13 @@
     "successMessagePart1": "धन्यवाद,",
     "successMessagePart2": "एक एंटरप्राइज़ लर्निंग सलाहकार",
     "successMessagePart3": "से 2 कार्य घंटों के भीतर संपर्क करेगा।",
-    "closeButton": "विंडो बंद करें"
+    "closeButton": "विंडो बंद करें",
+    "sections": {
+      "contactDetails": "संपर्क विवरण",
+      "preferences": "प्रशिक्षण प्राथमिकताएं"
+    },
+    "notARobot": "मैं रोबोट नहीं हूं",
+    "verifying": "सत्यापन हो रहा है..."
   },
   "PartnerModal": {
     "eyebrow": "पार्टनर प्रोग्राम",
@@ -465,6 +507,12 @@
       "message": {
         "label": "हमें पार्टनरशिप के बारे में बताएं",
         "placeholder": "अपनी कंपनी और मन में बनाए गए पार्टनरशिप के बारे में संक्षेप में बताएं..."
+      },
+      "tocDocument": {
+        "label": "हस्ताक्षरित नियम एवं शर्तें *",
+        "placeholder": "दस्तावेज़ अपलोड करने के लिए क्लिक करें",
+        "hint": "PDF, DOC, या DOCX — अधिकतम 10MB",
+        "remove": "फ़ाइल हटाएं"
       }
     },
     "partnershipTypeOptions": {
@@ -486,7 +534,13 @@
     "successMessagePart1": "धन्यवाद,",
     "successMessagePart2": "हमारी पार्टनरशिप टीम",
     "successMessagePart3": "से 2 कार्य दिवसों के भीतर संपर्क करेगी।",
-    "closeButton": "विंडो बंद करें"
+    "closeButton": "विंडो बंद करें",
+    "notARobot": "मैं रोबोट नहीं हूं",
+    "sections": {
+      "companyDetails": "कंपनी विवरण",
+      "partnershipDetails": "पार्टनरशिप विवरण"
+    },
+    "verifying": "सत्यापन हो रहा है..."
   },
   "Footer": {
     "description": "एंटरप्राइज़ कॉर्पोरेट लर्निंग, उद्योग-मान्यता प्राप्त आईटी वेंडर प्रमाणन, और कस्टम कार्यबल अपस्किलिंग समाधानों का वैश्विक प्रदाता।",
@@ -497,7 +551,9 @@
       "solutions": "हमारे समाधान",
       "learningFormats": "लर्निंग फॉर्मेट्स",
       "courseDirectory": "कोर्स डायरेक्टरी",
-      "aboutUs": "हमारे बारे में"
+      "aboutUs": "हमारे बारे में",
+      "vouchers": "वाउचर",
+      "contact": "संपर्क करें"
     },
     "deliveryOptions": {
       "title": "डिलीवरी विकल्प",
@@ -509,13 +565,16 @@
     },
     "contact": {
       "title": "कॉर्पोरेट मुख्यालय",
-      "address": "100 Technology Square, Suite 800, Boston, MA 02139"
+      "address": "Saharanpur Chowk, Dehradun, Uttarakhand, India"
     },
     "copyright": "© {year} नेक्समेंटर सॉल्यूशंस इंक. सर्वाधिकार सुरक्षित।",
     "legal": {
       "privacyPolicy": "गोपनीयता नीति",
       "termsOfService": "सेवा की शर्तें",
       "accreditations": "मान्यताएं"
+    },
+    "trademarkDisclaimer": {
+      "heading": "ट्रेडमार्क अस्वीकरण"
     }
   },
   "CourseContent": {
@@ -599,9 +658,252 @@
       "courseEnquiry": "कोर्स पूछताछ",
       "enrollment": "नामांकन: {title}",
       "advisorCall": "सलाहकार कॉल: {title}"
+    },
+    "enrollment": {
+      "badge": "तेज़ी से भर रहा है",
+      "seatsLeft": "अगले कोहॉर्ट में केवल {count} सीटें बची हैं",
+      "studentsEnrolled": "{count}+ पेशेवर पहले ही नामांकित हो चुके हैं"
     }
   },
   "LanguageSwitcher": {
     "changeLanguage": "भाषा बदलें"
+  },
+  "Vouchers": {
+    "eyebrow": "प्रमाणन वाउचर",
+    "heading": "परीक्षा वाउचर",
+    "subtitle": "अग्रणी तकनीकी वेंडरों में {count}+ प्रमाणन परीक्षा वाउचर।",
+    "providersLabel": "प्रमाणन प्रदाता",
+    "vendorVouchersTitle": "{vendor} वाउचर",
+    "vouchersCount": "{count} वाउचर उपलब्ध",
+    "requestButton": "वाउचर का अनुरोध करें",
+    "requestSubject": "वाउचर अनुरोध: {title}",
+    "onRequest": "अनुरोध पर"
+  },
+  "ContactPage": {
+    "eyebrow": "संपर्क में रहें",
+    "heading": "आइए आपके प्रशिक्षण लक्ष्यों पर बात करें",
+    "subheading": "हमें बताएं कि आप क्या हासिल करना चाहते हैं और एक एंटरप्राइज़ लर्निंग सलाहकार आपके लिए अनुकूलित योजना और मूल्य निर्धारण के साथ संपर्क करेगा।",
+    "sidebar": {
+      "heading": "सीधे हमसे संपर्क करें",
+      "address": "Saharanpur Chowk, Dehradun, Uttarakhand, India",
+      "responseTime": "एक नेक्समेंटर सलाहकार 2 कार्य घंटों के भीतर जवाब देगा।"
+    },
+    "tabs": {
+      "general": "सामान्य पूछताछ",
+      "partner": "पार्टनर पूछताछ"
+    },
+    "howItWorks": {
+      "heading": "यह कैसे काम करता है",
+      "submit": {
+        "title": "अपनी पूछताछ सबमिट करें",
+        "description": "हमें बताएं कि आप क्या हासिल करना चाहते हैं।"
+      },
+      "review": {
+        "title": "एक सलाहकार समीक्षा करता है",
+        "description": "हम आपको सही प्रोग्राम और फॉर्मेट से मिलाते हैं।"
+      },
+      "respond": {
+        "title": "जवाब पाएं",
+        "description": "2 कार्य घंटों के भीतर जवाब पाएं।"
+      }
+    },
+    "quickLinks": {
+      "heading": "कुछ और खोज रहे हैं?",
+      "courses": "कोर्स कैटलॉग देखें",
+      "vouchers": "परीक्षा वाउचर देखें"
+    }
+  },
+  "LegalPage": {
+    "eyebrow": "कानूनी",
+    "lastUpdated": "अंतिम अद्यतन: {date}",
+    "draftNotice": "यह एक टेम्पलेट कानूनी दस्तावेज़ है जो एक शुरुआती बिंदु के रूप में है — इसकी अभी तक कानूनी सलाहकार द्वारा समीक्षा नहीं की गई है। पेशेवर कानूनी समीक्षा और स्थानीयकरण लंबित रहने तक यह सभी साइट भाषाओं में वर्तमान में अंग्रेज़ी में प्रकाशित है।"
+  },
+  "PrivacyPolicy": {
+    "heading": "गोपनीयता नीति",
+    "sections": {
+      "introduction": {
+        "heading": "Introduction",
+        "body": "NexMentor Solutions (\"we\", \"us\", or \"our\") provides enterprise corporate learning, certification training, and workforce upskilling services. This Privacy Policy explains what information we collect through this website, how we use it, and the choices you have."
+      },
+      "informationWeCollect": {
+        "heading": "Information We Collect",
+        "body": "We collect information you provide directly, such as your name, company name, email address, phone number, and any message or document you submit through our contact, partnership, or enrollment forms. We may also collect standard technical information (such as browser type, device type, and pages visited) automatically when you use this site."
+      },
+      "howWeUseInformation": {
+        "heading": "How We Use Your Information",
+        "body": "We use the information we collect to respond to your enquiries, provide training and certification services, process partnership requests, send scheduling and course-related communications, and improve this website. We do not sell your personal information."
+      },
+      "cookies": {
+        "heading": "Cookies and Tracking Technologies",
+        "body": "This site may use cookies and similar technologies to remember your preferences (such as language and theme) and to understand how visitors use the site. You can control cookies through your browser settings."
+      },
+      "thirdPartyServices": {
+        "heading": "Third-Party Services",
+        "body": "We may rely on third-party providers for services such as email delivery, analytics, and hosting. These providers only receive the information necessary to perform their services and are expected to protect it accordingly."
+      },
+      "dataSecurity": {
+        "heading": "Data Security",
+        "body": "We take reasonable technical and organizational measures to protect the information you share with us. However, no method of transmission or storage is completely secure, and we cannot guarantee absolute security."
+      },
+      "dataRetention": {
+        "heading": "Data Retention",
+        "body": "We retain personal information for as long as necessary to fulfil the purposes described in this policy, respond to your enquiries, or comply with legal obligations, after which it is deleted or anonymized."
+      },
+      "yourRights": {
+        "heading": "Your Rights",
+        "body": "Depending on your location, you may have the right to access, correct, or request deletion of your personal information, or to object to certain uses of it. To exercise these rights, contact us using the details below."
+      },
+      "childrensPrivacy": {
+        "heading": "Children's Privacy",
+        "body": "Our services are intended for working professionals and organizations. This site is not directed at children, and we do not knowingly collect personal information from children."
+      },
+      "changes": {
+        "heading": "Changes to This Policy",
+        "body": "We may update this Privacy Policy from time to time. The \"Last updated\" date at the top of this page reflects the most recent revision."
+      },
+      "contactUs": {
+        "heading": "Contact Us",
+        "body": "If you have questions about this Privacy Policy or how we handle your information, contact us at info@nexmentorsolutions.com."
+      }
+    }
+  },
+  "TermsOfService": {
+    "heading": "सेवा की शर्तें",
+    "sections": {
+      "acceptance": {
+        "heading": "Acceptance of Terms",
+        "body": "By accessing or using this website or enrolling in any NexMentor Solutions training program, you agree to be bound by these Terms of Service. If you do not agree, please do not use this site or our services."
+      },
+      "services": {
+        "heading": "Description of Services",
+        "body": "NexMentor Solutions provides instructor-led and self-paced technical training, certification exam preparation, and related enterprise learning services, delivered online, in classrooms, or on-site, as described on this website."
+      },
+      "enrollmentAndPayment": {
+        "heading": "Enrollment and Payment",
+        "body": "Enrollment in a course or program is confirmed once we have received your request and any applicable payment. Pricing, schedules, and delivery formats are as communicated at the time of booking and may be updated for future cohorts."
+      },
+      "cancellations": {
+        "heading": "Cancellations and Rescheduling",
+        "body": "Cancellation and rescheduling requests should be submitted as early as possible. Specific cancellation windows, fees, and rescheduling options vary by program and will be confirmed with you at the time of enrollment."
+      },
+      "vouchers": {
+        "heading": "Certification Exam Vouchers",
+        "body": "Certification exam vouchers are subject to availability and the issuing certification body's own terms, including expiry dates and exam eligibility rules. NexMentor Solutions facilitates voucher requests but does not control third-party exam providers' policies."
+      },
+      "intellectualProperty": {
+        "heading": "Intellectual Property",
+        "body": "All course materials, courseware, trademarks, and content on this website are the property of NexMentor Solutions or its licensors and vendor partners, and may not be reproduced or redistributed without permission."
+      },
+      "userConduct": {
+        "heading": "User Conduct",
+        "body": "You agree to use this website and our services lawfully, and not to misuse, disrupt, or attempt to gain unauthorized access to our systems or those of our training partners."
+      },
+      "disclaimers": {
+        "heading": "Disclaimers and Limitation of Liability",
+        "body": "Our services are provided on an \"as is\" basis. While we work to ensure training quality and accuracy, we do not guarantee specific certification exam outcomes or career results. To the extent permitted by law, NexMentor Solutions is not liable for indirect or consequential damages arising from use of our services."
+      },
+      "trademarks": {
+        "heading": "Third-Party Trademarks",
+        "body": "References to third-party certifications, vendors, and trademarks on this website are for identification purposes only. See the trademark disclaimer in the site footer for details on specific third-party marks."
+      },
+      "governingLaw": {
+        "heading": "Governing Law",
+        "body": "These Terms are governed by the laws of the jurisdiction in which NexMentor Solutions is registered, without regard to conflict-of-law principles, unless otherwise required by applicable local law."
+      },
+      "changes": {
+        "heading": "Changes to These Terms",
+        "body": "We may update these Terms from time to time. The \"Last updated\" date at the top of this page reflects the most recent revision. Continued use of our services after changes constitutes acceptance of the updated Terms."
+      },
+      "contactUs": {
+        "heading": "Contact Us",
+        "body": "Questions about these Terms of Service can be directed to info@nexmentorsolutions.com."
+      }
+    }
+  },
+  "Partners": {
+    "heading": "विभिन्न उद्योगों में वैश्विक कंपनियों द्वारा भरोसेमंद"
+  },
+  "RiseFramework": {
+    "eyebrow": "हमारा लर्निंग फ्रेमवर्क",
+    "heading": "नेक्समेंटर RISE फ्रेमवर्क",
+    "subheading": "स्किल गैप से फ्यूचर-रेडी क्षमता तक",
+    "description": "एक संरचित 4-चरण लर्निंग दृष्टिकोण जो प्रशिक्षण को एक बार की घटना से कौशल विकास, व्यावहारिक अनुप्रयोग और व्यावसायिक विकास की मापने योग्य यात्रा में बदलने के लिए डिज़ाइन किया गया है।",
+    "stages": {
+      "recognise": {
+        "title": "RECOGNISE",
+        "subtitle": "सही कौशल की पहचान करें",
+        "description": "हम यह समझने से शुरू करते हैं कि शिक्षार्थी और संगठन आज कहां हैं। हम सबसे महत्वपूर्ण दक्षताओं की पहचान करने के लिए वर्तमान क्षमताओं, भूमिका आवश्यकताओं, व्यावसायिक उद्देश्यों और तकनीकी कौशल अंतराल का आकलन करते हैं।",
+        "tags": [
+          "स्किल गैप विश्लेषण",
+          "लर्नर असेसमेंट",
+          "रोल मैपिंग",
+          "बिज़नेस ऑब्जेक्टिव्स",
+          "क्षमता बेंचमार्किंग"
+        ]
+      },
+      "individualise": {
+        "title": "INDIVIDUALISE",
+        "subtitle": "सही लर्निंग जर्नी बनाएं",
+        "description": "किसी भी दो शिक्षार्थियों या संगठनों की समान आवश्यकताएं नहीं होतीं। हम व्यक्तिगत भूमिकाओं, अनुभव स्तरों, तकनीकी वातावरण, प्रमाणन लक्ष्यों और व्यावसायिक प्राथमिकताओं के अनुरूप कस्टमाइज़्ड लर्निंग पाथ बनाते हैं।",
+        "tags": [
+          "कस्टम लर्निंग पाथ",
+          "रोल-आधारित प्रशिक्षण",
+          "सर्टिफिकेशन मैपिंग",
+          "करिकुलम डिज़ाइन",
+          "लर्निंग प्लान"
+        ]
+      },
+      "skill": {
+        "title": "SKILL",
+        "subtitle": "सीखें। अभ्यास करें। लागू करें।",
+        "description": "ज्ञान तभी मूल्यवान बनता है जब उसे लागू किया जा सके। हमारे विशेषज्ञ प्रशिक्षक इंस्ट्रक्टर-लेड लर्निंग को हैंड्स-ऑन लैब, डेमोंस्ट्रेशन, वास्तविक दुनिया के परिदृश्यों, प्रोजेक्ट्स और व्यावहारिक अभ्यासों के साथ जोड़ते हैं—जिससे शिक्षार्थी अवधारणाओं को नौकरी के लिए तैयार कौशल में बदल पाते हैं।",
+        "tags": [
+          "विशेषज्ञ प्रशिक्षक",
+          "हैंड्स-ऑन लैब",
+          "वास्तविक दुनिया के उपयोग-मामले",
+          "प्रोजेक्ट्स",
+          "वर्कशॉप्स",
+          "व्यावहारिक शिक्षा"
+        ]
+      },
+      "elevate": {
+        "title": "ELEVATE",
+        "subtitle": "मापें। सत्यापित करें। आगे बढ़ें।",
+        "description": "प्रशिक्षण समाप्त होने पर सीखना खत्म नहीं होता। हम आकलन, व्यावहारिक मूल्यांकन, शिक्षार्थी फीडबैक और प्रमाणन परिणामों के माध्यम से प्रगति को मापते हैं, साथ ही कौशल और कार्यबल क्षमता को लगातार मजबूत करने के लिए जानकारी प्रदान करते हैं।",
+        "tags": [
+          "स्किल्स असेसमेंट",
+          "सर्टिफिकेशन ट्रैकिंग",
+          "परफॉर्मेंस इनसाइट्स",
+          "लर्नर फीडबैक",
+          "निरंतर सुधार"
+        ]
+      }
+    },
+    "journey": {
+      "eyebrow": "RISE यात्रा",
+      "steps": [
+        "गैप की पहचान करें",
+        "यात्रा को निजीकृत करें",
+        "व्यावहारिक कौशल बनाएं",
+        "प्रभाव को मापें"
+      ]
+    },
+    "closing": {
+      "line1": "नेक्समेंटर में, हम केवल प्रशिक्षण प्रदान नहीं करते।",
+      "line2": "हम लोगों और संगठनों को RISE करने में मदद करते हैं।"
+    },
+    "tagline": "इंटेलिजेंस को इम्पैक्ट में बदलना।"
+  },
+  "ChatBot": {
+    "title": "नेक्समेंटर असिस्टेंट",
+    "subtitle": "कोर्स और प्रमाणन के बारे में पूछें",
+    "greeting": "नमस्ते! मैं नेक्समेंटर असिस्टेंट हूं। हमारे कोर्स, प्रमाणन, या डिलीवरी फॉर्मेट के बारे में पूछें — मुझे मदद करने में खुशी होगी।",
+    "placeholder": "अपना संदेश लिखें…",
+    "sendLabel": "संदेश भेजें",
+    "openLabel": "चैट असिस्टेंट खोलें",
+    "closeLabel": "चैट असिस्टेंट बंद करें",
+    "thinking": "सोच रहा हूं…",
+    "errorMessage": "कुछ गलत हो गया। कृपया पुनः प्रयास करें।",
+    "disclaimer": "AI असिस्टेंट — विस्तृत पूछताछ के लिए हमारा कॉन्टैक्ट पेज उपयोग करें।"
   }
 }

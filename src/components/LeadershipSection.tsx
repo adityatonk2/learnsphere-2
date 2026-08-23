@@ -5,8 +5,7 @@ import { Quote } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 
-// NOTE: initials are used as a placeholder in place of headshots.
-// Swap `photo` with a real image path once client supplies leadership photographs.
+// NOTE: initials are shown as a placeholder for any leader without a photo yet.
 const LEADERS = [
   {
     id: 'shivamSharma',
@@ -18,7 +17,7 @@ const LEADERS = [
     id: 'tarunSharma',
     name: 'Tarun Sharma',
     initials: 'TS',
-    photo: null as string | null,
+    photo: '/assets/images/leadership/tarun-sharma.png' as string | null,
   },
 ];
 

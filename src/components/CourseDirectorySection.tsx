@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import { useTranslations } from 'next-intl';
 import { VENDORS_DATA } from '../data/coursesData';
 import { getCourseById } from '../data/courseContent';
@@ -12,6 +12,7 @@ import { translatedTitle, translatedLevel } from '../lib/courseTranslation';
 
 interface CourseDirectorySectionProps {
   onOpenContact: (courseName?: string) => void;
+  initialVendorId?: string;
 }
 
 type SearchCourse = Course & { vendorName?: string };
@@ -63,8 +64,10 @@ const CourseCard: React.FC<{ course: SearchCourse; showProvider?: boolean }> = (
   );
 };
 
-export const CourseDirectorySection: React.FC<CourseDirectorySectionProps> = ({ onOpenContact }) => {
-  const [selectedVendorId, setSelectedVendorId] = useState<string>('aws');
+export const CourseDirectorySection: React.FC<CourseDirectorySectionProps> = ({ onOpenContact, initialVendorId }) => {
+  const [selectedVendorId, setSelectedVendorId] = useState<string>(
+    initialVendorId && VENDORS_DATA.some((v) => v.id === initialVendorId) ? initialVendorId : 'aws'
+  );
   const [searchQuery, setSearchQuery] = useState<string>('');
   const containerRef = useScrollReveal({ y: 50, duration: 0.9 });
   const t = useTranslations('CourseDirectory');

@@ -43,6 +43,7 @@ export interface ContactFormData {
   trainingMode: string;
   participants: string;
   message: string;
+  tocDocument: File | null;
 }
 
 export interface PartnerFormData {
@@ -53,4 +54,5 @@ export interface PartnerFormData {
   website: string;
   partnershipType: string;
   message: string;
+  tocDocument: File | null;
 }

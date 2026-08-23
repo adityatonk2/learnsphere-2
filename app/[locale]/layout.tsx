@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { routing } from "@/i18n/routing";
+import { ChatBot } from "@/components/ChatBot";
 import "../globals.css";
 
 const SITE_URL = "https://www.nexmentorsolutions.com";
@@ -98,10 +99,9 @@ const organizationJsonLd = {
   url: SITE_URL,
   description: SITE_DESCRIPTION,
   sameAs: [
-    "https://instagram.com/nexmentorsolutions",
-    "https://facebook.com/nexmentorsolutions",
-    "https://linkedin.com/company/nexmentorsolutions",
-    "https://youtube.com/@nexmentorsolutions",
+    "https://www.instagram.com/nexmentorsolutions/?hl=en",
+    "https://www.youtube.com/@NEXMENTORSOLUTIONS",
+    "https://in.pinterest.com/nexmentorsolutions/?actingBusinessId=1100004415144240754",
   ],
 };
 
@@ -137,7 +137,10 @@ export default async function LocaleLayout({
         />
       </head>
       <body className="antialiased font-sans selection:bg-sky-500 selection:text-white bg-white text-slate-900 dark:bg-slate-950 dark:text-slate-200">
-        <NextIntlClientProvider>{children}</NextIntlClientProvider>
+        <NextIntlClientProvider>
+          {children}
+          <ChatBot />
+        </NextIntlClientProvider>
       </body>
     </html>
   );
