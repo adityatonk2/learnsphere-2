@@ -159,11 +159,14 @@ export const CoursePageClient: React.FC<CoursePageClientProps> = ({ course, cont
             </div>
           </section>
 
-          <section className="bg-sky-50/60 border border-sky-100 dark:border-sky-900/50 rounded-2xl p-6">
-            <h3 className="text-lg font-bold text-[#0A2540] dark:text-white mb-3 flex items-center gap-2">
-              <Award className="w-5 h-5 text-[#0B5198] dark:text-sky-400" /> {t('certificationHeading')}
+          <section className="bg-gradient-to-br from-sky-50 to-white dark:from-sky-950/50 dark:to-slate-900 border border-sky-100 dark:border-sky-800/50 rounded-2xl p-6">
+            <h3 className="text-lg font-bold text-[#0A2540] dark:text-white mb-3 flex items-center gap-2.5">
+              <span className="w-9 h-9 rounded-xl bg-[#0B5198]/10 dark:bg-sky-400/15 flex items-center justify-center shrink-0">
+                <Award className="w-5 h-5 text-[#0B5198] dark:text-sky-300" />
+              </span>
+              {t('certificationHeading')}
             </h3>
-            <p className="text-sm text-slate-600 dark:text-slate-300">{content.certification}</p>
+            <p className="text-sm text-slate-600 dark:text-slate-200">{content.certification}</p>
           </section>
         </main>
 

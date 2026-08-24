@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
-import { Globe, Mail, Phone, MapPin, ShieldCheck, Instagram, Youtube, MessageCircle } from 'lucide-react';
+import { Globe, Mail, Phone, MapPin, Instagram, Youtube, MessageCircle } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import { useScrollReveal } from '../hooks/useScrollReveal';
@@ -53,21 +53,16 @@ export const Footer: React.FC<FooterProps> = ({ onOpenContact, setActiveSection 
           {/* Brand Info */}
           <div className="lg:col-span-2 space-y-4">
             <Image
-              src="/assets/images/nexmentor-logo-transparent.png"
+              src="/assets/images/nexmentor-logo-dark.png"
               alt="NexMentor Solutions"
-              width={1270}
-              height={281}
-              className="h-10 w-auto object-contain [filter:drop-shadow(0_0_1px_rgba(255,255,255,0.9))_drop-shadow(0_0_3px_rgba(255,255,255,0.6))]"
+              width={1759}
+              height={407}
+              className="h-12 w-auto object-contain"
             />
 
             <p className="text-slate-400 text-xs sm:text-sm leading-relaxed max-w-sm font-light">
               {t('description')}
             </p>
-
-            <div className="pt-2 flex items-center gap-2 text-xs text-sky-400 font-semibold">
-              <ShieldCheck className="w-4 h-4 text-emerald-400" />
-              <span>{t('certification')}</span>
-            </div>
 
             {/* Social Media Links */}
             <div className="pt-3 flex items-center gap-3">
@@ -215,7 +210,6 @@ export const Footer: React.FC<FooterProps> = ({ onOpenContact, setActiveSection 
           <div className="flex gap-6">
             <Link href="/privacy-policy" className="hover:text-slate-400 transition-colors">{t('legal.privacyPolicy')}</Link>
             <Link href="/terms-of-service" className="hover:text-slate-400 transition-colors">{t('legal.termsOfService')}</Link>
-            <span className="hover:text-slate-400 cursor-pointer">{t('legal.accreditations')}</span>
           </div>
         </div>
       </div>

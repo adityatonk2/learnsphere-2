@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from 'react';
-import { CheckCircle2, Send, Building, Mail, Phone, User } from 'lucide-react';
+import { CheckCircle2, Send, Building, Mail, Phone, User, Loader2, AlertCircle } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import { ContactFormData } from '../types';
@@ -40,6 +40,9 @@ export const ContactForm: React.FC<ContactFormProps> = ({ defaultSubject, varian
   const [submitted, setSubmitted] = useState(false);
   const [agreedToTerms, setAgreedToTerms] = useState(false);
   const [notRobot, setNotRobot] = useState(false);
+  const [honeypot, setHoneypot] = useState('');
+  const [submitting, setSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
   useEffect(() => {
     if (defaultSubject) {
@@ -50,10 +53,54 @@ export const ContactForm: React.FC<ContactFormProps> = ({ defaultSubject, varian
     }
   }, [defaultSubject, t]);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
-    onSuccess?.();
+    if (submitting) return;
+
+    // Honeypot tripped — silently pretend success without hitting the API.
+    if (honeypot.trim() !== '') {
+      setSubmitted(true);
+      onSuccess?.();
+      return;
+    }
+
+    setSubmitting(true);
+    setSubmitError(null);
+
+    const extraDetails = [
+      formData.phone && `Phone: ${formData.phone}`,
+      `Preferred delivery format: ${formData.trainingMode}`,
+      `Estimated learners: ${formData.participants}`,
+    ]
+      .filter(Boolean)
+      .join('\n');
+
+    try {
+      const res = await fetch('/api/leads', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          type: 'customer',
+          name: formData.fullName,
+          email: formData.email,
+          company: formData.companyName,
+          message: [formData.message, extraDetails].filter(Boolean).join('\n\n'),
+          hp: honeypot,
+        }),
+      });
+
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}));
+        throw new Error(data.error || t('errorMessage'));
+      }
+
+      setSubmitted(true);
+      onSuccess?.();
+    } catch (err) {
+      setSubmitError(err instanceof Error ? err.message : t('errorMessage'));
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   if (submitted) {
@@ -73,6 +120,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({ defaultSubject, varian
               setSubmitted(false);
               setAgreedToTerms(false);
               setNotRobot(false);
+              setSubmitError(null);
               setFormData((prev) => ({ ...prev, tocDocument: null }));
             }}
             className="bg-slate-900 text-white px-6 py-2.5 rounded-xl text-sm font-semibold hover:bg-slate-800 transition-colors"
@@ -88,6 +136,17 @@ export const ContactForm: React.FC<ContactFormProps> = ({ defaultSubject, varian
     <>
       {header}
       <form onSubmit={handleSubmit} className={variant === 'page' ? 'space-y-8' : 'space-y-5'}>
+      {/* Honeypot — hidden from real users, catches bots that fill every field */}
+      <input
+        type="text"
+        name="website"
+        value={honeypot}
+        onChange={(e) => setHoneypot(e.target.value)}
+        tabIndex={-1}
+        autoComplete="off"
+        aria-hidden="true"
+        className="absolute left-[-9999px] top-auto w-px h-px overflow-hidden"
+      />
       <fieldset className="space-y-4">
         {variant === 'page' && <legend className={fieldsetLabelClass}>{t('sections.contactDetails')}</legend>}
         <div>
@@ -229,7 +288,6 @@ export const ContactForm: React.FC<ContactFormProps> = ({ defaultSubject, varian
           removeLabel={t('fields.tocDocument.remove')}
           file={formData.tocDocument}
           onChange={(file) => setFormData({ ...formData, tocDocument: file })}
-          required
         />
       </fieldset>
 
@@ -263,12 +321,19 @@ export const ContactForm: React.FC<ContactFormProps> = ({ defaultSubject, varian
         verifyingLabel={t('verifying')}
       />
 
+      {submitError && (
+        <div className="flex items-center gap-2 text-xs text-red-600 dark:text-red-400 bg-red-50 dark:bg-red-950/40 border border-red-200 dark:border-red-900/50 rounded-xl px-3 py-2">
+          <AlertCircle className="w-3.5 h-3.5 shrink-0" />
+          <span>{submitError}</span>
+        </div>
+      )}
+
       <button
         type="submit"
-        disabled={!agreedToTerms || !notRobot || !formData.tocDocument}
+        disabled={!agreedToTerms || !notRobot || submitting}
         className="w-full bg-[#0052CC] hover:bg-[#003B99] disabled:bg-slate-300 disabled:cursor-not-allowed disabled:hover:bg-slate-300 text-white py-3.5 rounded-xl font-bold text-sm shadow-md transition-all flex items-center justify-center gap-2 active:scale-95"
       >
-        <Send className="w-4 h-4" />
+        {submitting ? <Loader2 className="w-4 h-4 animate-spin" /> : <Send className="w-4 h-4" />}
         <span>{t('submitButton')}</span>
       </button>
       </form>

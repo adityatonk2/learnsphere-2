@@ -3,7 +3,7 @@ import { GoogleGenAI } from '@google/genai';
 
 export const runtime = 'nodejs';
 
-const MODEL = process.env.GEMINI_MODEL || 'gemini-2.0-flash';
+const MODEL = process.env.GEMINI_MODEL || 'gemini-3.6-flash';
 const MAX_MESSAGE_LENGTH = 1500;
 const MAX_HISTORY_TURNS = 12;
 
@@ -21,11 +21,24 @@ How to respond:
 - Help visitors understand NexMentor's courses, certifications, delivery formats, and how to get started.
 - If asked about specific pricing, exact schedules, or anything you're not certain of, say so honestly and direct them to the Contact page or info@nexmentorsolutions.com rather than guessing.
 - If asked something entirely unrelated to NexMentor or corporate training, politely redirect the conversation back to how you can help with training and certifications.
-- Never invent certifications, partnerships, or facts about the company that aren't listed above.`;
+- Never invent certifications, partnerships, or facts about the company that aren't listed above.
+- Reply in plain text only — no Markdown. Never use **bold**, _italics_, [link](url) syntax, headings, or bullet characters like "-" or "*". Write plain sentences and, if you need a list, use numbered lines like "1. ..." on separate lines.`;
 
 interface ChatMessage {
   role: 'user' | 'model';
   text: string;
+}
+
+/** Safety net in case the model still emits Markdown despite instructions. */
+function stripMarkdown(text: string): string {
+  return text
+    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '$1 ($2)') // [label](url) -> label (url)
+    .replace(/(\*\*|__)(.*?)\1/g, '$2') // bold
+    .replace(/(\*|_)(.*?)\1/g, '$2') // italics
+    .replace(/`{1,3}([^`]+)`{1,3}/g, '$1') // inline/code fences
+    .replace(/^#{1,6}\s+/gm, '') // headings
+    .replace(/^\s*[-*+]\s+/gm, '') // bullet markers
+    .trim();
 }
 
 export async function POST(req: NextRequest) {
@@ -74,15 +87,15 @@ export async function POST(req: NextRequest) {
       },
     });
 
-    const reply = response.text?.trim();
-    if (!reply) {
+    const rawReply = response.text?.trim();
+    if (!rawReply) {
       return NextResponse.json(
         { error: "Sorry, I couldn't generate a response. Please try again." },
         { status: 502 }
       );
     }
 
-    return NextResponse.json({ reply });
+    return NextResponse.json({ reply: stripMarkdown(rawReply) });
   } catch (error) {
     console.error('Chat API error:', error);
     return NextResponse.json(

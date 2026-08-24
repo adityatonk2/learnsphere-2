@@ -11,7 +11,7 @@ const STAT_CONFIG = [
   { key: 'coursesOffered', target: 500, suffix: '+', decimals: 0 },
   { key: 'certificationVendors', target: 40, suffix: '+', decimals: 0 },
   { key: 'successfulLearners', target: 98, suffix: '%', decimals: 0 },
-  { key: 'countriesServed', target: 40, suffix: '+', decimals: 0 },
+  { key: 'countriesServed', target: 195, suffix: '+', decimals: 0 },
 ];
 
 export const StatsSection: React.FC = () => {

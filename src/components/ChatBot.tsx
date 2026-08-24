@@ -2,8 +2,9 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
-import { X, Send, Loader2 } from 'lucide-react';
+import { X, Send, Loader2, Sparkles } from 'lucide-react';
 import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/navigation';
 
 interface ChatMessage {
   role: 'user' | 'model';
@@ -36,8 +37,8 @@ export const ChatBot: React.FC = () => {
     scrollRef.current?.scrollTo({ top: scrollRef.current.scrollHeight, behavior: 'smooth' });
   }, [messages, loading]);
 
-  const sendMessage = async () => {
-    const text = input.trim();
+  const sendMessage = async (override?: string) => {
+    const text = (override ?? input).trim();
     if (!text || loading) return;
 
     const nextMessages: ChatMessage[] = [...messages, { role: 'user', text }];
@@ -126,6 +127,17 @@ export const ChatBot: React.FC = () => {
             </button>
           </div>
 
+          {/* Cute CTA strip */}
+          <Link
+            href="/contact"
+            onClick={() => setOpen(false)}
+            className="flex items-center justify-center gap-1.5 px-4 py-2 bg-sky-50 dark:bg-sky-950/40 border-b border-sky-100 dark:border-slate-800 text-[11px] font-medium text-[#0B5198] dark:text-sky-300 hover:bg-sky-100 dark:hover:bg-sky-950/70 transition-colors shrink-0"
+          >
+            <Sparkles className="w-3.5 h-3.5" />
+            <span>{t('ctaText')}</span>
+            <span className="font-bold underline underline-offset-2">{t('ctaLinkLabel')}</span>
+          </Link>
+
           {/* Messages */}
           <div ref={scrollRef} className="flex-1 overflow-y-auto px-4 py-4 space-y-3 bg-slate-50 dark:bg-slate-950">
             {messages.map((msg, i) => (
@@ -141,6 +153,24 @@ export const ChatBot: React.FC = () => {
                 </div>
               </div>
             ))}
+            {messages.length === 1 && !loading && (
+              <div className="pt-1">
+                <p className="text-[11px] font-semibold text-slate-400 uppercase tracking-wider mb-2">
+                  {t('suggestedPromptsHeading')}
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {t.raw('suggestedPrompts').map((prompt: string) => (
+                    <button
+                      key={prompt}
+                      onClick={() => sendMessage(prompt)}
+                      className="px-3 py-1.5 rounded-full text-xs font-medium bg-white dark:bg-slate-800 border border-sky-200 dark:border-slate-700 text-[#0B5198] dark:text-sky-300 hover:bg-sky-50 dark:hover:bg-slate-700 hover:border-sky-300 transition-colors"
+                    >
+                      {prompt}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            )}
             {loading && (
               <div className="flex justify-start">
                 <div className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-2xl rounded-bl-sm px-3.5 py-2.5 flex items-center gap-1.5">
@@ -172,7 +202,7 @@ export const ChatBot: React.FC = () => {
                 className="flex-1 px-3.5 py-2.5 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#0B5198] focus:border-transparent disabled:opacity-60"
               />
               <button
-                onClick={sendMessage}
+                onClick={() => sendMessage()}
                 disabled={loading || !input.trim()}
                 aria-label={t('sendLabel')}
                 className="w-10 h-10 shrink-0 rounded-xl bg-[#0052CC] hover:bg-[#003B99] disabled:bg-slate-300 disabled:cursor-not-allowed text-white flex items-center justify-center transition-colors"

@@ -4,7 +4,7 @@
     "search": "検索"
   },
   "Header": {
-    "globalReach": "40か国以上でグローバルトレーニングを提供",
+    "globalReach": "195か国以上でグローバルトレーニングを提供",
     "enterpriseSupport": "エンタープライズサポート: +91 95489 88153",
     "nav": {
       "solutions": "ソリューション",
@@ -24,7 +24,7 @@
     "toggleMenu": "メニューを切り替える"
   },
   "Hero": {
-    "badge": "信頼されるグローバル企業教育パートナー",
+    "badge": "信頼されるグローバル企業教育プロバイダー",
     "headlineLine1": "テクノロジーが",
     "headlineLine2": "卓越性と出会う場所",
     "subtitle": "企業研修の未来を切り拓く",
@@ -56,7 +56,7 @@
       },
       {
         "title": "グローバルな提供体制",
-        "description": "40か国以上で対面・オンライン・ハイブリッド形式に対応し、チームのタイムゾーンとインフラに合わせて提供します。"
+        "description": "195か国以上で対面・オンライン・ハイブリッド形式に対応し、チームのタイムゾーンとインフラに合わせて提供します。"
       },
       {
         "title": "柔軟な学習形式",
@@ -300,7 +300,7 @@
     "bullets": {
       "whoWeAre": {
         "title": "私たちについて",
-        "description": "最先端の企業教育のリーダーとして、40か国以上で認定トレーニングを提供しています。"
+        "description": "最先端の企業教育のリーダーとして、195か国以上で認定トレーニングを提供しています。"
       },
       "ourMission": {
         "title": "私たちの使命",
@@ -324,10 +324,6 @@
     "eyebrow": "リーダーシップ",
     "heading": "NexMentor Solutionsを支える人々",
     "leaders": {
-      "shivamSharma": {
-        "role": "創業者兼CEO",
-        "quote": "私たちはNexMentor Solutionsを一つの信念のもとに築きました——研修は、認定資格とキャリアの成果につながって初めて意味を持つということです。"
-      },
       "tarunSharma": {
         "role": "共同創業者兼ディレクター",
         "quote": "すべての学習者は、フォーチュン500企業のチームと同じ厳格さ——公式教材、本物のインストラクター、そして習熟への明確な道筋——を受けるに値します。"
@@ -436,7 +432,7 @@
         "placeholder": "学習目標や必要な特定のコースについてお聞かせください..."
       },
       "tocDocument": {
-        "label": "署名済み利用規約 *",
+        "label": "署名済み利用規約",
         "placeholder": "クリックして書類をアップロード",
         "hint": "PDF、DOC、またはDOCX — 最大10MB",
         "remove": "ファイルを削除"
@@ -474,7 +470,8 @@
       "preferences": "研修の希望"
     },
     "notARobot": "私はロボットではありません",
-    "verifying": "確認中..."
+    "verifying": "確認中...",
+    "errorMessage": "問題が発生しました。もう一度お試しください。"
   },
   "PartnerModal": {
     "eyebrow": "パートナープログラム",
@@ -509,7 +506,7 @@
         "placeholder": "貴社と検討中のパートナーシップについて簡単にご説明ください..."
       },
       "tocDocument": {
-        "label": "署名済み利用規約 *",
+        "label": "署名済み利用規約",
         "placeholder": "クリックして書類をアップロード",
         "hint": "PDF、DOC、またはDOCX — 最大10MB",
         "remove": "ファイルを削除"
@@ -540,11 +537,11 @@
       "companyDetails": "会社詳細",
       "partnershipDetails": "パートナーシップ詳細"
     },
-    "verifying": "確認中..."
+    "verifying": "確認中...",
+    "errorMessage": "問題が発生しました。もう一度お試しください。"
   },
   "Footer": {
     "description": "企業研修、業界で認められたITベンダー認定資格、カスタム人材育成ソリューションのグローバルプロバイダー。",
-    "certification": "ISO 9001:2015 & ISO 27001認証トレーニングパートナー",
     "navigation": {
       "title": "ナビゲーション",
       "home": "ホーム",
@@ -570,11 +567,10 @@
     "copyright": "© {year} NexMentor Solutions Inc. 全著作権所有。",
     "legal": {
       "privacyPolicy": "プライバシーポリシー",
-      "termsOfService": "利用規約",
-      "accreditations": "認定資格"
+      "termsOfService": "利用規約"
     },
     "trademarkDisclaimer": {
-      "heading": "商標に関する免責事項"
+      "heading": "免責事項"
     }
   },
   "CourseContent": {
@@ -895,15 +891,24 @@
     "tagline": "インテリジェンスをインパクトへ。"
   },
   "ChatBot": {
-    "title": "NexMentorアシスタント",
+    "title": "NEXMENTORアシスタント",
     "subtitle": "コースや認定資格についてお尋ねください",
-    "greeting": "こんにちは!NexMentorアシスタントです。コース、認定資格、提供形式についてお気軽にお尋ねください。",
+    "greeting": "こんにちは!NEXMENTORアシスタントです。コース、認定資格、提供形式についてお気軽にお尋ねください。",
     "placeholder": "メッセージを入力…",
     "sendLabel": "メッセージを送信",
     "openLabel": "チャットアシスタントを開く",
     "closeLabel": "チャットアシスタントを閉じる",
     "thinking": "考え中…",
     "errorMessage": "問題が発生しました。もう一度お試しください。",
-    "disclaimer": "AIアシスタント — 詳細なお問い合わせはお問い合わせページをご利用ください。"
+    "disclaimer": "AIアシスタント — 詳細なお問い合わせはお問い合わせページをご利用ください。",
+    "suggestedPromptsHeading": "よくある質問",
+    "suggestedPrompts": [
+      "どのような認定資格を提供していますか?",
+      "トレーニングの提供形式は何ですか?",
+      "法人向けトレーニングはありますか?",
+      "コースの見積もりはどうすれば取得できますか?"
+    ],
+    "ctaText": "担当者と直接話したいですか?",
+    "ctaLinkLabel": "アドバイザーに相談する"
   }
 }

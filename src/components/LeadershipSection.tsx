@@ -8,16 +8,10 @@ import { useScrollReveal } from '../hooks/useScrollReveal';
 // NOTE: initials are shown as a placeholder for any leader without a photo yet.
 const LEADERS = [
   {
-    id: 'shivamSharma',
-    name: 'Shivam Sharma',
-    initials: 'SS',
-    photo: null as string | null,
-  },
-  {
     id: 'tarunSharma',
     name: 'Tarun Sharma',
     initials: 'TS',
-    photo: '/assets/images/leadership/tarun-sharma.png' as string | null,
+    photo: '/assets/images/leadership/tarun-sharma.jpg' as string | null,
   },
 ];
 
@@ -37,7 +31,7 @@ export const LeadershipSection: React.FC = () => {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 gap-8 max-w-sm mx-auto">
           {LEADERS.map((leader) => (
             <div
               key={leader.id}

@@ -101,6 +101,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenContact, activeSection, se
   };
 
   return (
+    <>
     <header className="sticky top-0 z-50 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-b border-slate-100 dark:border-slate-800 shadow-xs transition-all">
       <div className="bg-slate-900 text-slate-300 text-xs py-1 px-4 sm:px-8 flex justify-between items-center border-b border-slate-800">
         <div className="flex items-center gap-6">
@@ -126,10 +127,18 @@ export const Header: React.FC<HeaderProps> = ({ onOpenContact, activeSection, se
           <Image
             src="/assets/images/nexmentor-logo-transparent.png"
             alt="NexMentor Solutions"
-            width={1270}
-            height={281}
+            width={1517}
+            height={352}
             priority
-            className="h-8 w-auto object-contain group-hover:scale-105 transition-transform dark:[filter:drop-shadow(0_0_1px_rgba(255,255,255,0.9))_drop-shadow(0_0_3px_rgba(255,255,255,0.6))]"
+            className="h-10 w-auto object-contain group-hover:scale-105 transition-transform dark:hidden"
+          />
+          <Image
+            src="/assets/images/nexmentor-logo-dark.png"
+            alt="NexMentor Solutions"
+            width={1759}
+            height={407}
+            priority
+            className="hidden h-10 w-auto object-contain group-hover:scale-105 transition-transform dark:block"
           />
         </div>
 
@@ -344,11 +353,13 @@ export const Header: React.FC<HeaderProps> = ({ onOpenContact, activeSection, se
         </div>
       )}
 
-      <SearchModal
-        isOpen={searchOpen}
-        onClose={() => setSearchOpen(false)}
-        onNavigate={(sectionId) => scrollToSection(sectionId)}
-      />
     </header>
+
+    <SearchModal
+      isOpen={searchOpen}
+      onClose={() => setSearchOpen(false)}
+      onNavigate={(sectionId) => scrollToSection(sectionId)}
+    />
+    </>
   );
 };
